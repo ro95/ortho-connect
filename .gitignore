@@ -37,3 +37,7 @@ next-env.d.ts
 
 # data (subscriber emails — don't commit)
 /data/
+
+RESEND_API_KEY=re_SvcBVwQr_9XkcZq4hgedSXn8Axz5XUJi4
+RESEND_FROM=onboarding@resend.dev
+RESEND_TO=rodolphcorp@gmail.com
