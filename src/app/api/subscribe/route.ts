@@ -50,10 +50,20 @@ async function notifyEmail(email: string, total: number): Promise<void> {
   const apiKey = process.env.RESEND_API_KEY;
   const from = process.env.RESEND_FROM;
   const to = process.env.RESEND_TO;
-  if (!apiKey || !from || !to) return;
+
+  console.log("[Resend] notifyEmail appelé", {
+    hasApiKey: !!apiKey,
+    from,
+    to,
+  });
+
+  if (!apiKey || !from || !to) {
+    console.warn("[Resend] Variables d'environnement manquantes — mail non envoyé");
+    return;
+  }
 
   try {
-    await fetch("https://api.resend.com/emails", {
+    const res = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -71,8 +81,15 @@ async function notifyEmail(email: string, total: number): Promise<void> {
         `,
       }),
     });
+
+    const body = await res.text();
+    if (res.ok) {
+      console.log("[Resend] ✅ Mail envoyé :", body);
+    } else {
+      console.error(`[Resend] ❌ Erreur ${res.status} :`, body);
+    }
   } catch (err) {
-    console.error("Resend notification failed:", err);
+    console.error("[Resend] ❌ Exception :", err);
   }
 }
 
