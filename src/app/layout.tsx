@@ -25,7 +25,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="stylesheet"
         />
       </head>
-      <body className="bg-white text-gray-900 font-sans antialiased">{children}</body>
+      <body className="bg-white text-gray-900 font-sans antialiased" suppressHydrationWarning>
+        {children}
+      </body>
     </html>
   );
 }
