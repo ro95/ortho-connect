@@ -19,11 +19,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         const adminEmail = process.env.ADMIN_EMAIL?.toLowerCase().trim();
         const adminPasswordHash = process.env.ADMIN_PASSWORD_HASH;
 
-        if (!adminEmail || !adminPasswordHash) {
-          console.error("[Auth] ADMIN_EMAIL ou ADMIN_PASSWORD_HASH manquant dans .env.local");
-          return null;
-        }
-
+        if (!adminEmail || !adminPasswordHash) return null;
         if (email !== adminEmail) return null;
 
         const valid = await bcrypt.compare(password, adminPasswordHash);
