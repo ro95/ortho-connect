@@ -1,5 +1,5 @@
 import { auth, signOut } from "@/auth";
-import { supabase } from "@/lib/supabase";
+import { getSupabase } from "@/lib/supabase";
 
 interface Subscriber {
   id: number;
@@ -8,16 +8,22 @@ interface Subscriber {
 }
 
 async function getSubscribers(): Promise<Subscriber[]> {
-  const { data, error } = await supabase
-    .from("subscribers")
-    .select("id, email, subscribed_at")
-    .order("subscribed_at", { ascending: false });
+  try {
+    const supabase = getSupabase();
+    const { data, error } = await supabase
+      .from("subscribers")
+      .select("id, email, subscribed_at")
+      .order("subscribed_at", { ascending: false });
 
-  if (error) {
-    console.error("[admin] Supabase error:", error);
+    if (error) {
+      console.error("[admin] Supabase error:", error);
+      return [];
+    }
+    return data ?? [];
+  } catch (err) {
+    console.error("[admin] Supabase init error:", err);
     return [];
   }
-  return data ?? [];
 }
 
 export const dynamic = "force-dynamic";

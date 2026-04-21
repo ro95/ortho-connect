@@ -1,17 +1,24 @@
-import { createClient } from "@supabase/supabase-js";
+import { createClient, SupabaseClient } from "@supabase/supabase-js";
 
-const supabaseUrl = process.env.SUPABASE_URL;
-const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+let cached: SupabaseClient | null = null;
 
-if (!supabaseUrl || !supabaseServiceKey) {
-  throw new Error(
-    "SUPABASE_URL et SUPABASE_SERVICE_ROLE_KEY doivent être définis dans .env.local",
-  );
+export function getSupabase(): SupabaseClient {
+  if (cached) return cached;
+
+  const url = process.env.SUPABASE_URL;
+  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+  if (!url || !key) {
+    throw new Error(
+      "SUPABASE_URL et SUPABASE_SERVICE_ROLE_KEY doivent être définis",
+    );
+  }
+
+  cached = createClient(url, key, {
+    auth: { persistSession: false },
+  });
+  return cached;
 }
-
-export const supabase = createClient(supabaseUrl, supabaseServiceKey, {
-  auth: { persistSession: false },
-});
 
 export interface Subscriber {
   id?: number;
