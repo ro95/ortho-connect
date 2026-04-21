@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { supabase } from "@/lib/supabase";
+import { getSupabase } from "@/lib/supabase";
 
 function isValidEmail(email: string): boolean {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -69,6 +69,8 @@ export async function POST(request: Request) {
         { status: 400 },
       );
     }
+
+    const supabase = getSupabase();
 
     const { data: existing, error: selectError } = await supabase
       .from("subscribers")
