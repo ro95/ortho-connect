@@ -1,32 +1,8 @@
 import { NextResponse } from "next/server";
-import fs from "node:fs/promises";
-import path from "node:path";
+import { supabase } from "@/lib/supabase";
 
-const DATA_DIR = path.join(process.cwd(), "data");
-const DATA_FILE = path.join(DATA_DIR, "subscribers.json");
-
-/** Simple email regex — good enough for an MVP. */
 function isValidEmail(email: string): boolean {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-}
-
-interface Subscriber {
-  email: string;
-  subscribedAt: string;
-}
-
-async function readSubscribers(): Promise<Subscriber[]> {
-  try {
-    const raw = await fs.readFile(DATA_FILE, "utf-8");
-    return JSON.parse(raw) as Subscriber[];
-  } catch {
-    return [];
-  }
-}
-
-async function writeSubscribers(subscribers: Subscriber[]): Promise<void> {
-  await fs.mkdir(DATA_DIR, { recursive: true });
-  await fs.writeFile(DATA_FILE, JSON.stringify(subscribers, null, 2), "utf-8");
 }
 
 async function notifySlack(email: string, total: number): Promise<void> {
@@ -51,16 +27,7 @@ async function notifyEmail(email: string, total: number): Promise<void> {
   const from = process.env.RESEND_FROM;
   const to = process.env.RESEND_TO;
 
-  console.log("[Resend] notifyEmail appelé", {
-    hasApiKey: !!apiKey,
-    from,
-    to,
-  });
-
-  if (!apiKey || !from || !to) {
-    console.warn("[Resend] Variables d'environnement manquantes — mail non envoyé");
-    return;
-  }
+  if (!apiKey || !from || !to) return;
 
   try {
     const res = await fetch("https://api.resend.com/emails", {
@@ -82,14 +49,12 @@ async function notifyEmail(email: string, total: number): Promise<void> {
       }),
     });
 
-    const body = await res.text();
-    if (res.ok) {
-      console.log("[Resend] ✅ Mail envoyé :", body);
-    } else {
-      console.error(`[Resend] ❌ Erreur ${res.status} :`, body);
+    if (!res.ok) {
+      const body = await res.text();
+      console.error(`[Resend] Erreur ${res.status} :`, body);
     }
   } catch (err) {
-    console.error("[Resend] ❌ Exception :", err);
+    console.error("[Resend] Exception :", err);
   }
 }
 
@@ -105,27 +70,54 @@ export async function POST(request: Request) {
       );
     }
 
-    const subscribers = await readSubscribers();
+    const { data: existing, error: selectError } = await supabase
+      .from("subscribers")
+      .select("id")
+      .eq("email", email)
+      .maybeSingle();
 
-    if (subscribers.some((s) => s.email === email)) {
+    if (selectError) {
+      console.error("[Supabase] select error:", selectError);
+      return NextResponse.json(
+        { error: "Erreur serveur. Réessayez dans un instant." },
+        { status: 500 },
+      );
+    }
+
+    if (existing) {
       return NextResponse.json(
         { message: "Vous êtes déjà inscrit — on vous tient au courant !" },
         { status: 200 },
       );
     }
 
-    subscribers.push({ email, subscribedAt: new Date().toISOString() });
-    await writeSubscribers(subscribers);
+    const { error: insertError } = await supabase
+      .from("subscribers")
+      .insert({ email });
+
+    if (insertError) {
+      console.error("[Supabase] insert error:", insertError);
+      return NextResponse.json(
+        { error: "Erreur serveur. Réessayez dans un instant." },
+        { status: 500 },
+      );
+    }
+
+    const { count } = await supabase
+      .from("subscribers")
+      .select("*", { count: "exact", head: true });
+
     await Promise.all([
-      notifySlack(email, subscribers.length),
-      notifyEmail(email, subscribers.length),
+      notifySlack(email, count ?? 0),
+      notifyEmail(email, count ?? 0),
     ]);
 
     return NextResponse.json(
       { message: "Parfait ! Vous serez parmi les premiers informés." },
       { status: 201 },
     );
-  } catch {
+  } catch (err) {
+    console.error("[subscribe] exception:", err);
     return NextResponse.json(
       { error: "Erreur serveur. Réessayez dans un instant." },
       { status: 500 },
