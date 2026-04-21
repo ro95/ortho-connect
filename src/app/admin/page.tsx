@@ -1,31 +1,30 @@
-import fs from "node:fs/promises";
-import path from "node:path";
 import { auth, signOut } from "@/auth";
+import { supabase } from "@/lib/supabase";
 
 interface Subscriber {
+  id: number;
   email: string;
-  subscribedAt: string;
+  subscribed_at: string;
 }
 
 async function getSubscribers(): Promise<Subscriber[]> {
-  try {
-    const file = path.join(process.cwd(), "data", "subscribers.json");
-    const raw = await fs.readFile(file, "utf-8");
-    return JSON.parse(raw) as Subscriber[];
-  } catch {
+  const { data, error } = await supabase
+    .from("subscribers")
+    .select("id, email, subscribed_at")
+    .order("subscribed_at", { ascending: false });
+
+  if (error) {
+    console.error("[admin] Supabase error:", error);
     return [];
   }
+  return data ?? [];
 }
 
 export const dynamic = "force-dynamic";
 
 export default async function AdminPage() {
   const session = await auth();
-  const subscribers = await getSubscribers();
-  const sorted = [...subscribers].sort(
-    (a, b) =>
-      new Date(b.subscribedAt).getTime() - new Date(a.subscribedAt).getTime(),
-  );
+  const sorted = await getSubscribers();
 
   return (
     <main className="min-h-screen bg-white p-6 md:p-10">
@@ -80,7 +79,7 @@ export default async function AdminPage() {
               <tbody>
                 {sorted.map((sub, i) => (
                   <tr
-                    key={sub.email}
+                    key={sub.id}
                     className="border-b border-gray-100 hover:bg-gray-50"
                   >
                     <td className="py-3 pr-4 text-gray-400">
@@ -90,7 +89,7 @@ export default async function AdminPage() {
                       {sub.email}
                     </td>
                     <td className="py-3 text-gray-600">
-                      {new Date(sub.subscribedAt).toLocaleString("fr-FR", {
+                      {new Date(sub.subscribed_at).toLocaleString("fr-FR", {
                         dateStyle: "short",
                         timeStyle: "short",
                       })}
