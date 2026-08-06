@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "test": "vitest run",
     "scrape": "node scripts/scrape-missions.mjs",
     "model": "node scripts/business-model.mjs",
     "pricing": "node scripts/pricing-grid.mjs"
@@ -26,6 +27,7 @@
     "@types/react": "^19.2.14",
     "postcss": "^8.5.8",
     "tailwindcss": "^4.2.2",
-    "typescript": "^6.0.2"
+    "typescript": "^6.0.2",
+    "vitest": "^4.1.10"
   }
 }

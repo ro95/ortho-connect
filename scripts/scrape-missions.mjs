@@ -66,12 +66,52 @@ function extractLieu(texte) {
 
   // La ville se trouve en général juste avant la parenthèse du département.
   const avant = texte.slice(Math.max(0, idx - 70), idx).trim().replace(/[,\s]+$/, "");
-  const villeMatch = avant.match(
-    /(?:à|a|au|aux|sur|proche de|près de|de)\s+([A-ZÀ-Ý][A-Za-zÀ-ÿ'’]*(?:[ -](?:[A-ZÀ-Ý][A-Za-zÀ-ÿ'’]*|le|la|les|de|du|des|sur|en|lès|sous))*)$/,
-  );
-  const ville = villeMatch ? villeMatch[1].trim() : null;
+  const ville = extraireVille(avant);
 
   return { ville, departement, code };
+}
+
+/*
+ * Le lookbehind devant le groupe de prépositions est indispensable : sans lui,
+ * l'alternative « a » matche le « a » final de n'importe quel mot — « L(a) Direction
+ * de la Petite Enfance de la Ville de Lyon », « pour l(a) Clinique Mutualiste de Saint
+ * Etienne » — et le motif avale alors la raison sociale entière en guise de commune.
+ *
+ * Un `\b` ne conviendrait pas : en JavaScript la frontière de mot est ASCII, il n'y en
+ * a donc aucune entre une espace et « à », ce qui écarterait tous les « à Bordeaux ».
+ */
+const CANDIDAT_VILLE =
+  /(?<![A-Za-zÀ-ÿ'’])(?:à|a|au|aux|sur|proche de|près de|de)\s+([A-ZÀ-Ý][A-Za-zÀ-ÿ'’]*(?:[ -](?:[A-ZÀ-Ý][A-Za-zÀ-ÿ'’]*|[dl]['’][A-Za-zÀ-ÿ][A-Za-zÀ-ÿ'’]*|les|le|la|des|du|de|sous|sur|lès|en))*)(?![A-Za-zÀ-ÿ])/g;
+
+/**
+ * Repères approximatifs, pas des communes. « au Nord de Toulouse » désigne une zone,
+ * et la vraie commune est écrite ailleurs dans la phrase.
+ */
+const REPERE_APPROXIMATIF =
+  /^(Nord|Sud|Est|Ouest|Centre|Proche|Près|Environs|Alentours|Périphérie|Région|Secteur|Agglomération)\b/i;
+
+/**
+ * On préfère le candidat collé à la parenthèse du département, et le plus long à
+ * cette position — sans quoi « à Fort de France » se réduirait à « France ».
+ *
+ * Si ce candidat n'est qu'un repère approximatif, on écarte aussi tous ceux qui le
+ * chevauchent — « Toulouse » extrait de « Nord de Toulouse » serait la même erreur —
+ * et on retombe sur le candidat valide précédent, qui est la commune réelle.
+ */
+function extraireVille(avant) {
+  const candidats = [...avant.matchAll(CANDIDAT_VILLE)]
+    .map((m) => ({ nom: m[1].trim(), debut: m.index, fin: m.index + m[0].length }))
+    .sort((a, b) => b.fin - a.fin || a.debut - b.debut);
+
+  for (let i = 0; i < candidats.length; i++) {
+    const c = candidats[i];
+    if (!REPERE_APPROXIMATIF.test(c.nom)) return c.nom;
+    // Candidat rejeté : on saute ceux qu'il chevauche — eux seuls, un candidat
+    // entièrement à sa gauche reste la meilleure réponse disponible.
+    while (i + 1 < candidats.length && candidats[i + 1].fin > c.debut) i++;
+  }
+
+  return null;
 }
 
 const TYPES = [

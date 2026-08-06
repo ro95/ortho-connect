@@ -1,4 +1,5 @@
 import data from "@/data/missions.json";
+import { corrigerVille } from "./corrections";
 
 export interface Mission {
   id: string;
@@ -15,7 +16,14 @@ export interface Mission {
   contact: "email" | "telephone" | "autre";
 }
 
-const missions = data.missions as Mission[];
+/*
+ * Les communes mal extraites sont corrigées ici, au point d'entrée unique des données :
+ * tout le reste du code (index géographique, rédaction, cartes d'annonces) travaille
+ * ainsi sur des noms de communes déjà fiables.
+ */
+const missions = (data.missions as Mission[]).map((m) =>
+  m.ville === corrigerVille(m.ville, m.codeDept) ? m : { ...m, ville: corrigerVille(m.ville, m.codeDept) },
+);
 
 /** Ordre d'affichage des filtres : les types les plus recherchés d'abord. */
 const ORDRE_TYPES = ["Remplacement", "Collaboration", "Salariat", "Assistanat", "Association", "Cession", "Stage", "Mission"];
