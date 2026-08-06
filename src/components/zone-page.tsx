@@ -18,6 +18,17 @@ export interface BlocLiens {
   liens: LienZone[];
 }
 
+/**
+ * Bloc d'entités citées sans lien : les communes sous le seuil de publication
+ * n'ont pas de page. Leur nom doit être présent et indexable ici, mais pointer
+ * vers une page inexistante créerait des liens morts par centaines.
+ */
+export interface BlocTexte {
+  titre: string;
+  note?: string;
+  entrees: { label: string; count: number }[];
+}
+
 interface Props {
   zone: Zone;
   /** Titre H1 — unique par page, distinct de la balise <title>. */
@@ -32,6 +43,8 @@ interface Props {
   faits: { valeur: string | number; label: string }[];
   /** Blocs de maillage interne affichés sous les annonces. */
   blocs?: BlocLiens[];
+  /** Blocs d'entités citées sans lien, affichés après le maillage. */
+  blocsTexte?: BlocTexte[];
   /** Description reprise dans les données structurées. */
   description: string;
   /** Zone pré-remplie envoyée avec l'inscription, pour savoir d'où viennent les leads. */
@@ -52,6 +65,7 @@ export default function ZonePage({
   fil,
   faits,
   blocs = [],
+  blocsTexte = [],
   description,
   zoneLead,
 }: Props) {
@@ -149,6 +163,25 @@ export default function ZonePage({
                       {lien.label}
                       <span className="text-xs text-gray-400">{lien.count}</span>
                     </Link>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ))}
+
+          {/* ── Communes citées sans lien ── */}
+          {blocsTexte.map((bloc) => (
+            <section key={bloc.titre} className="mt-12">
+              <h2 className="text-xl font-bold tracking-tight text-gray-900">{bloc.titre}</h2>
+              {bloc.note && <p className="mt-2 max-w-3xl text-sm text-gray-500">{bloc.note}</p>}
+              <ul className="mt-4 flex flex-wrap gap-2">
+                {bloc.entrees.map((entree) => (
+                  <li
+                    key={entree.label}
+                    className="inline-flex items-center gap-2 rounded-xl border border-gray-100 bg-gray-50 px-4 py-2.5 text-sm text-gray-600"
+                  >
+                    {entree.label}
+                    <span className="text-xs text-gray-400">{entree.count}</span>
                   </li>
                 ))}
               </ul>

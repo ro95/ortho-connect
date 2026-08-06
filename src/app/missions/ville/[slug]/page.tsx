@@ -1,15 +1,17 @@
 import { notFound, permanentRedirect } from "next/navigation";
 import type { Metadata } from "next";
-import ZonePage, { type BlocLiens } from "@/components/zone-page";
+import ZonePage, { type BlocLiens, type BlocTexte } from "@/components/zone-page";
 import {
+  getCommunesSousLeSeuil,
   getDepartementByCode,
+  getRegionByNom,
   getVilleBySlug,
   getVilleNonPubliee,
   getVilles,
   getVillesVoisines,
   urls,
 } from "@/lib/geo";
-import { texteVille } from "@/lib/redaction";
+import { citerCommunes, texteVille } from "@/lib/redaction";
 import { buildMetadata } from "@/lib/seo";
 
 interface Props {
@@ -59,7 +61,9 @@ export default async function Page({ params }: Props) {
 
   const departement = getDepartementByCode(zone.departement.code);
   const totalDepartement = departement?.stats.total ?? zone.stats.total;
-  const { chapeau, paragraphes } = texteVille(zone, totalDepartement);
+  const communesSansPage = getCommunesSousLeSeuil(zone.departement.code);
+  const { chapeau, paragraphes } = texteVille(zone, totalDepartement, citerCommunes(communesSansPage));
+  const region = getRegionByNom(zone.departement.region);
   const { stats } = zone;
 
   const blocs: BlocLiens[] = [];
@@ -92,6 +96,17 @@ export default async function Page({ params }: Props) {
     });
   }
 
+  const blocsTexte: BlocTexte[] = [];
+  if (communesSansPage.length > 0) {
+    blocsTexte.push({
+      titre: `Autres communes ${zone.departement.loc}`,
+      note:
+        `Ces communes du département comptent trop peu d'annonces pour justifier leur propre ` +
+        `page. Leurs offres sont regroupées sur la page du département.`,
+      entrees: communesSansPage.map((c) => ({ label: c.nom, count: c.missions.length })),
+    });
+  }
+
   return (
     <ZonePage
       zone={zone}
@@ -103,6 +118,7 @@ export default async function Page({ params }: Props) {
       fil={[
         { nom: "Accueil", chemin: "/" },
         { nom: "Missions", chemin: urls.hub() },
+        ...(region ? [{ nom: region.nom, chemin: urls.region(region.slug) }] : []),
         ...(departement ? [{ nom: departement.nom, chemin: urls.departement(departement.slug) }] : []),
         { nom: zone.nom, chemin: urls.ville(slug) },
       ]}
@@ -113,6 +129,7 @@ export default async function Page({ params }: Props) {
         { valeur: stats.recentes30j, label: "Publiées sur 30 j" },
       ]}
       blocs={blocs}
+      blocsTexte={blocsTexte}
     />
   );
 }

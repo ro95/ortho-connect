@@ -4,7 +4,7 @@ import MissionsBoard, { type MissionCard } from "@/components/missions-board";
 import SubscribeForm from "@/components/subscribe-form";
 import { Footer, Navbar } from "@/components/site-chrome";
 import { formatAnciennete, formatLieu, getMissions, getMissionsStats } from "@/lib/missions";
-import { REFERENCE, getRegions, getTypes, getVilles, urls } from "@/lib/geo";
+import { REFERENCE, getRegionsZones, getTypes, getVilles, urls } from "@/lib/geo";
 import { breadcrumbJsonLd, buildMetadata, collectionJsonLd, JsonLd } from "@/lib/seo";
 
 const stats = getMissionsStats();
@@ -27,7 +27,7 @@ const SEUIL_RECENT = (() => {
 
 export default function Page() {
   const missions = getMissions();
-  const regions = getRegions();
+  const regions = getRegionsZones();
   const villes = getVilles();
   const types = getTypes();
 
@@ -150,16 +150,31 @@ export default function Page() {
 
           {/* ── Par département, groupé par région ── */}
           <section className="mt-12">
-            <h2 className="text-xl font-bold tracking-tight text-gray-900">Par département</h2>
+            <h2 className="text-xl font-bold tracking-tight text-gray-900">Par région et département</h2>
+            <p className="mt-2 text-sm text-gray-500">
+              Les régions comptant plusieurs départements pourvus ont leur propre page. Ailleurs, la
+              page du département fait déjà office de page régionale.
+            </p>
             <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {regions.map(({ region, departements, total }) => (
-                <div key={region} className="rounded-2xl border border-gray-100 bg-white p-5">
+              {regions.map((zoneRegion) => (
+                <div key={zoneRegion.slug} className="rounded-2xl border border-gray-100 bg-white p-5">
                   <h3 className="flex items-baseline justify-between gap-2 text-sm font-semibold text-gray-900">
-                    {region}
-                    <span className="text-xs font-normal text-gray-400">{total}</span>
+                    {zoneRegion.publiee ? (
+                      <Link
+                        href={urls.region(zoneRegion.slug)}
+                        className="transition-colors hover:text-primary-700"
+                      >
+                        {zoneRegion.nom}
+                      </Link>
+                    ) : (
+                      <span>{zoneRegion.nom}</span>
+                    )}
+                    <span className="text-xs font-normal text-gray-400">
+                      {zoneRegion.stats.total}
+                    </span>
                   </h3>
                   <ul className="mt-3 space-y-1.5">
-                    {departements.map((d) => (
+                    {zoneRegion.departements.map((d) => (
                       <li key={d.slug}>
                         <Link
                           href={urls.departement(d.slug)}

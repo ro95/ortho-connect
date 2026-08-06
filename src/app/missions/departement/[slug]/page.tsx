@@ -1,8 +1,16 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import ZonePage, { type BlocLiens } from "@/components/zone-page";
-import { getDepartementBySlug, getDepartements, getDepartementsVoisins, getTypes, urls } from "@/lib/geo";
-import { texteDepartement } from "@/lib/redaction";
+import ZonePage, { type BlocLiens, type BlocTexte } from "@/components/zone-page";
+import {
+  getCommunesSousLeSeuil,
+  getDepartementBySlug,
+  getDepartements,
+  getDepartementsVoisins,
+  getRegionByNom,
+  getTypes,
+  urls,
+} from "@/lib/geo";
+import { citerCommunes, texteDepartement } from "@/lib/redaction";
 import { buildMetadata } from "@/lib/seo";
 
 interface Props {
@@ -24,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const zone = getDepartementBySlug(slug);
   if (!zone) return {};
 
-  const { chapeau } = texteDepartement(zone);
+  const { chapeau } = texteDepartement(zone, citerCommunes(getCommunesSousLeSeuil(zone.departement.code)));
 
   return buildMetadata({
     titre: titre(zone.departement.nom, zone.departement.code, zone.stats.total),
@@ -39,7 +47,9 @@ export default async function Page({ params }: Props) {
   if (!zone) notFound();
 
   const { departement, stats } = zone;
-  const { chapeau, paragraphes } = texteDepartement(zone);
+  const communesSansPage = getCommunesSousLeSeuil(departement.code);
+  const { chapeau, paragraphes } = texteDepartement(zone, citerCommunes(communesSansPage));
+  const region = getRegionByNom(departement.region);
 
   const blocs: BlocLiens[] = [];
 
@@ -54,15 +64,24 @@ export default async function Page({ params }: Props) {
     });
   }
 
+  // Lien remontant vers la région, en tête du bloc régional : c'est le palier
+  // au-dessus, et la page qui recense l'ensemble des voisins non cités ici.
   const voisins = getDepartementsVoisins(zone);
-  if (voisins.length > 0) {
+  if (region) {
     blocs.push({
-      titre: `Autres départements en ${departement.region}`,
-      liens: voisins.map((d) => ({
-        href: urls.departement(d.slug),
-        label: `${d.nom} (${d.departement.code})`,
-        count: d.missions.length,
-      })),
+      titre: `Ailleurs ${region.region.loc}`,
+      liens: [
+        {
+          href: urls.region(region.slug),
+          label: `Toute la région — ${region.nom}`,
+          count: region.missions.length,
+        },
+        ...voisins.map((d) => ({
+          href: urls.departement(d.slug),
+          label: `${d.nom} (${d.departement.code})`,
+          count: d.missions.length,
+        })),
+      ],
     });
   }
 
@@ -81,6 +100,17 @@ export default async function Page({ params }: Props) {
     });
   }
 
+  const blocsTexte: BlocTexte[] = [];
+  if (communesSansPage.length > 0) {
+    blocsTexte.push({
+      titre: `Autres communes ${departement.loc}`,
+      note:
+        `Ces communes comptent trop peu d'annonces pour justifier leur propre page. ` +
+        `Leurs offres figurent dans la liste ci-dessus.`,
+      entrees: communesSansPage.map((c) => ({ label: c.nom, count: c.missions.length })),
+    });
+  }
+
   return (
     <ZonePage
       zone={zone}
@@ -92,6 +122,7 @@ export default async function Page({ params }: Props) {
       fil={[
         { nom: "Accueil", chemin: "/" },
         { nom: "Missions", chemin: urls.hub() },
+        ...(region ? [{ nom: region.nom, chemin: urls.region(region.slug) }] : []),
         { nom: departement.nom, chemin: urls.departement(slug) },
       ]}
       faits={[
@@ -101,6 +132,7 @@ export default async function Page({ params }: Props) {
         { valeur: stats.recentes30j, label: "Publiées sur 30 j" },
       ]}
       blocs={blocs}
+      blocsTexte={blocsTexte}
     />
   );
 }

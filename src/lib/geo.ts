@@ -1,5 +1,5 @@
 import { getMissions, type Mission } from "./missions";
-import { getDepartement, type Departement } from "./departements";
+import { getDepartement, getRegion, type Departement, type Region } from "./departements";
 
 /**
  * Index géographique et éditorial des missions.
@@ -18,6 +18,17 @@ import { getDepartement, type Departement } from "./departements";
  * département, qui elle a de la matière.
  */
 export const SEUIL_VILLE = 2;
+
+/**
+ * Nombre minimum de départements pourvus pour qu'une région mérite sa propre page.
+ *
+ * Une région qui n'a qu'un seul département pourvu (les régions d'outre-mer, où
+ * région et département se confondent) produirait une page portant le même nom et
+ * listant exactement les mêmes annonces que la page du département : du contenu
+ * dupliqué, pour le même motif que le seuil des villes. Ces régions restent
+ * agrégées et affichées dans l'annuaire du hub, mais sans page dédiée.
+ */
+export const SEUIL_REGION = 2;
 
 /** Slug URL : sans accents, sans ponctuation, minuscules. */
 export function slugify(valeur: string): string {
@@ -46,7 +57,7 @@ export interface ZoneStats {
 }
 
 export interface Zone {
-  kind: "departement" | "ville" | "type";
+  kind: "region" | "departement" | "ville" | "type";
   slug: string;
   /** Libellé affiché : « Haute-Garonne », « Toulouse », « Remplacement ». */
   nom: string;
@@ -66,6 +77,24 @@ export interface ZoneDepartement extends Zone {
 export interface ZoneVille extends Zone {
   kind: "ville";
   departement: Departement;
+}
+
+/**
+ * Palier intermédiaire entre le hub national et les départements. Il capte les
+ * requêtes régionales (« orthoptiste Occitanie ») et donne au maillage un étage
+ * de plus, au lieu de faire pendre 77 départements directement sous une page.
+ */
+export interface ZoneRegion extends Zone {
+  kind: "region";
+  region: Region;
+  /** Départements de la région ayant des annonces, par ordre alphabétique. */
+  departements: ZoneDepartement[];
+  /** Villes de la région ayant leur propre page, les mieux fournies d'abord. */
+  villes: ZoneVille[];
+  /** Villes distinctes concernées, seuil de publication compris ou non. */
+  nbVilles: number;
+  /** Vrai si la région a sa propre page (cf. SEUIL_REGION). */
+  publiee: boolean;
 }
 
 export interface ZoneType extends Zone {
@@ -219,6 +248,66 @@ departements.sort((a, b) => b.missions.length - a.missions.length || a.nom.local
 const deptsParSlug = new Map(departements.map((d) => [d.slug, d]));
 const deptsParCode = new Map(departements.map((d) => [d.departement.code, d]));
 
+/**
+ * Communes présentes dans les données mais sous le seuil de publication, indexées
+ * par département. Elles n'ont pas de page : on les cite en clair sur la page de
+ * leur département pour que leur nom y soit indexable, sans créer 150 pages minces.
+ */
+const communesSousLeSeuilParDept = new Map<string, ZoneVille[]>();
+for (const v of toutesLesVilles) {
+  if (villesParSlug.has(v.slug)) continue;
+  const liste = communesSousLeSeuilParDept.get(v.departement.code);
+  if (liste) liste.push(v);
+  else communesSousLeSeuilParDept.set(v.departement.code, [v]);
+}
+for (const liste of communesSousLeSeuilParDept.values()) {
+  liste.sort((a, b) => b.missions.length - a.missions.length || a.nom.localeCompare(b.nom, "fr"));
+}
+
+/* ── Régions ── */
+
+const deptsParRegion = new Map<string, ZoneDepartement[]>();
+for (const d of departements) {
+  const liste = deptsParRegion.get(d.departement.region);
+  if (liste) liste.push(d);
+  else deptsParRegion.set(d.departement.region, [d]);
+}
+
+const regions: ZoneRegion[] = [];
+for (const [nom, liste] of deptsParRegion) {
+  const region = getRegion(nom);
+  if (!region) continue;
+
+  const missionsRegion = liste.flatMap((d) => d.missions);
+
+  regions.push({
+    kind: "region",
+    slug: slugify(region.nom),
+    nom: region.nom,
+    region,
+    departements: [...liste].sort((a, b) => a.nom.localeCompare(b.nom, "fr")),
+    villes: liste
+      .flatMap((d) => d.villes)
+      .sort((a, b) => b.missions.length - a.missions.length || a.nom.localeCompare(b.nom, "fr")),
+    missions: [...missionsRegion].sort(parFraicheur),
+    stats: calculerStats(missionsRegion),
+    // La clé inclut le département, comme pour les slugs de ville : deux homonymes
+    // dans deux départements d'une même région sont deux communes, pas une seule.
+    // Ce comptage vaut donc exactement la somme des `nbVilles` des départements.
+    nbVilles: new Set(
+      missionsRegion
+        .map((m) => (m.ville ? `${slugify(m.ville)}|${m.codeDept}` : ""))
+        .filter((cle) => cle && !cle.startsWith("|")),
+    ).size,
+    publiee: liste.length >= SEUIL_REGION,
+  });
+}
+regions.sort((a, b) => b.missions.length - a.missions.length || a.nom.localeCompare(b.nom, "fr"));
+
+const regionsPubliees = regions.filter((r) => r.publiee);
+const regionsParSlug = new Map(regionsPubliees.map((r) => [r.slug, r]));
+const regionsParNom = new Map(regionsPubliees.map((r) => [r.region.nom, r]));
+
 /* ── Types de mission ── */
 
 const missionsParType = new Map<string, Mission[]>();
@@ -297,28 +386,47 @@ export function getVillesVoisines(zone: ZoneVille, limite = 6): ZoneVille[] {
     .slice(0, limite);
 }
 
-/** Départements groupés par région, pour l'annuaire du hub. */
-export function getRegions(): { region: string; departements: ZoneDepartement[]; total: number }[] {
-  const parRegion = new Map<string, ZoneDepartement[]>();
-  for (const d of departements) {
-    const liste = parRegion.get(d.departement.region);
-    if (liste) liste.push(d);
-    else parRegion.set(d.departement.region, [d]);
-  }
+/**
+ * Toutes les régions ayant des annonces, les mieux fournies d'abord — y compris
+ * celles sans page dédiée, que l'annuaire du hub doit continuer d'afficher pour
+ * ne perdre aucun département.
+ */
+export function getRegionsZones(): ZoneRegion[] {
+  return regions;
+}
 
-  return [...parRegion.entries()]
-    .map(([region, liste]) => ({
-      region,
-      departements: [...liste].sort((a, b) => a.nom.localeCompare(b.nom, "fr")),
-      total: liste.reduce((n, d) => n + d.missions.length, 0),
-    }))
-    .sort((a, b) => b.total - a.total || a.region.localeCompare(b.region, "fr"));
+/** Régions ayant leur propre page : celles-là seules sont générées et liées. */
+export function getRegionsPubliees(): ZoneRegion[] {
+  return regionsPubliees;
+}
+
+export function getRegionBySlug(slug: string): ZoneRegion | null {
+  return regionsParSlug.get(slug) ?? null;
+}
+
+/**
+ * Zone régionale publiée d'un département, pour le fil d'Ariane et le lien
+ * remontant. Renvoie `null` pour une région sans page : les appelants retombent
+ * alors sur un fil à trois niveaux plutôt que de fabriquer un lien mort.
+ */
+export function getRegionByNom(nom: string): ZoneRegion | null {
+  return regionsParNom.get(nom) ?? null;
+}
+
+/**
+ * Communes d'un département présentes dans les données mais sans page dédiée.
+ * Elles sont citées en texte sur la page du département : un lien vers une page
+ * inexistante, ou une redirection en masse, coûterait plus qu'il ne rapporterait.
+ */
+export function getCommunesSousLeSeuil(codeDept: string): ZoneVille[] {
+  return communesSousLeSeuilParDept.get(codeDept) ?? [];
 }
 
 /* ── URLs ── */
 
 export const urls = {
   hub: () => "/missions",
+  region: (slug: string) => `/missions/region/${slug}`,
   departement: (slug: string) => `/missions/departement/${slug}`,
   ville: (slug: string) => `/missions/ville/${slug}`,
   type: (slug: string) => `/missions/type/${slug}`,

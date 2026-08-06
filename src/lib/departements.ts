@@ -133,3 +133,51 @@ export const DEPARTEMENTS: Map<string, Departement> = new Map(
 export function getDepartement(code: string | null | undefined): Departement | null {
   return code ? (DEPARTEMENTS.get(code.toUpperCase()) ?? null) : null;
 }
+
+/* ─────────────────────────────── Régions ─────────────────────────────── */
+
+export interface Region {
+  nom: string;
+  /** Locution locative complète, à insérer telle quelle dans une phrase. */
+  loc: string;
+}
+
+/**
+ * Locutions régionales, écrites à la main pour la même raison que celles des
+ * départements : la préposition ne se déduit pas du nom. On dit « en Occitanie »
+ * mais « dans les Hauts-de-France », « dans le Grand Est » mais « en Île-de-France »,
+ * et « à La Réunion ». Aucune règle sur le genre ou l'initiale ne couvre ces cas,
+ * et une préposition fausse est immédiatement visible dans un contenu de référencement.
+ *
+ * Un test vérifie que chaque région citée par la table des départements a bien
+ * son entrée ici : ajouter un département dans une région oubliée fait échouer
+ * la suite plutôt que de produire un texte bancal en production.
+ */
+const REGIONS_TABLE: [nom: string, loc: string][] = [
+  ["Auvergne-Rhône-Alpes", "en Auvergne-Rhône-Alpes"],
+  ["Bourgogne-Franche-Comté", "en Bourgogne-Franche-Comté"],
+  ["Bretagne", "en Bretagne"],
+  ["Centre-Val de Loire", "en Centre-Val de Loire"],
+  ["Corse", "en Corse"],
+  ["Grand Est", "dans le Grand Est"],
+  ["Guadeloupe", "en Guadeloupe"],
+  ["Guyane", "en Guyane"],
+  ["Hauts-de-France", "dans les Hauts-de-France"],
+  ["Île-de-France", "en Île-de-France"],
+  ["La Réunion", "à La Réunion"],
+  ["Martinique", "en Martinique"],
+  ["Mayotte", "à Mayotte"],
+  ["Normandie", "en Normandie"],
+  ["Nouvelle-Aquitaine", "en Nouvelle-Aquitaine"],
+  ["Occitanie", "en Occitanie"],
+  ["Pays de la Loire", "dans les Pays de la Loire"],
+  ["Provence-Alpes-Côte d'Azur", "en Provence-Alpes-Côte d'Azur"],
+];
+
+export const REGIONS: Map<string, Region> = new Map(
+  REGIONS_TABLE.map(([nom, loc]) => [nom, { nom, loc }]),
+);
+
+export function getRegion(nom: string | null | undefined): Region | null {
+  return nom ? (REGIONS.get(nom) ?? null) : null;
+}
