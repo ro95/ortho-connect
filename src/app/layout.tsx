@@ -21,9 +21,6 @@ export const metadata: Metadata = {
   description:
     "La plateforme qui connecte les orthoptistes avec les missions qui leur correspondent. Inscrivez-vous pour être informé du lancement.",
   keywords: ["orthoptiste", "missions", "remplacement", "orthoptie", "freelance santé"],
-  verification: {
-    google: "3UjV6ntvmNl_EvIve27AcJvLM3DWvStyJ2fIOs499Sw",
-  },
   openGraph: {
     title: `${SITE_NAME} — Trouvez vos missions en orthoptie`,
     description:
