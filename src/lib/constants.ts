@@ -1,5 +1,12 @@
 export const SITE_NAME = "LesOrthoptistes.fr";
 
+/**
+ * Origine absolue du site, nécessaire aux URLs canoniques, au sitemap et aux
+ * données structurées — qui n'acceptent pas d'URL relative.
+ * Surchargeable via NEXT_PUBLIC_SITE_URL (previews Vercel, recette).
+ */
+export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://lesorthoptistes.fr").replace(/\/$/, "");
+
 export const VALUE_PROPS = [
   {
     icon: "search",
