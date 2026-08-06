@@ -207,7 +207,11 @@ for (const [code, liste] of missionsParDept) {
     missions: [...liste].sort(parFraicheur),
     stats: calculerStats(liste),
     villes: villesPubliees.filter((v) => v.departement.code === code),
-    nbVilles: new Set(liste.map((m) => m.ville).filter(Boolean)).size,
+    // Dédup sur le slug, comme partout ailleurs dans ce module : compter les noms
+    // bruts ferait de « Saint Germain en Laye » et « Saint-Germain-en-Laye » deux
+    // villes, et la phrase générée se contredirait (« 2 villes différentes » suivi
+    // d'une seule ville nommée).
+    nbVilles: new Set(liste.map((m) => (m.ville ? slugify(m.ville) : "")).filter(Boolean)).size,
   });
 }
 departements.sort((a, b) => b.missions.length - a.missions.length || a.nom.localeCompare(b.nom, "fr"));
