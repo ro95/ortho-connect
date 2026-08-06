@@ -10,6 +10,9 @@ import {
   texteRegion,
   texteType,
   texteVille,
+  texteIndexDepartements,
+  texteIndexRegions,
+  texteIndexTypes,
   texteIndexVilles,
 } from "./redaction";
 import {
@@ -17,6 +20,7 @@ import {
   getCommunesSousLeSeuil,
   getDepartements,
   getRegionsPubliees,
+  getRegionsSansPage,
   getTypes,
   getVilles,
   type ZoneDepartement,
@@ -338,6 +342,132 @@ describe("texteRegion", () => {
   });
 });
 
+/* ───────────────────────── Chapeaux des pages d'index ───────────────────────── */
+
+describe("texteIndexDepartements", () => {
+  it("accorde tout au singulier pour un département unique", () => {
+    const { chapeau } = texteIndexDepartements({
+      departements: [deptFictif({ nbMissions: 1, codeDept: "33" })],
+      nbRegions: 1,
+    });
+    expect(chapeau).toContain("1 département a sa propre page de missions d'orthoptie");
+    expect(chapeau).toContain("soit 1 annonce toutes situées dans une même région");
+    expect(chapeau).not.toContain("ont leur propre page");
+  });
+
+  it("accorde au pluriel et annonce la dispersion régionale", () => {
+    const { chapeau } = texteIndexDepartements({
+      departements: [
+        deptFictif({ nbMissions: 3, codeDept: "33" }),
+        deptFictif({ nbMissions: 2, codeDept: "31" }),
+      ],
+      nbRegions: 2,
+    });
+    expect(chapeau).toContain("2 départements ont leur propre page");
+    expect(chapeau).toContain("soit 5 annonces réparties sur 2 régions");
+  });
+
+  it("classe les départements par volume dans l'analyse", () => {
+    const { paragraphes } = texteIndexDepartements({
+      departements: [
+        deptFictif({ nbMissions: 2, codeDept: "33" }),
+        deptFictif({ nbMissions: 6, codeDept: "31" }),
+      ],
+      nbRegions: 2,
+    });
+    expect(paragraphes[0]).toBe("Haute-Garonne (6) et Gironde (2) concentrent le plus d'annonces.");
+  });
+});
+
+describe("texteIndexRegions", () => {
+  it("accorde tout au singulier pour une région unique", () => {
+    const { chapeau } = texteIndexRegions({ regions: [regionFictive({ codesDept: ["974"] })] });
+    expect(chapeau).toContain("1 région a sa propre page de missions d'orthoptie");
+    expect(chapeau).toContain("soit 1 annonce répartie sur 1 département");
+  });
+
+  it("emploie la locution de la région de tête, jamais un « en » plaqué", () => {
+    const hautsDeFrance = regionFictive({ codesDept: ["59", "62"], parDept: [4, 2] });
+    const occitanie = regionFictive({ codesDept: ["31", "34"], parDept: [1, 1] });
+    const { paragraphes } = texteIndexRegions({ regions: [occitanie, hautsDeFrance] });
+    expect(paragraphes[0]).toContain(
+      "C'est dans les Hauts-de-France que les offres sont les plus nombreuses (6 sur 8).",
+    );
+    expect(paragraphes[0]).toContain("Suivent Occitanie (2).");
+  });
+
+  it("accorde la mention des régions sans page sur une seule entrée", () => {
+    const { paragraphes } = texteIndexRegions({
+      regions: [regionFictive({ codesDept: ["31", "34"] })],
+      regionsSansPage: [{ nom: "Corse", count: 2 }],
+    });
+    const texte = paragraphes.join(" ");
+    expect(texte).toContain("1 autre région ne compte qu'un seul département pourvu : Corse (2).");
+    expect(texte).toContain("Sa page régionale ferait double emploi");
+  });
+
+  it("accorde la mention des régions sans page au pluriel", () => {
+    const { paragraphes } = texteIndexRegions({
+      regions: [regionFictive({ codesDept: ["31", "34"] })],
+      regionsSansPage: [
+        { nom: "Corse", count: 2 },
+        { nom: "La Réunion", count: 1 },
+      ],
+    });
+    const texte = paragraphes.join(" ");
+    expect(texte).toContain("2 autres régions ne comptent qu'un seul département pourvu");
+    expect(texte).toContain("Leurs pages régionales feraient double emploi");
+  });
+});
+
+describe("texteIndexTypes", () => {
+  it("accorde tout au singulier pour un type unique", () => {
+    const { chapeau } = texteIndexTypes({
+      types: [typeFictif({ nbMissions: 1, type: "Remplacement" })],
+      nbDepartements: 1,
+      nbCommunes: 1,
+    });
+    expect(chapeau).toContain("1 offre d'orthoptiste est recensée en France, toutes du même type");
+    expect(chapeau).not.toContain("réparties en");
+  });
+
+  it("annonce la répartition en types au pluriel", () => {
+    const { chapeau } = texteIndexTypes({
+      types: [
+        typeFictif({ nbMissions: 5, type: "Remplacement" }),
+        typeFictif({ nbMissions: 2, type: "Association" }),
+      ],
+      nbDepartements: 3,
+      nbCommunes: 9,
+    });
+    expect(chapeau).toContain("7 offres d'orthoptiste sont recensées en France, réparties en 2 types");
+  });
+
+  it("élide correctement le libellé du type dominant", () => {
+    const { paragraphes } = texteIndexTypes({
+      types: [
+        typeFictif({ nbMissions: 5, type: "Association" }),
+        typeFictif({ nbMissions: 2, type: "Remplacement" }),
+      ],
+      nbDepartements: 2,
+      nbCommunes: 4,
+    });
+    expect(paragraphes[0]).toContain("Les offres d'association sont les plus nombreuses : 5 sur 7.");
+    expect(paragraphes[0]).toContain("Viennent ensuite remplacement (2).");
+  });
+
+  it("accorde la couverture géographique sur un seul département et une seule commune", () => {
+    const { paragraphes } = texteIndexTypes({
+      types: [typeFictif({ nbMissions: 2, type: "Remplacement" })],
+      nbDepartements: 1,
+      nbCommunes: 1,
+    });
+    expect(paragraphes.join(" ")).toContain(
+      "ces offres proviennent de 1 département et de 1 commune.",
+    );
+  });
+});
+
 /* ─────────── Qualité typographique sur toutes les zones réelles ─────────── */
 
 describe("qualité typographique des textes réellement publiés", () => {
@@ -390,6 +520,43 @@ describe("qualité typographique des textes réellement publiés", () => {
     });
     textes.push({ zone: "index villes", texte: chapeau });
     paragraphes.forEach((p, i) => textes.push({ zone: `index villes §${i + 1}`, texte: p }));
+  }
+
+  {
+    // Les trois autres index sont des pages publiées au même titre : leurs textes
+    // sont écrits exactement comme les pages les appellent, données réelles comprises.
+    const departements = getDepartements();
+    const nbCommunes = departements.reduce((n, d) => n + d.nbVilles, 0);
+
+    const index = [
+      {
+        zone: "index départements",
+        ...texteIndexDepartements({
+          departements,
+          nbRegions: new Set(departements.map((d) => d.departement.region)).size,
+        }),
+      },
+      {
+        zone: "index régions",
+        ...texteIndexRegions({
+          regions: getRegionsPubliees(),
+          regionsSansPage: getRegionsSansPage().map((r) => ({ nom: r.nom, count: r.stats.total })),
+        }),
+      },
+      {
+        zone: "index types",
+        ...texteIndexTypes({
+          types: getTypes(),
+          nbDepartements: departements.length,
+          nbCommunes,
+        }),
+      },
+    ];
+
+    for (const { zone, chapeau, paragraphes } of index) {
+      textes.push({ zone, texte: chapeau });
+      paragraphes.forEach((p, i) => textes.push({ zone: `${zone} §${i + 1}`, texte: p }));
+    }
   }
 
   it("génère au moins un texte par zone", () => {

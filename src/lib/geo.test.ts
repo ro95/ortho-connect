@@ -535,3 +535,79 @@ describe("index des villes — redistribution du maillage", () => {
     for (const g of geoReel.getVillesParRegion()) expect(g.villes.length).toBeGreaterThan(0);
   });
 });
+
+describe("index des départements — redistribution du maillage", () => {
+  it("chaque département publié appartient à exactement un groupe régional", () => {
+    const groupes = geoReel.getDepartementsParRegion();
+    const slugs = groupes.flatMap((g) => g.departements.map((d) => d.slug));
+
+    expect(new Set(slugs).size, "un département apparaît dans deux groupes").toBe(slugs.length);
+    // L'union doit être exactement getDepartements() : un département absent de
+    // l'index ne recevrait aucun lien de cette page, qui raterait son unique rôle.
+    expect([...slugs].sort()).toEqual(geoReel.getDepartements().map((d) => d.slug).sort());
+  });
+
+  it("chaque département est rangé dans sa propre région", () => {
+    for (const groupe of geoReel.getDepartementsParRegion()) {
+      for (const d of groupe.departements) {
+        expect(d.departement.region, `${d.slug} mal rangé`).toBe(groupe.region.nom);
+      }
+    }
+  });
+
+  it("aucun groupe vide", () => {
+    for (const g of geoReel.getDepartementsParRegion()) {
+      expect(g.departements.length).toBeGreaterThan(0);
+    }
+  });
+});
+
+describe("index des régions — redistribution du maillage", () => {
+  it("partitionne les régions entre celles qui ont une page et les autres", () => {
+    const avec = geoReel.getRegionsPubliees().map((r) => r.slug);
+    const sans = geoReel.getRegionsSansPage().map((r) => r.slug);
+
+    expect(avec.filter((s) => sans.includes(s)), "une région dans les deux listes").toEqual([]);
+    // L'index publie les unes et cite les autres : ensemble, elles doivent couvrir
+    // toutes les régions ayant des annonces, sinon des annonces seraient orphelines.
+    expect([...avec, ...sans].sort()).toEqual(geoReel.getRegionsZones().map((r) => r.slug).sort());
+  });
+
+  it("aucune région publiée n'est sous le seuil de départements", () => {
+    for (const r of geoReel.getRegionsPubliees()) {
+      expect(r.departements.length, `${r.slug} publiée à tort`).toBeGreaterThanOrEqual(SEUIL_REGION);
+    }
+  });
+});
+
+describe("index des types — redistribution du maillage", () => {
+  it("recense chaque type présent dans les annonces, sans doublon", () => {
+    const types = geoReel.getTypes();
+    const slugs = types.map((t) => t.slug);
+
+    expect(new Set(slugs).size, "deux types partagent un slug").toBe(slugs.length);
+    expect(new Set(types.map((t) => t.nom))).toEqual(new Set(getMissions().map((m) => m.type)));
+  });
+
+  it("totalise exactement les annonces du jeu de données", () => {
+    // Un type manquant sur l'index rendrait ses offres inatteignables par cet axe.
+    expect(geoReel.getTypes().reduce((n, t) => n + t.stats.total, 0)).toBe(getMissions().length);
+  });
+});
+
+describe("URLs des index", () => {
+  it("préfixe chaque page de zone par l'URL de l'index de son palier", () => {
+    const { urls } = geoReel;
+    expect(urls.region("occitanie").startsWith(`${urls.regions()}/`)).toBe(true);
+    expect(urls.departement("gironde-33").startsWith(`${urls.departements()}/`)).toBe(true);
+    expect(urls.ville("toulouse").startsWith(`${urls.villes()}/`)).toBe(true);
+    expect(urls.type("remplacement").startsWith(`${urls.types()}/`)).toBe(true);
+  });
+
+  it("range les quatre index sous le hub", () => {
+    const { urls } = geoReel;
+    for (const index of [urls.regions(), urls.departements(), urls.villes(), urls.types()]) {
+      expect(index.startsWith(`${urls.hub()}/`)).toBe(true);
+    }
+  });
+});
