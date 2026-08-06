@@ -3,6 +3,8 @@ import { EyeIcon, SearchIcon, CalendarIcon, ShieldIcon } from "@/components/icon
 import SubscribeForm from "@/components/subscribe-form";
 import BentoCard from "@/components/bento-card";
 import HeroIllustration from "@/components/hero-illustration";
+import MissionsSection from "@/components/missions-section";
+import { getMissionsStats } from "@/lib/missions";
 
 /* ───────────────────────── Navbar ───────────────────────── */
 function Navbar() {
@@ -13,16 +15,21 @@ function Navbar() {
           <EyeIcon className="w-7 h-7" />
           {SITE_NAME}
         </a>
-        <span className="rounded-full bg-primary-50 px-3 py-1 text-xs font-medium text-primary-600 ring-1 ring-primary-200">
-          Bientôt disponible
-        </span>
+        <div className="flex items-center gap-4">
+          <a href="#missions" className="hidden text-sm font-medium text-gray-500 transition-colors hover:text-primary-700 sm:block">
+            Les missions
+          </a>
+          <span className="rounded-full bg-primary-50 px-3 py-1 text-xs font-medium text-primary-600 ring-1 ring-primary-200">
+            Bientôt disponible
+          </span>
+        </div>
       </div>
     </nav>
   );
 }
 
 /* ───────────────────── Hero Bento ────────────────────────── */
-function HeroBento() {
+function HeroBento({ total, departements }: { total: number; departements: number }) {
   return (
     <section className="relative overflow-hidden pt-32 pb-16 md:pt-40 md:pb-24">
       {/* Background blobs */}
@@ -44,13 +51,21 @@ function HeroBento() {
             </h1>
 
             <p className="mt-5 max-w-md text-base text-gray-500 animate-fade-in-up animation-delay-100">
-              Cabinets, cliniques, hôpitaux cherchent des orthoptistes.
-              Vous cherchez des missions. On fait le lien.
+              <strong className="font-semibold text-gray-700">{total} missions</strong> sont
+              ouvertes en ce moment dans {departements} départements. Inscrivez-vous pour être
+              parmi les premiers à y accéder.
             </p>
 
             <div className="mt-8 animate-fade-in-up animation-delay-200">
               <SubscribeForm />
             </div>
+
+            <a
+              href="#missions"
+              className="mt-4 inline-flex text-sm font-medium text-primary-700 underline-offset-4 hover:underline animate-fade-in-up animation-delay-300"
+            >
+              Voir les missions disponibles →
+            </a>
           </div>
 
           {/* ── Illustration cell (2 cols, top right) ── */}
@@ -71,8 +86,8 @@ function HeroBento() {
             <p className="text-xs text-gray-400 leading-tight">De croissance<br />en 10 ans</p>
           </BentoCard>
           <BentoCard className="flex items-center gap-4 py-5 px-6">
-            <p className="stat-value text-3xl font-bold text-accent-600">54%</p>
-            <p className="text-xs text-gray-400 leading-tight">Exercent<br />en libéral</p>
+            <p className="stat-value text-3xl font-bold text-accent-600">{total}</p>
+            <p className="text-xs text-gray-400 leading-tight">Missions<br />ouvertes</p>
           </BentoCard>
         </div>
       </div>
@@ -159,14 +174,15 @@ function BentoFeatures() {
 /* ──────────────────── Bottom CTA ────────────────────────── */
 function BottomCTA() {
   return (
-    <section className="relative overflow-hidden py-24 md:py-32 reveal">
+    <section id="inscription" className="relative scroll-mt-24 overflow-hidden py-24 md:py-32 reveal">
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-primary-50/80 to-white" />
       <div className="relative mx-auto max-w-2xl px-6 text-center">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Prêt à ne plus chercher vos missions à l&apos;aveugle ?
         </h2>
         <p className="mx-auto mt-4 max-w-md text-gray-500">
-          Laissez-nous votre email. On vous prévient dès que c&apos;est prêt.
+          Laissez-nous votre email : vous recevrez les missions de votre secteur — et les
+          coordonnées des recruteurs — dès l&apos;ouverture.
         </p>
         <div className="mt-10 flex justify-center">
           <SubscribeForm />
@@ -195,11 +211,14 @@ function Footer() {
 
 /* ───────────────────────── Page ─────────────────────────── */
 export default function Home() {
+  const stats = getMissionsStats();
+
   return (
     <>
       <Navbar />
       <main>
-        <HeroBento />
+        <HeroBento total={stats.total} departements={stats.departements} />
+        <MissionsSection />
         <BentoFeatures />
         <BottomCTA />
       </main>

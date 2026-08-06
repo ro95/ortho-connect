@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "scrape": "node scripts/scrape-missions.mjs",
+    "model": "node scripts/business-model.mjs",
+    "pricing": "node scripts/pricing-grid.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.104.0",

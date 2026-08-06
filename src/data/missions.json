@@ -1,0 +1,4026 @@
+{
+  "scrapedAt": "2026-08-05T10:57:59.157Z",
+  "total": 293,
+  "missions": [
+    {
+      "id": "2026-08-02-fort-de-france-0",
+      "date": "2026-08-02",
+      "ville": "Fort de France",
+      "departement": "Martinique",
+      "codeDept": "972",
+      "type": "Remplacement",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Neurovisuel",
+        "Basse vision",
+        "Vertiges / vestibulaire"
+      ],
+      "resume": "Orthoptiste libérale à Fort de France (Martinique - 972) cherche un(e) remplaçant(e) afin d'assurer la fin d'un congé maternité idéalement du 1er septembre 2026 au 11 novembre 2026.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-08-02-lignan-de-bordeaux-1",
+      "date": "2026-08-02",
+      "ville": "Lignan de Bordeaux",
+      "departement": "Gironde",
+      "codeDept": "33",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction",
+        "Rééducation"
+      ],
+      "resume": "Orthoptiste libéral à Lignan de Bordeaux (Gironde - 33) cherche un(e) collaborateur(rice) dans un cabinet au sein d'un pôle santé. Prescripteurs à proximité.",
+      "contact": "telephone"
+    },
+    {
+      "id": "2026-08-02-toulouse-2",
+      "date": "2026-08-02",
+      "ville": "Toulouse",
+      "departement": "Haute Garonne",
+      "codeDept": "31",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Neurovisuel",
+        "Bébé vision",
+        "Dépistage rétinopathie"
+      ],
+      "resume": "Orthoptiste libérale à Saint Lys, proche de Toulouse (Haute Garonne - 31), cherche un(e) collaborateur(rice) 2 jours par semaine (mercredi et vendredi) dans un cabinet avec ostéopathe et pod…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-08-02-ille-et-vilaine-3",
+      "date": "2026-08-02",
+      "ville": null,
+      "departement": "Ille-et-Vilaine",
+      "codeDept": "35",
+      "type": "Collaboration",
+      "structure": "Maison de santé",
+      "specialites": [
+        "Neurovisuel",
+        "Basse vision",
+        "Bébé vision"
+      ],
+      "resume": "Ille-et-Vilaine (35), à 15 minutes au nord de Rennes (Montreuil le Gast), au sein d'une maison médicale récente (nombreux médecins généralistes, orthophonistes,...) : A partir de septembre 2…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-08-02-villeurbanne-4",
+      "date": "2026-08-02",
+      "ville": "Villeurbanne",
+      "departement": "Rhône",
+      "codeDept": "69",
+      "type": "Remplacement",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Neurovisuel",
+        "Basse vision",
+        "Strabologie"
+      ],
+      "resume": "Orthoptiste libérale à Villeurbanne (Rhône - 69), quartier Charpennes, recherche un(e) remplaçant(e) du 01/10/2026 au 30/06/2027.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-08-02-lamorlaye-5",
+      "date": "2026-08-02",
+      "ville": "Lamorlaye",
+      "departement": "Oise",
+      "codeDept": "60",
+      "type": "Remplacement",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Neurovisuel",
+        "Basse vision",
+        "Strabologie"
+      ],
+      "resume": "Orthoptiste libérale à Lamorlaye (Oise - 60), à la limite du Val-d’Oise, recherche un(e) remplaçant(e) à temps plein à partir du mois d’octobre, avec perspective de collaboration par la suit…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-08-02-saint-jory-6",
+      "date": "2026-08-02",
+      "ville": "Saint-Jory",
+      "departement": "Haute Garonne",
+      "codeDept": "31",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Neurovisuel",
+        "Strabologie"
+      ],
+      "resume": "Orthoptiste libérale à Saint-Jory (Haute Garonne - 31) recherche un(e) collaborateur(rice) à partir du mois de novembre, pour 1 à 3 jours par semaine, avec une organisation flexible.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-08-02-pavilly-7",
+      "date": "2026-08-02",
+      "ville": "Pavilly",
+      "departement": "Seine Maritime",
+      "codeDept": "76",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Strabologie",
+        "Réfraction",
+        "Champ visuel"
+      ],
+      "resume": "Orthoptiste libérale à Pavilly (Seine Maritime - 76) recherche un(e) collaborateur(rice) à partir de septembre 2026 pour deux à trois jours par semaine (dont le mercredi après-midi de préfér…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-08-02-nimes-8",
+      "date": "2026-08-02",
+      "ville": "Nîmes",
+      "departement": "Gard",
+      "codeDept": "30",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Cabinet d'orthoptie à Manduel, à côté de Nîmes (Gard - 30) recherche un(e) collaborateur(rice) pour le lundi et/ou vendredi.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-08-02-herlies-9",
+      "date": "2026-08-02",
+      "ville": "Herlies",
+      "departement": "Nord",
+      "codeDept": "59",
+      "type": "Remplacement",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Neurovisuel",
+        "Bébé vision",
+        "Vertiges / vestibulaire"
+      ],
+      "resume": "Orthoptiste libérale recherche un(e) remplaçant(e) dans le cadre d’un congé maternité pour une durée minimale de 6 mois, avec possibilité de collaboration par la suite, à partir de septembre…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-08-02-saint-mande-10",
+      "date": "2026-08-02",
+      "ville": "Saint-Mandé",
+      "departement": "Val de Marne",
+      "codeDept": "94",
+      "type": "Salariat",
+      "structure": null,
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Le groupe Accès Vision recherche un(e) orthoptiste en CDI, à temps partiel (lundis et vendredis ou vendredis uniquement) pour son centre de Saint-Mandé (Val de Marne - 94).",
+      "contact": "email"
+    },
+    {
+      "id": "2026-08-02-flers-11",
+      "date": "2026-08-02",
+      "ville": "Flers",
+      "departement": "Orne",
+      "codeDept": "61",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction",
+        "Dépistage rétinopathie"
+      ],
+      "resume": "Vous êtes orthoptiste et souhaitez exercer en autonomie complète tout en étant accompagné(e) ? Dans le cadre d’un projet d’ouverture d’un cabinet Téo à Flers (Orne - 61), nous recrutons un(e…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-08-02-puy-en-velay-12",
+      "date": "2026-08-02",
+      "ville": "Puy en Velay",
+      "departement": "Haute Loire",
+      "codeDept": "43",
+      "type": "Collaboration",
+      "structure": "Ophtalmologiste",
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Notre centre d’ophtalmologie Pôle Vision, situé au Puy en Velay (Haute Loire – 43), recrute un(e) orthoptiste en CDI à temps plein afin de renforcer son équipe.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-08-02-decines-charpieu-13",
+      "date": "2026-08-02",
+      "ville": "Décines-Charpieu",
+      "departement": "Rhône",
+      "codeDept": "69",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Notre cabinet d’ophtalmologie situé à Décines-Charpieu (Rhône – 69) recherche un(e) orthoptiste pour assurer les consultations du samedi à partir de septembre 2026 (vacations libérales ou co…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-08-02-var-14",
+      "date": "2026-08-02",
+      "ville": null,
+      "departement": "Var",
+      "codeDept": "83",
+      "type": "Salariat",
+      "structure": "Centre / clinique",
+      "specialites": [
+        "Strabologie"
+      ],
+      "resume": "Le centre ophtalmologique Klarity Toulon (Var - 83) recherche actuellement un(e) orthoptiste en CDI temps plein/temps partiel afin de compléter son équipe.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-08-02-soissons-15",
+      "date": "2026-08-02",
+      "ville": "Soissons",
+      "departement": "Aisne",
+      "codeDept": "02",
+      "type": "Salariat",
+      "structure": null,
+      "specialites": [],
+      "resume": "Le Pôle médical ophtalmologique de Soissons (Aisne - 02) se développe. Nous recherchons donc un(e) orthoptiste pour compléter notre équipe jeune et dynamique, dès le mois de septembre 2026.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-08-02-compiegne-16",
+      "date": "2026-08-02",
+      "ville": "Compiègne",
+      "departement": "Oise",
+      "codeDept": "60",
+      "type": "Salariat",
+      "structure": null,
+      "specialites": [],
+      "resume": "Le pôle médical ophtalmologique de Compiègne (Oise - 60) se développe. Nous recherchons donc un(e) orthoptiste pour compléter notre équipe jeune et dynamique, dès le mois de septembre 2026.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-08-02-chu-de-la-guadeloupe-17",
+      "date": "2026-08-02",
+      "ville": null,
+      "departement": "CHU de la Guadeloupe",
+      "codeDept": "971",
+      "type": "Mission",
+      "structure": "Hôpital",
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Suite à l'ouverture de 2 nouveaux postes, le CHU de la Guadeloupe (971) recherche 2 orthoptistes en temps plein dès que possible.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-08-02-sedan-18",
+      "date": "2026-08-02",
+      "ville": "Sedan",
+      "departement": "Ardennes",
+      "codeDept": "08",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Le COSQ, cabinet ophtalmologique de Sedan (Ardennes - 08), recrute un(e) orthoptiste. Nous proposons un poste salarié à temps plein, temps partiel avec une organisation possible sur 4 ou 5 j…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-08-02-saint-jean-de-luz-19",
+      "date": "2026-08-02",
+      "ville": "Saint Jean de Luz",
+      "departement": "Pyrénées Atlantiques",
+      "codeDept": "64",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Le cabinet Heliosvision à Saint Jean de Luz (Pyrénées Atlantiques - 64) recrute un(e) orthoptiste.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-08-02-saint-martin-du-touch-20",
+      "date": "2026-08-02",
+      "ville": "Saint Martin du Touch",
+      "departement": "Haute Garonne",
+      "codeDept": "31",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Cabinet d'ophtalmologie neuf à Saint Martin du Touch (Haute Garonne - 31) recherche un(e) orthoptiste en CDI à partir de fin septembre 2026.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-08-02-beausoleil-21",
+      "date": "2026-08-02",
+      "ville": "Beausoleil",
+      "departement": "Alpes Maritimes",
+      "codeDept": "06",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Cabinet d’ophtalmologie à Beausoleil (Alpes Maritimes - 06) recherche un(e) orthoptiste salarié(e) en CDI à temps plein (35h).",
+      "contact": "email"
+    },
+    {
+      "id": "2026-08-02-mee-sur-seine-22",
+      "date": "2026-08-02",
+      "ville": "Mée sur Seine",
+      "departement": "Seine et Marne",
+      "codeDept": "77",
+      "type": "Mission",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction",
+        "Dépistage rétinopathie"
+      ],
+      "resume": "Cabinet d’ophtalmologie au Mée sur Seine (Seine et Marne - 77) recrute un(e) orthoptiste pour un temps partiel 4 jours par semaine à partir de septembre 2026.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-08-02-sete-23",
+      "date": "2026-08-02",
+      "ville": "Sète",
+      "departement": "Hérault",
+      "codeDept": "34",
+      "type": "Remplacement",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Cabinet d’ophtalmologie à Sète (Hérault - 34) recherche un(e) orthoptiste pour un temps plein 35h dans le cadre d'un remplacement de congé maternité.",
+      "contact": "telephone"
+    },
+    {
+      "id": "2026-08-02-issoire-24",
+      "date": "2026-08-02",
+      "ville": "Issoire",
+      "departement": "Puy de Dôme",
+      "codeDept": "63",
+      "type": "Salariat",
+      "structure": null,
+      "specialites": [
+        "Champ visuel"
+      ],
+      "resume": "Centre d’ophtalmologie à Issoire (Puy de Dôme - 63) recherche un(e) orthoptiste salarié(e) en CDI à temps plein (35 heures). Poste disponible en fin d'année.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-08-02-dijon-25",
+      "date": "2026-08-02",
+      "ville": "Dijon",
+      "departement": "Côte d'Or",
+      "codeDept": "21",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Le cabinet d’ophtalmologie Inovu à Dijon (Côte d'Or - 21) et Chalon sur Saône (Saône et Loire – 71) recrute un(e) orthoptiste pour nous rejoindre à temps complet ou à temps partiel en CDI.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-08-02-l-isle-jourdain-27",
+      "date": "2026-08-02",
+      "ville": "L'Isle Jourdain",
+      "departement": "Gers",
+      "codeDept": "32",
+      "type": "Mission",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Cabinet d'ophtalmologie à L'Isle Jourdain (Gers - 32) recherche un(e) orthoptiste temps plein pour compléter son équipe. Poste à pourvoir début septembre.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-08-02-laval-28",
+      "date": "2026-08-02",
+      "ville": "Laval",
+      "departement": "Mayenne",
+      "codeDept": "53",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction",
+        "Champ visuel"
+      ],
+      "resume": "Cabinet d’ophtalmologie à Laval (Mayenne – 53) recherche un(e) orthoptiste (pas d'optométriste) à partir du 1 septembre, de préférence pour un mi-temps (un temps plein peut être discuté).",
+      "contact": "email"
+    },
+    {
+      "id": "2026-08-02-toulouse-29",
+      "date": "2026-08-02",
+      "ville": "Toulouse",
+      "departement": "Haute Garonne",
+      "codeDept": "31",
+      "type": "Salariat",
+      "structure": "Centre / clinique",
+      "specialites": [],
+      "resume": "Centre ophtalmologique à Toulouse (Haute Garonne - 31) recherche un(e) orthoptiste à temps plein ou temps partiel, en CDI pour intégrer une équipe jeune et dynamique.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-08-02-rueil-malmaison-30",
+      "date": "2026-08-02",
+      "ville": "Rueil Malmaison",
+      "departement": "Hauts de Seine",
+      "codeDept": "92",
+      "type": "Mission",
+      "structure": "Centre / clinique",
+      "specialites": [],
+      "resume": "Le centre médical Clinimed à Rueil Malmaison (Hauts de Seine - 92) recrute un(e) orthoptiste pour accompagner les pré consultations en ophtalmologie.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-08-02-montreuil-31",
+      "date": "2026-08-02",
+      "ville": "Montreuil",
+      "departement": "Seine Saint Denis",
+      "codeDept": "93",
+      "type": "Stage",
+      "structure": "Hôpital",
+      "specialites": [
+        "Strabologie",
+        "Réfraction",
+        "Rééducation"
+      ],
+      "resume": "Le Centre Hospitalier Intercommunal André Grégoire de Montreuil (Seine Saint Denis - 93) recherche un(e) orthoptiste à temps partiel 50% dès septembre.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-08-02-toulouse-32",
+      "date": "2026-08-02",
+      "ville": "Toulouse",
+      "departement": "Haute Garonne",
+      "codeDept": "31",
+      "type": "Salariat",
+      "structure": "Centre / clinique",
+      "specialites": [
+        "Champ visuel"
+      ],
+      "resume": "Centre ophtalmologique dans le centre commercial Gramont à Toulouse (Haute Garonne - 31) recherche des orthoptistes pour parfaire son équipe médicale.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-08-02-carcassonne-33",
+      "date": "2026-08-02",
+      "ville": "Carcassonne",
+      "departement": "Aude",
+      "codeDept": "11",
+      "type": "Collaboration",
+      "structure": "Centre / clinique",
+      "specialites": [
+        "Champ visuel"
+      ],
+      "resume": "Centre ophtalmologique à Carcassonne (Aude - 11) recherche des orthoptistes pour parfaire son équipe médicale.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-08-02-toulouse-34",
+      "date": "2026-08-02",
+      "ville": "Toulouse",
+      "departement": "Haute Garonne",
+      "codeDept": "31",
+      "type": "Salariat",
+      "structure": "Centre / clinique",
+      "specialites": [
+        "Champ visuel"
+      ],
+      "resume": "Centre ophtalmologique à Toulouse (Haute Garonne - 31) recherche des orthoptistes pour parfaire son équipe médicale.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-08-02-colomiers-35",
+      "date": "2026-08-02",
+      "ville": "Colomiers",
+      "departement": "Haute Garonne",
+      "codeDept": "31",
+      "type": "Salariat",
+      "structure": "Centre / clinique",
+      "specialites": [
+        "Champ visuel"
+      ],
+      "resume": "Centre ophtalmologique à Colomiers (Haute Garonne - 31) recherche des orthoptistes pour parfaire son équipe médicale.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-26-domloup-36",
+      "date": "2026-07-26",
+      "ville": "Domloup",
+      "departement": "Ille et Vilaine",
+      "codeDept": "35",
+      "type": "Remplacement",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Cabinet d'orthoptie à Domloup (Ille et Vilaine - 35) recherche un(e) remplaçant(e) pour congé maternité à partir d'octobre 2026 jusqu'à fin Janvier 2027.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-26-pontarlier-37",
+      "date": "2026-07-26",
+      "ville": "Pontarlier",
+      "departement": "Doubs",
+      "codeDept": "25",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Strabologie",
+        "Rééducation"
+      ],
+      "resume": "Orthoptiste libérale à Pontarlier (Doubs-25) recherche un(e) collaborateur(rice) pour 2 à 3 jours / semaine.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-26-sud-de-la-reunion-38",
+      "date": "2026-07-26",
+      "ville": null,
+      "departement": "Sud de La Réunion",
+      "codeDept": "974",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Rééducation"
+      ],
+      "resume": "Orthoptistes libérales dans le Sud de La Réunion (974) recherchent un(e) collaborateur(rice) pour une collaboration à long terme.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-26-narbonne-39",
+      "date": "2026-07-26",
+      "ville": "Narbonne",
+      "departement": "Aude",
+      "codeDept": "11",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Neurovisuel",
+        "Basse vision",
+        "Strabologie"
+      ],
+      "resume": "Orthoptiste libérale installée à Narbonne (Aude - 11) recherche un(e) collaborateur(rice) à partir de septembre 2026 pour développer une activité libérale les jeudis, vendredis et samedis.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-26-la-terrasse-40",
+      "date": "2026-07-26",
+      "ville": "La Terrasse",
+      "departement": "Isère",
+      "codeDept": "38",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Orthoptiste libérale située à La Terrasse (Isère - 38), entre Grenoble et Chambéry, recherche un(e) collaborateur(rice^) à partir de septembre 2026 pour deux jours par semaine : mercredi et…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-26-moulins-41",
+      "date": "2026-07-26",
+      "ville": "Moulins",
+      "departement": "Allier",
+      "codeDept": "03",
+      "type": "Salariat",
+      "structure": null,
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Le groupe Accès Vision recherche un(e) orthoptiste en CDI, à temps plein ou temps partiel pour son centre de Moulins (Allier - 03).Rejoignez une équipe dynamique au sein d’un environnement d…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-26-eure-42",
+      "date": "2026-07-26",
+      "ville": null,
+      "departement": "Eure",
+      "codeDept": "27",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction",
+        "Champ visuel"
+      ],
+      "resume": "Le Pôle Ophtalmologique de Verneuil d'Avre et d'Iton - POV27 (Eure - 27), à 1h de Paris en train (Montparnasse) et un peu plus d'1h en voiture de Rouen et du Mans, recherche un(e) orthoptist…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-26-metz-43",
+      "date": "2026-07-26",
+      "ville": "Metz",
+      "departement": "Moselle",
+      "codeDept": "57",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Cabinet d’ophtalmologie en secteur 1 à Metz (Moselle - 57) recherche 4 orthoptistes en CDI à temps plein (39h/semaine) afin de renforcer son équipe.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-26-puteaux-44",
+      "date": "2026-07-26",
+      "ville": "Puteaux",
+      "departement": "Hauts de Seine",
+      "codeDept": "92",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction",
+        "Rééducation"
+      ],
+      "resume": "Visalya, centre ophtalmologique de référence situé au cœur de La Défense, Tour Kupka B à Puteaux (Hauts de Seine - 92), recherche un(e) orthoptiste CDI temps plein ou temps partiel à partir…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-26-chalon-sur-saone-45",
+      "date": "2026-07-26",
+      "ville": "Chalon-sur-Saône",
+      "departement": "Saône-et-Loire",
+      "codeDept": "71",
+      "type": "Stage",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Strabologie",
+        "Rééducation"
+      ],
+      "resume": "Cabinet d'ophtalmologie à Chalon-sur-Saône (Saône-et-Loire – 71) recherche un(e) orthoptiste pour un salariat à temps plein à partir de fin septembre 2026.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-26-rhone-46",
+      "date": "2026-07-26",
+      "ville": null,
+      "departement": "Rhône",
+      "codeDept": "69",
+      "type": "Collaboration",
+      "structure": "Centre / clinique",
+      "specialites": [
+        "Réfraction",
+        "Champ visuel"
+      ],
+      "resume": "Le centre ophtalmologique de la Colline à Caluire-et-Cuire (Rhône - 69) recherche un(e) orthoptiste en CDI pour rejoindre une équipe où l’humain et l’excellence médicale vont de pair.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-26-challans-47",
+      "date": "2026-07-26",
+      "ville": "Challans",
+      "departement": "Vendée",
+      "codeDept": "85",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction",
+        "Dépistage rétinopathie"
+      ],
+      "resume": "Le Centre Hospitalier Loire Vendée Océan, CHLVO, de Challans (Vendée - 85) recherche un(e) orthoptiste en CDI pour compléter son équipe à partir du 17 Aout 2026.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-26-direction-de-la-petite-enfance-de-la-ville-de-lyon-49",
+      "date": "2026-07-26",
+      "ville": "Direction de la Petite Enfance de la Ville de Lyon",
+      "departement": "Rhône",
+      "codeDept": "69",
+      "type": "Stage",
+      "structure": null,
+      "specialites": [],
+      "resume": "La Direction de la Petite Enfance de la Ville de Lyon (Rhône - 69) cherche un(e) orthoptiste sur un contrat de 7h hebdomadaire (2 matinées), afin d’effectuer des dépistages visuels dans ses…",
+      "contact": "autre"
+    },
+    {
+      "id": "2026-07-26-bouscat-50",
+      "date": "2026-07-26",
+      "ville": "Bouscat",
+      "departement": "Gironde",
+      "codeDept": "33",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Strabologie",
+        "Réfraction"
+      ],
+      "resume": "Cabinet d’ophtalmologie au Bouscat (Gironde - 33), recherche un(e) orthoptiste salarié(e) en CDI 10h/semaine sur 1 jour, suite à l’arrivée d’un nouvel ophtalmologue.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-26-rennes-51",
+      "date": "2026-07-26",
+      "ville": "Rennes",
+      "departement": "Ille et Vilaine",
+      "codeDept": "35",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Ophtalmologue à Rennes (Ille et Vilaine - 35) recherche un(e) orthoptiste en CDI temps partiel pour de la pré consultation : 24h hebdomadaires sur 3 jours (lundis, mardis et vendredis), dès…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-26-marseille-52",
+      "date": "2026-07-26",
+      "ville": "Marseille",
+      "departement": "Bouches du Rhône",
+      "codeDept": "13",
+      "type": "Salariat",
+      "structure": "Centre / clinique",
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Centre ophtalmologique Vision Sud 2 dans le 8ème arrondissement de Marseille (Bouches du Rhône - 13) recrute un(e) orthoptiste en CDI 24 h par semaine.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-26-rhone-53",
+      "date": "2026-07-26",
+      "ville": null,
+      "departement": "Rhône",
+      "codeDept": "69",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Ovision Limas (Rhône - 69), cabinet d'ophtalmologie équipé de matériel dernière génération, recherche un(e) orthoptiste pour un poste à pourvoir en CDI dès que possible.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-26-verdun-54",
+      "date": "2026-07-26",
+      "ville": "Verdun",
+      "departement": "Meuse",
+      "codeDept": "55",
+      "type": "Mission",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Dans le cadre de l’ouverture prochaine de nos cabinets de Verdun (Meuse - 55) et Sedan (Ardennes - 08), nous recherchons des orthoptistes souhaitant rejoindre une équipe investie, dans un en…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-26-seine-saint-denis-55",
+      "date": "2026-07-26",
+      "ville": null,
+      "departement": "Seine Saint Denis",
+      "codeDept": "93",
+      "type": "Salariat",
+      "structure": null,
+      "specialites": [],
+      "resume": "Effisanté Saint Ouen (Seine Saint Denis - 93), à la limite du 18ème arrondissement de Paris, centre spécialisé en ophtalmologie, recherche un(e) orthoptiste en CDI à partir de septembre 2026…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-26-champigny-56",
+      "date": "2026-07-26",
+      "ville": "Champigny",
+      "departement": "Val de Marne",
+      "codeDept": "94",
+      "type": "Collaboration",
+      "structure": "Centre / clinique",
+      "specialites": [],
+      "resume": "Centre de santé à Champigny (Val de Marne - 94) recrute un(e) orthoptiste en CDI à temps plein. Vous réalisez en toute autonomie les examens de vue et imagerie en collaboration directe avec…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-26-ploemeur-57",
+      "date": "2026-07-26",
+      "ville": "Ploemeur",
+      "departement": "Morbihan",
+      "codeDept": "56",
+      "type": "Salariat",
+      "structure": null,
+      "specialites": [],
+      "resume": "Le centre de Kerpape à Ploemeur (Morbihan - 56) recherche un(e) orthoptiste en CDD longue durée (toute l'année scolaire) à 0.30 ETP (environ 11h) dans le secteur du handicap pour de l'évalua…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-26-maine-et-loire-58",
+      "date": "2026-07-26",
+      "ville": null,
+      "departement": "Maine et Loire",
+      "codeDept": "49",
+      "type": "Remplacement",
+      "structure": "Hôpital",
+      "specialites": [
+        "Strabologie"
+      ],
+      "resume": "Le CHU d’Angers (Maine et Loire - 49) recherche un(e) orthoptiste à temps plein ou temps partiel, à pourvoir immédiatement dans le cadre d’un remplacement d’un congé de Maternité.",
+      "contact": "autre"
+    },
+    {
+      "id": "2026-07-26-nimes-59",
+      "date": "2026-07-26",
+      "ville": "Nîmes",
+      "departement": "Gard",
+      "codeDept": "30",
+      "type": "Remplacement",
+      "structure": "Centre / clinique",
+      "specialites": [
+        "Rééducation"
+      ],
+      "resume": "L'Institut ARAMAV à Nîmes (Gard - 30) recherche un(e) orthoptiste en CDD à temps plein 35h/semaine.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-26-arles-60",
+      "date": "2026-07-26",
+      "ville": "Arles",
+      "departement": "Bouches du Rhône",
+      "codeDept": "13",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction",
+        "Champ visuel"
+      ],
+      "resume": "Nous sommes à la recherche d'un(e) orthoptiste pour rejoindre notre équipe au sein d'un cabinet médical moderne situé à Arles (Bouches du Rhône - 13).",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-26-loire-61",
+      "date": "2026-07-26",
+      "ville": "Loire",
+      "departement": "Loire Atlantique",
+      "codeDept": "44",
+      "type": "Salariat",
+      "structure": "Ophtalmologiste",
+      "specialites": [],
+      "resume": "Venez rejoindre l’équipe d’Optimum Visio ! Nous recherchons un(e) orthoptiste à Nantes / Saint Sébastien sur Loire (Loire Atlantique - 44).",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-26-reunion-62",
+      "date": "2026-07-26",
+      "ville": null,
+      "departement": "Réunion",
+      "codeDept": "974",
+      "type": "Salariat",
+      "structure": null,
+      "specialites": [],
+      "resume": "Les centres Vision Claire sur l'île de la Réunion (974) recherchent des orthoptistes diplômé(e)s pour les centres de Saint-Denis et de Saint-Pierre.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-26-grenoble-63",
+      "date": "2026-07-26",
+      "ville": "Grenoble",
+      "departement": "Isère",
+      "codeDept": "38",
+      "type": "Collaboration",
+      "structure": "Hôpital",
+      "specialites": [],
+      "resume": "Rejoignez un projet de recherche innovant sur la DMLA ! Le CHU de Grenoble (Isère - 38) propose un poste d’orthoptiste à 60% à orientation recherche, au sein d’une équipe dynamique et engagé…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-26-seine-maritime-64",
+      "date": "2026-07-26",
+      "ville": null,
+      "departement": "Seine Maritime",
+      "codeDept": "76",
+      "type": "Salariat",
+      "structure": "Centre / clinique",
+      "specialites": [
+        "Strabologie"
+      ],
+      "resume": "Le centre ophtalmologique Klarity Le Havre (Seine Maritime - 76) recherche actuellement un(e) orthoptiste en CDI temps plein/temps partiel afin de compléter son équipe.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-26-saint-brevin-les-pins-65",
+      "date": "2026-07-26",
+      "ville": "Saint-Brévin-Les-Pins",
+      "departement": "Loire Atlantique",
+      "codeDept": "44",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction",
+        "Champ visuel"
+      ],
+      "resume": "Centre ophtalmologique situé sur la côte atlantique, nous disposons de 5 cabinets de consultation et recherchons un(e) orthoptiste en CDI temps plein (36h hebdos sur 4 jours du lundi au jeud…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-26-nantes-66",
+      "date": "2026-07-26",
+      "ville": "Nantes",
+      "departement": "Loire Atlantique",
+      "codeDept": "44",
+      "type": "Collaboration",
+      "structure": null,
+      "specialites": [],
+      "resume": "L'Institut Ophtalmologie de l'Ouest à Nantes (Loire Atlantique - 44) recherche un(e) orthoptiste en CDI à compter de juillet 2026 à temps partiel ou temps complet.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-26-reze-67",
+      "date": "2026-07-26",
+      "ville": "Rézé",
+      "departement": "Loire Atlantique",
+      "codeDept": "44",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Ophtalliance recherche un(e) orthoptiste pour son cabinet médical situé à Rézé (Loire Atlantique - 44).",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-26-saint-etienne-68",
+      "date": "2026-07-26",
+      "ville": "Saint Etienne",
+      "departement": "Loire",
+      "codeDept": "42",
+      "type": "Salariat",
+      "structure": "Centre / clinique",
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Centre ophtalmologique Chavanelle à Saint Etienne (Loire - 42) recherche un(e) orthoptiste en complément d’une équipe de 5 (orthoptistes, infirmière), pour un CDI temps plein à pourvoir dès…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-26-argenteuil-69",
+      "date": "2026-07-26",
+      "ville": "Argenteuil",
+      "departement": "Val d'Oise",
+      "codeDept": "95",
+      "type": "Salariat",
+      "structure": "Centre / clinique",
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Centre ophtalmologique à Argenteuil (Val d'Oise - 95) recherche un(e) orthoptiste en CDI. Poste à pourvoir en septembre 2026.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-26-rouen-70",
+      "date": "2026-07-26",
+      "ville": "Rouen",
+      "departement": "Seine Maritime",
+      "codeDept": "76",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Champ visuel"
+      ],
+      "resume": "Cabinet d'ophtalmologie à Mont Saint Aignan proche de Rouen (Seine Maritime - 76) recherche un(e) orthoptiste pour un CDD de fin aout à fin décembre 15 à 20 heures par semaine, répartis en 1…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-26-tours-71",
+      "date": "2026-07-26",
+      "ville": "Tours",
+      "departement": "Indre et Loire",
+      "codeDept": "37",
+      "type": "Mission",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Champ visuel"
+      ],
+      "resume": "Cabinet d'ophtalmologie moderne et bien équipé à Tours (Indre et Loire - 37) propose un poste d'orthoptiste.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-26-lieusaint-72",
+      "date": "2026-07-26",
+      "ville": "Lieusaint",
+      "departement": "Seine et Marne",
+      "codeDept": "77",
+      "type": "Salariat",
+      "structure": "Centre / clinique",
+      "specialites": [
+        "Réfraction",
+        "Dépistage rétinopathie"
+      ],
+      "resume": "Le Centre Ophtalmologique Sénart situé dans le Pôle Médical de Sénart à Lieusaint (Seine et Marne - 77) recrute. Nous sommes 3 ophtalmologistes présents chaque jour alternativement.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-19-gretz-armainvilliers-73",
+      "date": "2026-07-19",
+      "ville": "Gretz Armainvilliers",
+      "departement": "Seine et Marne",
+      "codeDept": "77",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Neurovisuel",
+        "Strabologie"
+      ],
+      "resume": "Orthoptiste libérale à Gretz Armainvilliers (Seine et Marne - 77), sur le RER E, recherche un(e) collaborateur(rice) pour 1 jour par semaine (lundi, mardi ou jeudi / demi journée supplémenta…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-19-pyrenees-orientales-74",
+      "date": "2026-07-19",
+      "ville": null,
+      "departement": "Pyrénées Orientales",
+      "codeDept": "66",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Basse vision",
+        "Strabologie"
+      ],
+      "resume": "Dans le cadre du développement de son activité, orthoptiste libérale Saint-Cyprien Plage (Pyrénées Orientales - 66) recherche un(e) orthoptiste collaborateur(rice) pour rejoindre un cabinet…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-19-seine-saint-denis-75",
+      "date": "2026-07-19",
+      "ville": null,
+      "departement": "Seine Saint Denis",
+      "codeDept": "93",
+      "type": "Remplacement",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Recherche un(e) remplaçant(e) pour congés maladie de 2 mois de ma collaboratrice. Entre octobre et décembre, les lundis, jeudis et possiblement les vendredis.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-19-montoison-76",
+      "date": "2026-07-19",
+      "ville": "Montoison",
+      "departement": "Drôme",
+      "codeDept": "26",
+      "type": "Remplacement",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Orthoptiste libérale à Montoison (Drôme - 26), à environ 15 minutes de Valence, propose un remplacement avec logement pris en charge, de novembre 2026 ou janvier 2027 jusqu'à début mai 2027.…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-19-oise-77",
+      "date": "2026-07-19",
+      "ville": null,
+      "departement": "Oise",
+      "codeDept": "60",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Neurovisuel",
+        "Basse vision",
+        "Strabologie"
+      ],
+      "resume": "Orthoptiste libérale à Senlis et Verneuil en Halatte (Oise - 60) propose un poste en collaboration à temps plein / temps partiel.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-19-charente-maritime-78",
+      "date": "2026-07-19",
+      "ville": null,
+      "departement": "Charente maritime",
+      "codeDept": "17",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Neurovisuel",
+        "Basse vision",
+        "Strabologie"
+      ],
+      "resume": "Orthoptiste libérale à Royan et Arvert (Charente maritime - 17) recherche un(e) collaborateur(rice) suite à la cessation d'activité d'une de nos collègues.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-19-rennes-79",
+      "date": "2026-07-19",
+      "ville": "Rennes",
+      "departement": "Ile et Vilaine",
+      "codeDept": "35",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Cabinet d'orthoptie à Rennes (Ile et Vilaine - 35) recherche un(e) collaborateur(rice) pour le vendredi et/ou samedi.",
+      "contact": "telephone"
+    },
+    {
+      "id": "2026-07-19-avignon-80",
+      "date": "2026-07-19",
+      "ville": "Avignon",
+      "departement": "Vaucluse",
+      "codeDept": "84",
+      "type": "Remplacement",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Orthoptiste libérale à Avignon (Vaucluse - 84) cherche un(e) remplaçant(e) en vue d’une collaboration. Conditions à définir ensemble.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-19-perreux-sur-marne-81",
+      "date": "2026-07-19",
+      "ville": "Perreux sur Marne",
+      "departement": "Val de Marne",
+      "codeDept": "94",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Orthoptiste libérale au Perreux sur Marne (Val de Marne - 94) recherche un(e) collaborateur(rice) à partir de fin juillet 2026 les mercredis et jeudis.",
+      "contact": "telephone"
+    },
+    {
+      "id": "2026-07-19-haute-savoie-82",
+      "date": "2026-07-19",
+      "ville": null,
+      "departement": "Haute Savoie",
+      "codeDept": "74",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Basse vision",
+        "Bébé vision",
+        "Strabologie"
+      ],
+      "resume": "Orthoptiste libérale proche d'Annecy (Haute Savoie - 74), au sein d'un pôle de santé, recherche un(e) collaborateur(rice) à partir de septembre.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-19-voiron-83",
+      "date": "2026-07-19",
+      "ville": "Voiron",
+      "departement": "Isère",
+      "codeDept": "38",
+      "type": "Remplacement",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Strabologie",
+        "Vertiges / vestibulaire",
+        "Réfraction"
+      ],
+      "resume": "Recherche un(e) orthoptiste pour un remplacement de début janvier à début juin 2027 environ, entre 3 et 5 jours par semaine selon possibilités.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-19-horbourg-wihr-84",
+      "date": "2026-07-19",
+      "ville": "Horbourg Wihr",
+      "departement": "Haut Rhin",
+      "codeDept": "68",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Centre d’ophtalmologie à Horbourg Wihr (Haut Rhin - 68), à 5 minutes de Colmar, recherche un(e) orthoptiste pour CDI, temps plein ou partiel, pour pré consultation et examens complémentaires…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-19-labege-85",
+      "date": "2026-07-19",
+      "ville": "Labège",
+      "departement": "Haute Garonne",
+      "codeDept": "31",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Cabinet d'ophtalmologie à Labège (Haute Garonne - 31) recherche un(e) orthoptiste salarié(e) pour une collaboration de 2 à 3 jours par semaine : Lundi, Mercredi et vendredi, à partir du 24 a…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-19-eaubonne-86",
+      "date": "2026-07-19",
+      "ville": "Eaubonne",
+      "departement": "Val d'Oise",
+      "codeDept": "95",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Dans le cadre de son développement, le cabinet IOVO à Eaubonne (Val d'Oise - 95) recherche un(e) orthoptiste en CDI.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-19-maxeville-87",
+      "date": "2026-07-19",
+      "ville": "Maxéville",
+      "departement": "Meurthe et Moselle",
+      "codeDept": "54",
+      "type": "Mission",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Cabinet d'ophtalmologie à Maxéville (Meurthe et Moselle - 54) recherche un(e) orthoptiste à mi-temps les lundis (8h30-18h30) et mercredis (8h30-18h30).",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-19-brumath-89",
+      "date": "2026-07-19",
+      "ville": "Brumath",
+      "departement": "Bas Rhin",
+      "codeDept": "67",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Bébé vision",
+        "Réfraction",
+        "Rééducation"
+      ],
+      "resume": "Cabinet d'ophtalmologie à proximité de Brumath (Bas Rhin - 67) propose un poste d’orthoptiste en CDI à mi-temps. Début d’activité septembre 2026. Salaire très intéressant.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-19-aucamville-90",
+      "date": "2026-07-19",
+      "ville": "Aucamville",
+      "departement": "Haute-Garonne",
+      "codeDept": "31",
+      "type": "Mission",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Cabinet d'ophtalmologie à Aucamville (Haute-Garonne - 31) recherche un(e) orthoptiste en pré consultation à temps plein 4 jours par semaine (mercredi libre) à partir du mois de septembre.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-19-val-de-marne-91",
+      "date": "2026-07-19",
+      "ville": null,
+      "departement": "Val de Marne",
+      "codeDept": "94",
+      "type": "Salariat",
+      "structure": "Centre / clinique",
+      "specialites": [],
+      "resume": "Centre ophtalmologique à Boissy saint léger (Val de Marne - 94) recherche un(e) orthoptiste pour un CDI les mercredis et éventuellement le week-end. Bonne rémunération",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-19-bois-senart-92",
+      "date": "2026-07-19",
+      "ville": "Bois Senart",
+      "departement": "Seine et Marne",
+      "codeDept": "77",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Centre Santé France, cabinet médico-dentaire d'Auchan à Bois Senart (Seine et Marne - 77), composé d'ophtalmo, médecin généraliste, dentiste et orthodontiste, recherche un(e) orthoptiste pou…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-19-maine-et-loire-93",
+      "date": "2026-07-19",
+      "ville": null,
+      "departement": "Maine et Loire",
+      "codeDept": "49",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Lumaine, cabinet d'ophtalmologie qui ouvrira ses portes début 2027 au cœur d'Angers (Maine et Loire - 49), recherche un(e) orthoptiste salarié(e) en CDI temps plein (35h ou 39h), dès janvier…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-19-hauts-de-seine-94",
+      "date": "2026-07-19",
+      "ville": null,
+      "departement": "Hauts de Seine",
+      "codeDept": "92",
+      "type": "Collaboration",
+      "structure": "Centre / clinique",
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Le centre ophtalmologique d'Antony (Hauts de Seine - 92) recrute un(e) orthoptiste. Au sein de notre centre, vous travaillez en étroite collaboration avec les ophtalmologues dans le respect…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-19-poitiers-95",
+      "date": "2026-07-19",
+      "ville": "Poitiers",
+      "departement": "Vienne",
+      "codeDept": "86",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Le cabinet Ophtacalypso à Poitiers (Vienne - 86) recrute en CDI deux orthoptistes pour compléter son équipe en vue de l'arrivée d'un troisième médecin et la création d’une clinique ophtalmol…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-19-orleans-96",
+      "date": "2026-07-19",
+      "ville": "Orléans",
+      "departement": "Loiret",
+      "codeDept": "45",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction",
+        "Champ visuel"
+      ],
+      "resume": "Cabinet d'ophtalmologie à Orléans (Loiret - 45) recherche un(e) orthoptiste, temps plein ou partiel, en CDD ou CDI (à déterminer ensemble).",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-19-saint-etienne-97",
+      "date": "2026-07-19",
+      "ville": "Saint Etienne",
+      "departement": "Loire",
+      "codeDept": "42",
+      "type": "Remplacement",
+      "structure": "Hôpital",
+      "specialites": [],
+      "resume": "Le CHU de Saint Etienne (Loire - 42), service Ophtalmologie du Pr. Gain, recherche 3 orthoptistes à temps plein, dont 1 remplacement de 6 mois, pour novembre 2026 (embauche à la fin du rempl…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-19-poitiers-98",
+      "date": "2026-07-19",
+      "ville": "Poitiers",
+      "departement": "Vienne",
+      "codeDept": "86",
+      "type": "Salariat",
+      "structure": "Hôpital",
+      "specialites": [],
+      "resume": "Centre d’ophtalmologie à Poitiers (Vienne - 86), à proximité du CHU, recherche un(e) orthoptiste en CDI à temps plein. Poste sur 4 jours par semaine (35h). Débutant(e) accepté(e).",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-19-somain-99",
+      "date": "2026-07-19",
+      "ville": "Somain",
+      "departement": "Nord",
+      "codeDept": "59",
+      "type": "Salariat",
+      "structure": "Ophtalmologiste",
+      "specialites": [
+        "Réfraction",
+        "Champ visuel"
+      ],
+      "resume": "L'Institut Ophtalmique Nord de France à Somain (Nord - 59) recherche, pour agrandir son équipe existante, un(e) orthoptiste en CDI à temps plein/temps partiel pour aide à la consultation (ré…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-19-ille-et-vilaine-100",
+      "date": "2026-07-19",
+      "ville": null,
+      "departement": "Ille et Vilaine",
+      "codeDept": "35",
+      "type": "Association",
+      "structure": null,
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Le Pôle Rennais d'ophtalmologie (Ille et Vilaine - 35) recrute un(e) orthoptiste à temps plein. Centre situé à moins de 5 minutes à pied de la gare de Rennes et donc très bien desservi, dédi…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-12-fontaines-sur-saone-101",
+      "date": "2026-07-12",
+      "ville": "Fontaines-sur-Saône",
+      "departement": "Rhône",
+      "codeDept": "69",
+      "type": "Remplacement",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Cabinet d'orthoptie à Fontaines-sur-Saône (Rhône - 69), à 20 minutes au nord de Lyon (desservi par les TCL si besoin), au sein d'un immeuble médical, cherche un(e) remplaçant(e) du 31 Août a…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-12-dijon-102",
+      "date": "2026-07-12",
+      "ville": "Dijon",
+      "departement": "Côte d'Or",
+      "codeDept": "21",
+      "type": "Remplacement",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Orthoptiste libérale à Chenôve, proche de Dijon (Côte d'Or - 21), recherche un(e) remplaçant(e) pour Août 2026. Possibilité de poursuivre en collaboration (jours à convenir ensemble).",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-12-soucieu-en-jarrest-103",
+      "date": "2026-07-12",
+      "ville": "Soucieu en Jarrest",
+      "departement": "Rhône",
+      "codeDept": "69",
+      "type": "Remplacement",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Neurovisuel",
+        "Basse vision",
+        "Strabologie"
+      ],
+      "resume": "Orthoptiste libérale à Soucieu en Jarrest (Rhône – 69), à proximité de Lyon, recherche un(e) collaborateur(rice) dès que possible en temps partiel (jour à définir), puis pour un remplacement…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-12-voiron-104",
+      "date": "2026-07-12",
+      "ville": "Voiron",
+      "departement": "Isère",
+      "codeDept": "38",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Basse vision",
+        "Vertiges / vestibulaire"
+      ],
+      "resume": "Orthoptiste libérale à Voiron (Isère – 38) recherche un(e) collaborateur(rice), pour 2 jours par semaine (possibilité 3), dès juillet 2026.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-12-saint-venant-105",
+      "date": "2026-07-12",
+      "ville": "Saint Venant",
+      "departement": "Pas de Calais",
+      "codeDept": "62",
+      "type": "Remplacement",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Neurovisuel",
+        "Strabologie",
+        "Réfraction"
+      ],
+      "resume": "Cabinet d’orthoptie à Saint Venant (Pas de Calais - 62) recherche un(e) remplaçant(e) orthoptiste de septembre 2026 à fin janvier voir fin mars 2027 dans le cadre d’un congé maternité.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-12-rhone-106",
+      "date": "2026-07-12",
+      "ville": null,
+      "departement": "Rhône",
+      "codeDept": "69",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Cabinet de 3 orthoptistes à la polyclinique d’Arnas (Rhône - 69), à 30 minutes au Nord de Lyon, propose une collaboration à partir d’octobre 2026, pour 2 jours par semaine (mercredi ou samed…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-12-vitre-107",
+      "date": "2026-07-12",
+      "ville": "Vitré",
+      "departement": "Ille et Vilaine",
+      "codeDept": "35",
+      "type": "Remplacement",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Orthoptiste libérale à Vitré (Ille et Vilaine - 35) cherche remplaçant(e) pour le mois de Septembre (possible jusqu'à la fin Octobre) pour 1 à 2 jours par semaine idéalement mercredi + un au…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-12-montauban-109",
+      "date": "2026-07-12",
+      "ville": "Montauban",
+      "departement": "Tarn et Garonne",
+      "codeDept": "82",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Basse vision",
+        "Rééducation"
+      ],
+      "resume": "Cabinet d’orthoptie de 7 orthoptistes à Montauban (Tarn et Garonne - 82) recherche un(e) collaborateur(rice) pour renforcer son équipe.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-12-betschdorf-110",
+      "date": "2026-07-12",
+      "ville": "Betschdorf",
+      "departement": "Bas Rhin",
+      "codeDept": "67",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Orthoptiste libérale à Betschdorf (Bas Rhin - 67) recherche un(e) collaborateur(rice) à partir de début octobre 2026. Possibilité de commencer avant.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-12-saintes-111",
+      "date": "2026-07-12",
+      "ville": "Saintes",
+      "departement": "Charente Maritimes",
+      "codeDept": "17",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Vous êtes orthoptiste et recherchez un complément d’activité ? Vous souhaitez exercer en autonomie tout en étant accompagné(e) ? Notre cabinet de Saintes (Charente Maritimes – 17) recrute un…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-12-vienne-112",
+      "date": "2026-07-12",
+      "ville": "Vienne",
+      "departement": "Haute Vienne",
+      "codeDept": "87",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction",
+        "Dépistage rétinopathie"
+      ],
+      "resume": "Vous êtes orthoptiste et souhaitez exercer en autonomie complète tout en étant accompagné(e) ? Notre cabinet Téo du Palais sur Vienne (Haute Vienne – 87) recrute un(e) orthoptiste en CDI/CDD…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-12-le-faou-113",
+      "date": "2026-07-12",
+      "ville": "Le Faou",
+      "departement": "Finistère",
+      "codeDept": "29",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction",
+        "Dépistage rétinopathie"
+      ],
+      "resume": "Le cabinet d’ophtalmologie Téo situé à Le Faou (Finistère- 29) recrute un(e) orthoptiste en CDD de 3 mois à temps plein (35h) de janvier à avril 2027.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-12-albi-114",
+      "date": "2026-07-12",
+      "ville": "Albi",
+      "departement": "Tarn",
+      "codeDept": "81",
+      "type": "Salariat",
+      "structure": "Centre / clinique",
+      "specialites": [],
+      "resume": "Le centre ophtalmologique Iridis à Albi (Tarn – 81) recrute un(e) orthoptiste en CDI temps plein (semaine de 4 jours).",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-12-strasbourg-115",
+      "date": "2026-07-12",
+      "ville": "Strasbourg",
+      "departement": "Bas Rhin",
+      "codeDept": "67",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Le Centre Ortho-Ophtalmo Local (COOL) dans le centre de Strasbourg (Bas Rhin - 67) recherche un(e) orthoptiste à temps partiel ou à temps complet, en CDI à compter du mois d'août.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-12-val-de-marne-116",
+      "date": "2026-07-12",
+      "ville": null,
+      "departement": "Val de Marne",
+      "codeDept": "94",
+      "type": "Stage",
+      "structure": "Ophtalmologiste",
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Le centre médico-dentaire d’Alfortville (Val de Marne - 94) recherche un(e) orthoptiste pour rejoindre l’équipe d’ophtalmologie. Poste à pourvoir les mercredis à partir du 26 aout 2026.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-12-haute-savoie-117",
+      "date": "2026-07-12",
+      "ville": null,
+      "departement": "Haute Savoie",
+      "codeDept": "74",
+      "type": "Mission",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Le centre ophtalmologique de la Semine, cabinet à taille humaine proche d’Annecy (Haute Savoie - 74), recherche un(e) orthoptiste à temps partiel, environ 20 h/semaine, pour pré consultation…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-12-rhone-118",
+      "date": "2026-07-12",
+      "ville": null,
+      "departement": "Rhône",
+      "codeDept": "69",
+      "type": "Remplacement",
+      "structure": "Hôpital",
+      "specialites": [
+        "Strabologie"
+      ],
+      "resume": "Le centre hospitalier Lyon Sud (Rhône - 69) recrute un(e) orthoptiste à 45 % à compter du 1er septembre 2026.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-12-aubagne-119",
+      "date": "2026-07-12",
+      "ville": "Aubagne",
+      "departement": "Bouches du Rhône",
+      "codeDept": "13",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Basse vision",
+        "Réfraction"
+      ],
+      "resume": "Cabinet d’ophtalmologie médico-chirurgical à l’hôpital Privé la Casamance à Aubagne (Bouches du Rhône - 13), à proximité de Marseille et Aix en Provence, suite au départ d'une de nos salarié…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-12-merignac-120",
+      "date": "2026-07-12",
+      "ville": "Mérignac",
+      "departement": "Gironde",
+      "codeDept": "33",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Cabinet d'ophtalmologie à Mérignac (Gironde - 33) recrute un(e) orthoptiste en CDI 20h/semaine sur 2 jours.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-12-montpellier-121",
+      "date": "2026-07-12",
+      "ville": "Montpellier",
+      "departement": "Hérault",
+      "codeDept": "34",
+      "type": "Mission",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Cabinet d'ophtalmologie à Montpellier (Hérault - 34) recrute un(e) orthoptiste pour compléter son équipe le jeudi matin à partir de début septembre.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-12-reims-122",
+      "date": "2026-07-12",
+      "ville": "Reims",
+      "departement": "Marne",
+      "codeDept": "51",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Dans le cadre de l’ouverture d'un nouveau cabinet d’ophtalmologie dans le centre-ville de Reims (Marne - 51), nous recherchons un(e) orthoptiste pour rejoindre notre équipe en CDI à temps pl…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-12-landes-123",
+      "date": "2026-07-12",
+      "ville": null,
+      "departement": "Landes",
+      "codeDept": "40",
+      "type": "Salariat",
+      "structure": "Hôpital",
+      "specialites": [
+        "Réfraction",
+        "Rééducation"
+      ],
+      "resume": "Proche de l’océan et de la montagne, le centre hospitalier de Dax Côte d’Argent (Landes – 40) recherche un(e) orthoptiste à temps partiel ou complet, CDD ou CDI, pour renforcer son équipe pl…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-12-marseille-124",
+      "date": "2026-07-12",
+      "ville": "Marseille",
+      "departement": "Bouches du Rhône",
+      "codeDept": "13",
+      "type": "Collaboration",
+      "structure": "Centre / clinique",
+      "specialites": [
+        "Champ visuel",
+        "Rééducation"
+      ],
+      "resume": "Nous sommes à la recherche d'un(e) orthoptiste passionné(e) et dynamique pour rejoindre notre équipe au sein d'un centre médical moderne à Marseille (Bouches du Rhône - 13).",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-12-moselle-125",
+      "date": "2026-07-12",
+      "ville": null,
+      "departement": "Moselle",
+      "codeDept": "57",
+      "type": "Salariat",
+      "structure": "Centre / clinique",
+      "specialites": [
+        "Strabologie"
+      ],
+      "resume": "Le centre ophtalmologique Klarity Metz (Moselle - 57), ouvert depuis juillet 2026, recherche actuellement un(e) orthoptiste en CDI temps plein/temps partiel afin de constituer son équipe.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-12-sarthe-126",
+      "date": "2026-07-12",
+      "ville": null,
+      "departement": "Sarthe",
+      "codeDept": "72",
+      "type": "Salariat",
+      "structure": "Centre / clinique",
+      "specialites": [
+        "Strabologie"
+      ],
+      "resume": "Le centre ophtalmologique Klarity Le Mans (Sarthe - 72), ouvert depuis juin 2026, recherche actuellement un(e) orthoptiste en CDI temps plein/temps partiel afin de constituer son équipe.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-12-saint-benoit-127",
+      "date": "2026-07-12",
+      "ville": "Saint Benoît",
+      "departement": "Vienne",
+      "codeDept": "86",
+      "type": "Mission",
+      "structure": "Hôpital",
+      "specialites": [
+        "Basse vision",
+        "Rééducation"
+      ],
+      "resume": "Le SMR Basse Vision de Saint Benoît (Vienne - 86) recherche un(e) orthoptiste pour son centre spécialisé en basse vision dans le cadre d'un départ en retraite.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-12-draveil-128",
+      "date": "2026-07-12",
+      "ville": "Draveil",
+      "departement": "Essonne",
+      "codeDept": "91",
+      "type": "Mission",
+      "structure": "Centre / clinique",
+      "specialites": [
+        "Champ visuel"
+      ],
+      "resume": "La polyclinique de Draveil (Essonne - 91) recrute un(e) orthoptiste tous les jeudi après-midi de 14h à 18h ou un lundi sur deux journées entières, à discuter ensemble.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-12-laval-129",
+      "date": "2026-07-12",
+      "ville": "Laval",
+      "departement": "Mayenne",
+      "codeDept": "53",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Strabologie"
+      ],
+      "resume": "Cabinet d’ophtalmologie à Laval (Mayenne - 53), composé de 3 ophtalmos, 3 orthoptistes et 3 secrétaires, recherche un(e) orthoptiste.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-12-romagnat-130",
+      "date": "2026-07-12",
+      "ville": "Romagnat",
+      "departement": "Puy de Dôme",
+      "codeDept": "63",
+      "type": "Salariat",
+      "structure": "Centre / clinique",
+      "specialites": [
+        "Neurovisuel",
+        "Strabologie",
+        "Réfraction"
+      ],
+      "resume": "Dans le cadre d’un départ en congé sabbatique, le centre médical infantile de Romagnat (Puy de Dôme - 63) recrute un(e) orthoptiste à temps partiel (40% ETP) afin de participer à l'évaluatio…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-12-nanterre-131",
+      "date": "2026-07-12",
+      "ville": "Nanterre",
+      "departement": "Hauts de Seine",
+      "codeDept": "92",
+      "type": "Mission",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Champ visuel",
+        "Rééducation"
+      ],
+      "resume": "Cabinet d'ophtalmologie à Nanterre (Hauts de Seine - 92) recherche un(e) orthoptiste à temps plein pour la période du 1er au 30 septembre 2026.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-12-senlis-132",
+      "date": "2026-07-12",
+      "ville": "Senlis",
+      "departement": "Oise",
+      "codeDept": "60",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction",
+        "Champ visuel"
+      ],
+      "resume": "Le centre ophtalmologique PO2 à Senlis (Oise - 60) à 1 heure d’Amiens et 45 minutes de Paris, dans une zone commerciale très dynamique cherche à renforcer son équipe pour le bien-être de nos…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-12-nimes-134",
+      "date": "2026-07-12",
+      "ville": "Nîmes",
+      "departement": "Gard",
+      "codeDept": "30",
+      "type": "Cession",
+      "structure": "Centre / clinique",
+      "specialites": [
+        "Réfraction",
+        "Rééducation"
+      ],
+      "resume": "Dans le cadre de son développement, Ophtacenter, centre ophtalmologique implanté à Nîmes (Gard - 30) et rayonnant sur le territoire gardois (Alès, Arles, Nîmes, Remoulins, Calvisson, Le Grau…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-12-haute-garonne-135",
+      "date": "2026-07-12",
+      "ville": null,
+      "departement": "Haute Garonne",
+      "codeDept": "31",
+      "type": "Mission",
+      "structure": "Centre / clinique",
+      "specialites": [],
+      "resume": "Le centre d'ophtalmologie de la clinique de l'Union en proche périphérie toulousaine (Haute Garonne - 31) recherche un(e) orthoptiste pour les samedis matin pour compléter son équipe pour de…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-12-nantes-137",
+      "date": "2026-07-12",
+      "ville": "Nantes",
+      "departement": "Loire Atlantique",
+      "codeDept": "44",
+      "type": "Remplacement",
+      "structure": null,
+      "specialites": [],
+      "resume": "L'institut Public Ocens à Nantes (Loire Atlantique - 44) recherche un(e) orthoptiste pour un CDD de remplacement à 80% à compter du 24/8/2026.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-05-bordeaux-138",
+      "date": "2026-07-05",
+      "ville": "Bordeaux",
+      "departement": "Gironde",
+      "codeDept": "33",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Cabinet d’orthoptie libéral à Bordeaux (Gironde - 33) recherche un(e) orthoptiste pour une collaboration à partir d'août ou septembre 2026. Forte activité et variée.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-05-itxassou-139",
+      "date": "2026-07-05",
+      "ville": "Itxassou",
+      "departement": "Pyrénées Atlantiques",
+      "codeDept": "64",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Pour la création d’un cabinet d’orthoptie libéral au sein du Pôle de santé Hobeki à Itxassou (Pyrénées Atlantiques - 64), je suis à la recherche d’un(e) collaborateur(rice) à partir de septe…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-05-finistere-140",
+      "date": "2026-07-05",
+      "ville": null,
+      "departement": "Finistère",
+      "codeDept": "29",
+      "type": "Mission",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Neurovisuel",
+        "Strabologie",
+        "Vertiges / vestibulaire"
+      ],
+      "resume": "Je recherche un(e) orthoptiste libérale dans le cadre d’un congé maternité à partir du mois d’octobre 2026 dans le Finistère (29), secteur de Morlaix.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-05-saint-germain-en-laye-141",
+      "date": "2026-07-05",
+      "ville": "Saint Germain en Laye",
+      "departement": "Yvelines",
+      "codeDept": "78",
+      "type": "Mission",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Neurovisuel",
+        "Strabologie",
+        "Vertiges / vestibulaire"
+      ],
+      "resume": "Orthoptiste libérale à Saint Germain en Laye (Yvelines - 78), dans un cabinet situé à seulement 2 minutes à pied du RER A, recherche un(e) orthoptiste dès que possible.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-05-toulouse-142",
+      "date": "2026-07-05",
+      "ville": "Toulouse",
+      "departement": "Haute Garonne",
+      "codeDept": "31",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Basse vision",
+        "Réfraction"
+      ],
+      "resume": "Cabinet d’orthoptie dans l'hyper centre de Toulouse (Haute Garonne - 31) propose un poste de collaborateur(rice) 2,5 jours /semaine.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-05-toulouse-143",
+      "date": "2026-07-05",
+      "ville": "Toulouse",
+      "departement": "Haute Garonne",
+      "codeDept": "31",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Rééducation"
+      ],
+      "resume": "Cabinet d'orthoptie dans un centre multidisciplinaire (médecins généralistes, pédopsychiatre, podologue, chiropracteur...) à Toulouse (Haute Garonne - 31) recherche un(e) orthoptiste motivé(…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-05-lamballe-144",
+      "date": "2026-07-05",
+      "ville": "Lamballe",
+      "departement": "Côte d'Armor",
+      "codeDept": "22",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Cabinet de 2 orthoptistes à Lamballe (Côte d'Armor - 22) cherche un(e) collaborateur(rice) à temps plein, de septembre/octobre 2026 à mai 2027 (prolongement possible).",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-05-remoulins-145",
+      "date": "2026-07-05",
+      "ville": "Remoulins",
+      "departement": "Gard",
+      "codeDept": "30",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Basse vision",
+        "Strabologie",
+        "Réfraction"
+      ],
+      "resume": "Je suis à la recherche d'un(e) orthoptiste pour une collaboration de 2 à 3 jours par semaine du lundi au mercredi.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-05-crest-146",
+      "date": "2026-07-05",
+      "ville": "Crest",
+      "departement": "Drôme",
+      "codeDept": "26",
+      "type": "Remplacement",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Rééducation"
+      ],
+      "resume": "Je recherche un(e) remplaçant(e) pour un congé maternité en cabinet libéral à Crest (Drôme - 26), proche de Valence du 5 octobre 2026 au 29 janvier 2027.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-05-brest-148",
+      "date": "2026-07-05",
+      "ville": "Brest",
+      "departement": "Finistère",
+      "codeDept": "29",
+      "type": "Salariat",
+      "structure": "Centre / clinique",
+      "specialites": [],
+      "resume": "Le centre ophtalmologique de la Rade à Brest (Finistère - 29) recrute. Nous sommes 5 ophtalmologistes et recherchons un(e) orthoptiste à temps plein, en CDD de 1 à 3 mois 35h sur 4 jours ou…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-05-orsay-149",
+      "date": "2026-07-05",
+      "ville": "Orsay",
+      "departement": "Essonne",
+      "codeDept": "91",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction",
+        "Champ visuel"
+      ],
+      "resume": "Rejoignez le Centre COPSO Vision à Orsay (Essonne - 91) et évoluez au sein d’un cabinet d’ophtalmologie moderne, dynamique et à taille humaine.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-05-sartrouville-150",
+      "date": "2026-07-05",
+      "ville": "Sartrouville",
+      "departement": "Yvelines",
+      "codeDept": "78",
+      "type": "Salariat",
+      "structure": "Centre / clinique",
+      "specialites": [],
+      "resume": "Le centre médical et ophtalmologies de Sartrouville (Yvelines - 78) sur le RER A, recherche un(e) orthoptiste les lundis et mardis.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-05-carcassonne-151",
+      "date": "2026-07-05",
+      "ville": "Carcassonne",
+      "departement": "Aude",
+      "codeDept": "11",
+      "type": "Mission",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Cabinet d’ophtalmologie à Carcassonne (Aude - 11) recherche un(e) orthoptiste pour un temps partiel 2 jours par semaine (mardi et jeudi).",
+      "contact": "telephone"
+    },
+    {
+      "id": "2026-07-05-angles-152",
+      "date": "2026-07-05",
+      "ville": "Angles",
+      "departement": "Gard",
+      "codeDept": "30",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Cabinet ophtalmologique aux Angles (Gard - 30) recherche un(e) orthoptiste pour un CDD 2 jours par semaine mercredi et jeudi à partir de septembre jusqu'à début 2027 (congé maternité).",
+      "contact": "telephone"
+    },
+    {
+      "id": "2026-07-05-yvelines-153",
+      "date": "2026-07-05",
+      "ville": null,
+      "departement": "Yvelines",
+      "codeDept": "78",
+      "type": "Mission",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Cabinet d’ophtalmologie à Mantes la ville (Yvelines - 78), au niveau de la gare, recherche un(e) orthoptiste pour rejoindre une équipe dynamique au sein d’un environnement moderne, bien équi…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-05-toulouse-154",
+      "date": "2026-07-05",
+      "ville": "Toulouse",
+      "departement": "Haute Garonne",
+      "codeDept": "31",
+      "type": "Salariat",
+      "structure": "Centre / clinique",
+      "specialites": [],
+      "resume": "Centre ophtalmologique à Toulouse (Haute Garonne - 31) recherche un(e) orthoptiste à temps plein ou temps partiel, en CDI pour intégrer une équipe jeune et dynamique.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-05-sens-155",
+      "date": "2026-07-05",
+      "ville": "Sens",
+      "departement": "Yonne",
+      "codeDept": "89",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction",
+        "Rééducation"
+      ],
+      "resume": "Dans le cadre de l’ouverture d’un cabinet d’ophtalmologie neuf à Sens (Yonne - 89), entièrement équipé d’un plateau technique de dernière génération, nous recherchons un(e) orthoptiste motiv…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-05-strasbourg-156",
+      "date": "2026-07-05",
+      "ville": "Strasbourg",
+      "departement": "Bas Rhin",
+      "codeDept": "67",
+      "type": "Mission",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Strabologie",
+        "Réfraction"
+      ],
+      "resume": "Le centre ophtalmologique du Rhin à Strasbourg (Bas Rhin - 67) recherche un(e) orthoptiste pour un poste à temps plein pour prise en charge en ophtalmo- pédiatrie, strabologie, Réalisation d…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-05-meuse-157",
+      "date": "2026-07-05",
+      "ville": null,
+      "departement": "Meuse",
+      "codeDept": "55",
+      "type": "Collaboration",
+      "structure": "Ophtalmologiste",
+      "specialites": [
+        "Rééducation"
+      ],
+      "resume": "Dans le cadre de l'ouverture d'un nouveau pôle ophtalmologique dans la Meuse (55), nous recrutons un(e) orthoptiste en CDI à temps plein pour rejoindre une équipe dynamique et pluridisciplin…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-05-sainte-maxime-158",
+      "date": "2026-07-05",
+      "ville": "Sainte-Maxime",
+      "departement": "Var",
+      "codeDept": "83",
+      "type": "Collaboration",
+      "structure": "Ophtalmologiste",
+      "specialites": [
+        "Rééducation"
+      ],
+      "resume": "Le pôle ophtalmologique Varois à Sainte-Maxime (Var - 83) recrute un(e) orthoptiste à plein temps (100%).",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-05-bastia-160",
+      "date": "2026-07-05",
+      "ville": "Bastia",
+      "departement": "Haute Corse",
+      "codeDept": "2B",
+      "type": "Salariat",
+      "structure": null,
+      "specialites": [],
+      "resume": "Le pôle ophtalmologique Sainte Lucie, centre moderne implanté à Bastia (Haute Corse – 2B) depuis 2019 recherche un orthoptiste en CDD ou CDI, à temps plein sur 4 jours/semaine (3 jours de re…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-05-annemasse-161",
+      "date": "2026-07-05",
+      "ville": "Annemasse",
+      "departement": "Haute Savoie",
+      "codeDept": "74",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Champ visuel"
+      ],
+      "resume": "Cabinet d’ophtalmologie à Annemasse (Haute Savoie - 74) recrute un(e) orthoptiste en CDI à partir du 17 août 2026, temps plein souhaité, temps partiel possible.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-05-castres-163",
+      "date": "2026-07-05",
+      "ville": "Castres",
+      "departement": "Tarn",
+      "codeDept": "81",
+      "type": "Remplacement",
+      "structure": null,
+      "specialites": [
+        "Réfraction",
+        "Dépistage rétinopathie"
+      ],
+      "resume": "Dans le cadre d'un remplacement de congé maternité, le centre d'ophtalmologie du Pastel aux portes de Castres (Tarn - 81), recherche un(e) orthoptiste salarié(e) à temps plein.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-05-vendee-164",
+      "date": "2026-07-05",
+      "ville": null,
+      "departement": "Vendée",
+      "codeDept": "85",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Félicitations aux jeunes diplômé(e)s ! Cette annonce s’adresse tout particulièrement à vous. Nous savons qu’un premier poste est un moment décisif : nous vous proposons un cadre idéal pour d…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-05-charente-maritime-165",
+      "date": "2026-07-05",
+      "ville": null,
+      "departement": "Charente Maritime",
+      "codeDept": "17",
+      "type": "Association",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Rééducation"
+      ],
+      "resume": "Cabinet d'ophtalmologie à La Rochelle / Rochefort (Charente Maritime - 17) cherche, pour compléter son équipe, un(e) orthoptiste salarié(e) à temps plein en CDI.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-05-montlucon-166",
+      "date": "2026-07-05",
+      "ville": "Montluçon",
+      "departement": "Allier",
+      "codeDept": "03",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Cabinet d'ophtalmologie à Montluçon (Allier - 03) cherche un(e) orthoptiste en CDD ou CDI pour compléter son équipe de 4 ophtalmologistes et 5 orthoptistes.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-07-05-aurillac-167",
+      "date": "2026-07-05",
+      "ville": "Aurillac",
+      "departement": "Cantal",
+      "codeDept": "15",
+      "type": "Mission",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Rejoignez CantalOphta à Aurillac (Cantal - 15) ! Dans le cadre de l'arrivée de deux nouveaux ophtalmologistes en novembre prochain, notre centre se développe ! Nous recherchons 1 à 2 orthopt…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-28-mourenx-168",
+      "date": "2026-06-28",
+      "ville": "Mourenx",
+      "departement": "Pyrénées Atlantiques",
+      "codeDept": "64",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Pour la création d’un cabinet d’orthoptie libéral au sein du Pôle de santé Simone Veil à Mourenx (Pyrénées Atlantiques - 64), je suis à la recherche d’un(e) collaborateur(rice) à partir de s…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-28-mordelles-169",
+      "date": "2026-06-28",
+      "ville": "Mordelles",
+      "departement": "Ille et Vilaine",
+      "codeDept": "35",
+      "type": "Remplacement",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Neurovisuel"
+      ],
+      "resume": "Cabinet d’orthoptie libéral à Mordelles (Ille et Vilaine - 35), proche de Rennes, recherche un(e) orthoptiste pour remplacement de congé maternité d'octobre 2026 à mars 2027.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-28-nord-170",
+      "date": "2026-06-28",
+      "ville": null,
+      "departement": "Nord",
+      "codeDept": "59",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Orthoptiste libérale dans un centre pluridisciplinaire à Villeneuve-d'Ascq, secteur Maillerie (Nord - 59), recherche un(e) collaborateur(rice) pour le mercredi toute la journée.",
+      "contact": "telephone"
+    },
+    {
+      "id": "2026-06-28-toulouse-171",
+      "date": "2026-06-28",
+      "ville": "Toulouse",
+      "departement": "Haute Garonne",
+      "codeDept": "31",
+      "type": "Remplacement",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Orthoptiste libérale dans le centre de Toulouse (Haute Garonne - 31) cherche un(e) remplaçant(e) pour un congés maternité à partir de début août pour une activité de 3 à 5 jours par semaine…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-28-thionville-172",
+      "date": "2026-06-28",
+      "ville": "Thionville",
+      "departement": "Moselle",
+      "codeDept": "57",
+      "type": "Salariat",
+      "structure": null,
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Le groupe Accès Vision recherche un(e) orthoptiste en CDI, à temps complet ou temps partiel, pour son centre de Thionville (Moselle - 57).",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-28-metz-173",
+      "date": "2026-06-28",
+      "ville": "Metz",
+      "departement": "Moselle",
+      "codeDept": "57",
+      "type": "Salariat",
+      "structure": null,
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Le groupe Accès Vision recherche un(e) orthoptiste en CDI, à temps complet ou temps partiel, pour son centre de Metz (Moselle - 57).",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-28-conde-en-normandie-174",
+      "date": "2026-06-28",
+      "ville": "Condé-en-Normandie",
+      "departement": "Calvados",
+      "codeDept": "14",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction",
+        "Champ visuel"
+      ],
+      "resume": "Dans le cadre du développement d'une nouvelle activité à Condé-en-Normandie (Calvados - 14), nous recherchons un(e) orthoptiste pour rejoindre notre cabinet d'ophtalmologie neuf, situé au se…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-28-verdun-176",
+      "date": "2026-06-28",
+      "ville": "Verdun",
+      "departement": "Meuse",
+      "codeDept": "55",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Le COSQ, cabinet ophtalmologique de Verdun (Meuse - 55), à proximité de Metz, recrute un(e) orthoptiste.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-28-lyon-177",
+      "date": "2026-06-28",
+      "ville": "Lyon",
+      "departement": "Rhône",
+      "codeDept": "69",
+      "type": "Salariat",
+      "structure": null,
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Bellecour Vision Clinic, centre de chirurgie réfractive situé au cœur de Lyon (Rhône - 69), recherche un(e) orthoptiste(e) diplômé(e).",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-28-bordeaux-178",
+      "date": "2026-06-28",
+      "ville": "Bordeaux",
+      "departement": "Gironde",
+      "codeDept": "33",
+      "type": "Salariat",
+      "structure": null,
+      "specialites": [
+        "Réfraction",
+        "Champ visuel"
+      ],
+      "resume": "Le centre M&M Vision à Bordeaux (Gironde - 33) recrute un(e) orthoptiste en CDI à temps plein 4j par semaine. Poste à pourvoir fin août 2026.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-28-oise-179",
+      "date": "2026-06-28",
+      "ville": null,
+      "departement": "Oise",
+      "codeDept": "95",
+      "type": "Salariat",
+      "structure": "Centre / clinique",
+      "specialites": [],
+      "resume": "Centre de santé pluridisciplinaire dans le Val d'Oise (95) recherche, pour compléter son équipe, un(e) orthoptiste salarié(e) à temps partiel 3 jours par semaine les mardis ou jeudis, vendre…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-28-varennes-vauzelles-180",
+      "date": "2026-06-28",
+      "ville": "Varennes Vauzelles",
+      "departement": "Nièvre",
+      "codeDept": "58",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction",
+        "Dépistage rétinopathie"
+      ],
+      "resume": "Le cabinet d’ophtalmologie Avenir Vision à Varennes Vauzelles (Nièvre - 58) recrute un(e) orthoptiste en CDD à temps plein ou partiel à partir de Janvier 2027.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-28-roissy-en-brie-181",
+      "date": "2026-06-28",
+      "ville": "Roissy en Brie",
+      "departement": "Seine et Marne",
+      "codeDept": "77",
+      "type": "Mission",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Strabologie",
+        "Réfraction",
+        "Champ visuel"
+      ],
+      "resume": "Cabinet ophtalmologiste à Roissy en Brie (Seine et Marne - 77) recherche un(e) orthoptiste à temps plein (35h sur 4 jours, 1 samedi sur 2) ou temps partiel.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-28-vaires-sur-marne-182",
+      "date": "2026-06-28",
+      "ville": "Vaires sur Marne",
+      "departement": "Seine et Marne",
+      "codeDept": "77",
+      "type": "Mission",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Strabologie",
+        "Réfraction",
+        "Champ visuel"
+      ],
+      "resume": "Cabinet ophtalmologiste à Vaires sur Marne (Seine et Marne - 77) recherche un(e) orthoptiste à temps plein (35h sur 4 jours, 1 samedi sur 2) ou temps partiel.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-28-pradet-184",
+      "date": "2026-06-28",
+      "ville": "Pradet",
+      "departement": "Var",
+      "codeDept": "83",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction",
+        "Rééducation"
+      ],
+      "resume": "Cabinets d'ophtalmologie à la Valette et au Pradet (Var - 83) recherche un(e) orthoptiste salarié(e) CDD évolutif vers CDI à temps complet pour rejoindre une équipe jeune, dynamique et bienv…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-28-mans-185",
+      "date": "2026-06-28",
+      "ville": "Mans",
+      "departement": "Sarthe",
+      "codeDept": "72",
+      "type": "Mission",
+      "structure": "Centre / clinique",
+      "specialites": [],
+      "resume": "Centre ophtalmologique Meden au Mans (Sarthe - 72) propose 2 postes d’orthoptistes à temps plein a pourvoir. Le centre (conventionné secteur 1) se trouve dans une rue commerçante agréable.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-28-marseille-186",
+      "date": "2026-06-28",
+      "ville": "Marseille",
+      "departement": "Bouches du Rhône",
+      "codeDept": "13",
+      "type": "Salariat",
+      "structure": "Hôpital",
+      "specialites": [
+        "Champ visuel"
+      ],
+      "resume": "La Direction des Soins de l’Hôpital Saint Joseph à Marseille (Bouches du Rhône - 13) recherche un(e) orthoptiste pour les consultations externes. CDI à pourvoir dès le 01/09/2026.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-28-villeurbanne-187",
+      "date": "2026-06-28",
+      "ville": "Villeurbanne",
+      "departement": "Rhône",
+      "codeDept": "69",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Cabinet d’ophtalmologie moderne et innovant Ovision à Villeurbanne (Rhône - 69) recherche un(e) orthoptiste, responsable de cabinet, en CDI 39 heures négociable.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-28-rhone-188",
+      "date": "2026-06-28",
+      "ville": null,
+      "departement": "Rhône",
+      "codeDept": "69",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Ovision Villeurbanne (Rhône - 69), cabinet d'ophtalmologie équipé de matériel dernière génération, recherche un(e) orthoptiste pour un poste à pourvoir en CDI dès que possible.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-28-garenne-colombes-189",
+      "date": "2026-06-28",
+      "ville": "Garenne Colombes",
+      "departement": "Hauts de Seine",
+      "codeDept": "92",
+      "type": "Salariat",
+      "structure": "Centre / clinique",
+      "specialites": [],
+      "resume": "Le centre ophtalmologique de la Garenne Colombes (Hauts de Seine - 92) recherche un(e) orthoptiste en CDI pour les vendredis.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-28-annecy-190",
+      "date": "2026-06-28",
+      "ville": "Annecy",
+      "departement": "Haute Savoie",
+      "codeDept": "74",
+      "type": "Mission",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Le cabinet Ophtalmologie des Cimes à Annecy (Haute Savoie - 74) recherche un(e) orthoptiste responsable de centre.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-28-clinique-mutualiste-de-saint-etienne-192",
+      "date": "2026-06-28",
+      "ville": "Clinique Mutualiste de Saint Etienne",
+      "departement": "Loire",
+      "codeDept": "42",
+      "type": "Collaboration",
+      "structure": "Centre / clinique",
+      "specialites": [
+        "Strabologie",
+        "Réfraction"
+      ],
+      "resume": "AESIO Santé, pour son groupement Mutualité française Loire - Haute-Loire - Puy-de-Dôme SSAM, recrute, pour la Clinique Mutualiste de Saint Etienne (Loire - 42) un(e) orthoptiste en CDI à tem…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-28-valence-193",
+      "date": "2026-06-28",
+      "ville": "Valence",
+      "departement": "Drôme",
+      "codeDept": "26",
+      "type": "Mission",
+      "structure": "Hôpital",
+      "specialites": [],
+      "resume": "Le centre hospitalier de Valence (Drôme - 26) recherche un(e) orthoptiste pour un contrat à plein temps ou à temps partiel (80 %) pour une durée de 6 mois.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-28-rennes-194",
+      "date": "2026-06-28",
+      "ville": "Rennes",
+      "departement": "Ille et Vilaine",
+      "codeDept": "35",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction",
+        "Champ visuel"
+      ],
+      "resume": "Cabinet d'ophtalmologie à l'est de Rennes (Ille et Vilaine - 35) recherche un(e) orthoptiste pour assister le médecin pour les pré consultations.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-28-tournefeuille-196",
+      "date": "2026-06-28",
+      "ville": "Tournefeuille",
+      "departement": "Haute Garonne",
+      "codeDept": "31",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Dans le cadre de l'ouverture d'un nouveau cabinet d'ophtalmologie à Tournefeuille (Haute Garonne - 31), ophtalmologiste recherche un(e) orthoptiste diplômé(e) souhaitant rejoindre un projet…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-21-romans-sur-isere-197",
+      "date": "2026-06-21",
+      "ville": "Romans sur Isère",
+      "departement": "Drôme",
+      "codeDept": "26",
+      "type": "Remplacement",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Orthoptiste libérale à Romans sur Isère (Drôme - 26) cherche un(e) remplaçant(e) pour le mois d'août. Cabinet neuf, climatisé avec parking, équipement moderne et logiciel métier intuitif.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-21-creteil-198",
+      "date": "2026-06-21",
+      "ville": "Créteil",
+      "departement": "Val de Marne",
+      "codeDept": "94",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Neurovisuel",
+        "Rééducation"
+      ],
+      "resume": "Orthoptiste libérale à Créteil (Val de Marne - 94), tout près de la ligne 8 et du lac, recherche un(e) collaborateur(rice) dès que possible.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-21-chambery-199",
+      "date": "2026-06-21",
+      "ville": "Chambéry",
+      "departement": "Savoie",
+      "codeDept": "73",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Neurovisuel",
+        "Basse vision",
+        "Bébé vision"
+      ],
+      "resume": "Orthoptiste libérale à Chambéry (Savoie - 73) recherche un(e) collaborateur(rice) pour 1 à 2 jours par semaine, le lundi et autre jour à définir ensemble.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-21-toul-200",
+      "date": "2026-06-21",
+      "ville": "Toul",
+      "departement": "Meurthe et Moselle",
+      "codeDept": "54",
+      "type": "Remplacement",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Neurovisuel",
+        "Strabologie"
+      ],
+      "resume": "Orthoptiste libérale à Toul (Meurthe et Moselle - 54), à mi chemin entre Nancy et Commercy, recherche un(e) remplaçant(e) pour 2 jours par semaine dès que possible (le mercredi en priorité e…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-21-levallois-perret-201",
+      "date": "2026-06-21",
+      "ville": "Levallois-Perret",
+      "departement": "Hauts de Seine",
+      "codeDept": "92",
+      "type": "Remplacement",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Orthoptiste libérale à Levallois-Perret (Hauts de Seine - 92) recherche un(e) remplaçant(e) dès la fin du mois d'août 2026 (date à convenir ensemble), sur minimum 2 jours par semaine et pour…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-21-perigueux-202",
+      "date": "2026-06-21",
+      "ville": "Périgueux",
+      "departement": "Dordogne",
+      "codeDept": "24",
+      "type": "Remplacement",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Orthoptiste libérale à Périgueux (Dordogne - 24), à 1h30 de Bordeaux, recherche un(e) remplaçant(e) ou collaborateur(rice) dès que possible, pour les vendredis +/- une après-midi et/ou matin…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-21-saint-paul-trois-chateaux-203",
+      "date": "2026-06-21",
+      "ville": "Saint-Paul-Trois-Châteaux",
+      "departement": "Drôme",
+      "codeDept": "26",
+      "type": "Remplacement",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Cabinet d’orthoptie à Saint-Paul-Trois-Châteaux (Drôme - 26) recherche un(e) orthoptiste pour remplacer notre collaboratrice actuelle à compter de septembre 2026 (départ pour cause de mutati…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-21-la-possession-204",
+      "date": "2026-06-21",
+      "ville": "La Possession",
+      "departement": "Réunion",
+      "codeDept": "974",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Neurovisuel",
+        "Réfraction",
+        "Rééducation"
+      ],
+      "resume": "Cabinet d'orthoptie libéral sur la côte ouest de l’île de la Réunion à La Possession (Réunion - 974) propose une collaboration fin septembre 2026.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-21-la-montagne-205",
+      "date": "2026-06-21",
+      "ville": "La Montagne",
+      "departement": "Loire Atlantique",
+      "codeDept": "44",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Neurovisuel",
+        "Strabologie",
+        "Réfraction"
+      ],
+      "resume": "Orthoptiste à La Montagne (Loire Atlantique - 44) recherche un(e) collaborateur(rice) pour 2 jours par semaine (mardi et vendredi de préférence).",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-21-toulouse-206",
+      "date": "2026-06-21",
+      "ville": "Toulouse",
+      "departement": "Haute Garonne",
+      "codeDept": "31",
+      "type": "Remplacement",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Orthoptiste libérale à Muret, au sud de Toulouse (Haute Garonne - 31), propose ub remplacement d'une année environ à partir de fin août - début septembre 2026, 3 jours par semaine (possibili…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-21-la-chapelle-sur-erdre-209",
+      "date": "2026-06-21",
+      "ville": "La Chapelle sur Erdre",
+      "departement": "Loire Atlantique",
+      "codeDept": "44",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Ophtalliance recherche un(e) orthoptiste pour son cabinet médical situé à La Chapelle sur Erdre (Loire Atlantique - 44). CDD à compter du 17/08/2026 et jusqu'au 31/10/2026. Temps complet.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-21-mulhouse-210",
+      "date": "2026-06-21",
+      "ville": "Mulhouse",
+      "departement": "Haut Rhin",
+      "codeDept": "68",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Le centre Accès Vision de Mulhouse (Haut Rhin - 68) recrute un(e) orthoptiste. Nous proposons un poste salarié à temps partiel au sein de notre équipe d'ophtalmologie, avec la possibilité, p…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-21-la-cote-saint-andre-211",
+      "date": "2026-06-21",
+      "ville": "La Côte-Saint-André",
+      "departement": "Isère",
+      "codeDept": "38",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction",
+        "Dépistage rétinopathie"
+      ],
+      "resume": "Le cabinet d’ophtalmologie Téo situé à La Côte-Saint-André (Isère - 38) recrute un(e) orthoptiste en CDD à temps plein (35h ou 38h) d’octobre 2026 à février 2027.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-21-sens-212",
+      "date": "2026-06-21",
+      "ville": "Sens",
+      "departement": "Yonne",
+      "codeDept": "89",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction",
+        "Dépistage rétinopathie"
+      ],
+      "resume": "Le cabinet Téo situé à Sens (Yonne - 89) recrute un(e) orthoptiste en CDI à temps plein ou partiel.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-21-reunion-213",
+      "date": "2026-06-21",
+      "ville": null,
+      "departement": "Réunion",
+      "codeDept": "974",
+      "type": "Remplacement",
+      "structure": "Hôpital",
+      "specialites": [
+        "Réfraction",
+        "Champ visuel",
+        "Rééducation"
+      ],
+      "resume": "Le Centre Hospitalier Ouest Réunion (CHOR) (Réunion - 974) recrute un(e) orthoptiste diplômé(e) dans le cadre d’un CDD de remplacement.",
+      "contact": "autre"
+    },
+    {
+      "id": "2026-06-21-amiens-214",
+      "date": "2026-06-21",
+      "ville": "Amiens",
+      "departement": "Somme",
+      "codeDept": "80",
+      "type": "Collaboration",
+      "structure": "Centre / clinique",
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Centre ophtalmologique à Amiens (Somme – 80) recrute un(e) orthoptiste. Au sein de notre centre, vous travaillez en étroite collaboration avec les ophtalmologues dans le respect des protocol…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-21-tarbes-215",
+      "date": "2026-06-21",
+      "ville": "Tarbes",
+      "departement": "Hautes Pyrénées",
+      "codeDept": "65",
+      "type": "Collaboration",
+      "structure": "Centre / clinique",
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Centre ophtalmologique à Tarbes (Hautes Pyrénées – 65) recrute un(e) orthoptiste. Au sein de notre centre, vous travaillez en étroite collaboration avec les ophtalmologues dans le respect de…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-21-argenteuil-216",
+      "date": "2026-06-21",
+      "ville": "Argenteuil",
+      "departement": "Val d'Oise",
+      "codeDept": "95",
+      "type": "Collaboration",
+      "structure": "Centre / clinique",
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Centre ophtalmologique à Argenteuil (Val d'Oise - 95) recrute un(e) orthoptiste. Au sein de notre centre, vous travaillez en étroite collaboration avec les ophtalmologues dans le respect des…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-21-sartrouville-217",
+      "date": "2026-06-21",
+      "ville": "Sartrouville",
+      "departement": "Yvelines",
+      "codeDept": "78",
+      "type": "Collaboration",
+      "structure": "Centre / clinique",
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Centre ophtalmologique à Sartrouville (Yvelines - 78) recrute un(e) orthoptiste. Au sein de notre centre, vous travaillez en étroite collaboration avec les ophtalmologues dans le respect des…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-21-metz-218",
+      "date": "2026-06-21",
+      "ville": "Metz",
+      "departement": "Moselle",
+      "codeDept": "57",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Cabinet d’ophtalmologie en secteur 1 à Metz (Moselle - 57) recherche actuellement 4 orthoptistes en CDI à temps plein (39h/semaine) afin de renforcer son équipe.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-21-nice-219",
+      "date": "2026-06-21",
+      "ville": "Nice",
+      "departement": "Alpes Maritimes",
+      "codeDept": "06",
+      "type": "Salariat",
+      "structure": null,
+      "specialites": [],
+      "resume": "Centre d'ophtalmologie à Nice (Alpes Maritimes - 06) recherche un(e) orthoptiste pour aide à la consultation. Activité principale de rétine médicale et pré consultation.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-21-toulouse-220",
+      "date": "2026-06-21",
+      "ville": "Toulouse",
+      "departement": "Haute Garonne",
+      "codeDept": "31",
+      "type": "Remplacement",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Cabinet d'ophtalmologie de la clinique Médipôle Garonne à Toulouse (Haute Garonne - 31) recrute, pour un remplacement de congés maternité, un(e) orthoptiste salarié(e) à temps complet pour p…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-21-lyon-221",
+      "date": "2026-06-21",
+      "ville": "Lyon",
+      "departement": "Rhône",
+      "codeDept": "69",
+      "type": "Stage",
+      "structure": "Hôpital",
+      "specialites": [],
+      "resume": "Le Centre Hospitalier Universitaire Édouard Herriot à Lyon (Rhône - 69) recherche des orthoptistes de 40% à 100% sur le secteur adulte. Plage horaires pouvant aller de 8h à 16h50.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-21-dole-222",
+      "date": "2026-06-21",
+      "ville": "Dole",
+      "departement": "Jura",
+      "codeDept": "39",
+      "type": "Mission",
+      "structure": "Hôpital",
+      "specialites": [],
+      "resume": "Le service d'ophtalmologie du centre hospitalier Louis Pasteur de Dole (Jura - 39) recherche un(e) orthoptiste à temps plein à compter de Novembre 2026.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-21-cote-d-or-223",
+      "date": "2026-06-21",
+      "ville": null,
+      "departement": "Côte d'Or",
+      "codeDept": "21",
+      "type": "Salariat",
+      "structure": "Centre / clinique",
+      "specialites": [
+        "Strabologie"
+      ],
+      "resume": "Le centre de santé ophtalmologique Klarity Dijon (Côte d'Or - 21) ouvrira ses portes mi-septembre 2026.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-21-doubs-224",
+      "date": "2026-06-21",
+      "ville": null,
+      "departement": "Doubs",
+      "codeDept": "25",
+      "type": "Salariat",
+      "structure": "Centre / clinique",
+      "specialites": [
+        "Strabologie"
+      ],
+      "resume": "Le centre de santé ophtalmologique Klarity Besançon (Doubs - 25) ouvrira ses portes début septembre 2026.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-21-nancy-225",
+      "date": "2026-06-21",
+      "ville": "Nancy",
+      "departement": "Meurthe et Moselle",
+      "codeDept": "54",
+      "type": "Remplacement",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Cabinet de deux praticiens à Nancy (Meurthe et Moselle - 54) cherche un(e) orthoptiste pour aide à la consultation dans le cadre d’un remplacement pour congé maternité puis parental.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-21-lyon-226",
+      "date": "2026-06-21",
+      "ville": "Lyon",
+      "departement": "Rhône",
+      "codeDept": "69",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Le Centre d’Exploration de la Rétine Kléber (CERK) à Lyon (Rhône - 69) recherche un(e) orthoptiste pour un CDI temps partiel pour aide à la consultation (AV, OCT, rétino, angiographie, infor…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-21-nantes-227",
+      "date": "2026-06-21",
+      "ville": "Nantes",
+      "departement": "Loire Atlantique",
+      "codeDept": "44",
+      "type": "Salariat",
+      "structure": null,
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Le centre d'ophtalmologie du Confluent à Nantes (Loire Atlantique - 44) recherche un(e) orthoptiste du 17 au 20 août inclus. CDD 21h, 5 demi-journées.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-21-maine-et-loire-228",
+      "date": "2026-06-21",
+      "ville": null,
+      "departement": "Maine et Loire",
+      "codeDept": "49",
+      "type": "Mission",
+      "structure": "Ophtalmologiste",
+      "specialites": [
+        "Réfraction",
+        "Dépistage rétinopathie"
+      ],
+      "resume": "TOM (Télé Ophtalmologie Mobile) recherche un(e) Orthoptiste à temps partiel, pour le département du Maine et Loire (49).",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-21-creteil-229",
+      "date": "2026-06-21",
+      "ville": "Créteil",
+      "departement": "Val de Marne",
+      "codeDept": "94",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Champ visuel"
+      ],
+      "resume": "Centre ophtalmologique à Créteil (Val de Marne - 94) recherche des orthoptistes pour parfaire son équipe médicale.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-21-toulon-231",
+      "date": "2026-06-21",
+      "ville": "Toulon",
+      "departement": "Var",
+      "codeDept": "83",
+      "type": "Remplacement",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Cherche orthoptiste diplômée pour remplacement congé maternité pour un poste en salariat sur la période de novembre à mars inclus. Cabinet avec 3 ophtalmologistes à Toulon (Var - 83).",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-21-aix-les-bains-232",
+      "date": "2026-06-21",
+      "ville": "Aix les Bains",
+      "departement": "Savoie",
+      "codeDept": "73",
+      "type": "Mission",
+      "structure": "Centre / clinique",
+      "specialites": [],
+      "resume": "Le centre ophtalmologique du Grand Lac à Aix les Bains (Savoie - 73) recherche un(e) orthoptiste pour aide à la consultation. Cadre de vie exceptionnel entre lac et montagnes.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-21-port-marly-233",
+      "date": "2026-06-21",
+      "ville": "Port Marly",
+      "departement": "Yvelines",
+      "codeDept": "78",
+      "type": "Mission",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Le cabinet d’ophtalmologie Oph78 au Port Marly (Yvelines - 78) recrute un(e) orthoptiste pour renforcer l’équipe déjà en place pour aide à la pré consultation. Temps plein ou temps partiel.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-14-fere-champenoise-237",
+      "date": "2026-06-14",
+      "ville": "Fère Champenoise",
+      "departement": "Marne",
+      "codeDept": "51",
+      "type": "Remplacement",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Orthoptiste libérale à Fère Champenoise (Marne - 51) propose une collaboration ou un remplacement dans cabinet médical avec médecins, dentistes, infirmières, kiné… Jours à définir ensemble.",
+      "contact": "telephone"
+    },
+    {
+      "id": "2026-06-14-perenchies-238",
+      "date": "2026-06-14",
+      "ville": "Pérenchies",
+      "departement": "Nord",
+      "codeDept": "59",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Orthoptiste à Pérenchies (Nord - 59), proche de Lille et d’Armentières, recherche un(e) collaborateur(rice) pour 2 demi-journées par semaine (mercredi après-midi et vendredi après-midi).",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-14-luzinay-239",
+      "date": "2026-06-14",
+      "ville": "Luzinay",
+      "departement": "Isère",
+      "codeDept": "38",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction",
+        "Rééducation"
+      ],
+      "resume": "Orthoptiste à Luzinay (Isère - 38) recherche un(e) collaborateur(rice) pour les mercredis à partir du mois de décembre 2026 ou avant si possible.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-14-uzes-240",
+      "date": "2026-06-14",
+      "ville": "Uzès",
+      "departement": "Gard",
+      "codeDept": "30",
+      "type": "Remplacement",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Basse vision",
+        "Réfraction",
+        "Rééducation"
+      ],
+      "resume": "Cabinet d'orthoptie à Uzès (Gard - 30), à 30 minutes de Nîmes, cherche un(e) remplaçant(e) pour le mois d'août 2026 les lundis, un mercredi sur deux et les jeudis (samedi possible).",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-14-nord-de-toulouse-241",
+      "date": "2026-06-14",
+      "ville": "Nord de Toulouse",
+      "departement": "Haute Garonne",
+      "codeDept": "31",
+      "type": "Remplacement",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Neurovisuel",
+        "Basse vision",
+        "Strabologie"
+      ],
+      "resume": "Orthoptiste libérale à Castelnau d'Estretefonds, au Nord de Toulouse (Haute Garonne - 31), recherche un(e) remplaçante pouvant déboucher sur une collaboration, 2 jours par semaine (idéalemen…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-14-saint-pierre-de-la-reunion-242",
+      "date": "2026-06-14",
+      "ville": "Saint Pierre de la Réunion",
+      "departement": "Réunion",
+      "codeDept": "974",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Vertiges / vestibulaire",
+        "Rééducation"
+      ],
+      "resume": "Cabinet d'orthoptie à fort potentiel à Saint Pierre de la Réunion (Réunion - 974) recherche, pour la période de fin juin 2026 à mi septembre 2026, 2 orthoptistes (jeunes diplômés ou expérien…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-14-saint-affrique-243",
+      "date": "2026-06-14",
+      "ville": "Saint-Affrique",
+      "departement": "Aveyron",
+      "codeDept": "12",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Basse vision",
+        "Strabologie",
+        "Réfraction"
+      ],
+      "resume": "Cabinet libéral d'orthoptie à Saint-Affrique (Aveyron - 12) recherche un(e) collaborateur(rice) suite au départ de la collaboratrice actuelle.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-14-val-de-marne-245",
+      "date": "2026-06-14",
+      "ville": null,
+      "departement": "Val de Marne",
+      "codeDept": "94",
+      "type": "Remplacement",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Orthoptiste libérale dans le Val de Marne (94) recherche un(e) ou des remplaçant(e)s du vendredi 3 au 13 juillet puis en août à partir du 17/08 au 03/09.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-14-rennes-246",
+      "date": "2026-06-14",
+      "ville": "Rennes",
+      "departement": "Ille et Vilaine",
+      "codeDept": "35",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Cabinet d'orthoptie au sud de Rennes (Ille et Vilaine - 35) recherche un(e) collaborateur(rice) à partir du mois de septembre.",
+      "contact": "telephone"
+    },
+    {
+      "id": "2026-06-14-saint-germain-en-laye-247",
+      "date": "2026-06-14",
+      "ville": "Saint-Germain-en-Laye",
+      "departement": "Yvelines",
+      "codeDept": "78",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Neurovisuel",
+        "Strabologie",
+        "Vertiges / vestibulaire"
+      ],
+      "resume": "Orthoptiste libérale à Saint-Germain-en-Laye (Yvelines - 78) à proximité du RER A. Cabinet bien équipé (Plusoptix, PPS, MoveR...) ! Suite à l'arrêt de travail soudain de ma collaboratrice, j…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-14-coueron-248",
+      "date": "2026-06-14",
+      "ville": "Couëron",
+      "departement": "Loire Atlantique",
+      "codeDept": "44",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Ophtalliance recherche un(e) orthoptiste en CDI à compter de septembre 2026, à temps partiel (lundi - vendredi matin semaine impaire) pour son cabinet médical situé à Couëron (Loire Atlantiq…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-14-salon-de-provence-249",
+      "date": "2026-06-14",
+      "ville": "Salon de Provence",
+      "departement": "Bouches du Rhône",
+      "codeDept": "13",
+      "type": "Salariat",
+      "structure": null,
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Le groupe Accès Vision recherche un(e) orthoptiste en CDI à temps partiel (2 jours) pour son centre de Salon de Provence (Bouches du Rhône - 13). Poste à pourvoir en octobre 2026.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-14-lyon-250",
+      "date": "2026-06-14",
+      "ville": "Lyon",
+      "departement": "Rhône",
+      "codeDept": "69",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Cabinet d’Ophtalmologie à Lyon (Rhône - 69) recrute un(e) orthoptiste pour rejoindre son équipe actuelle et travailler avec 2 médecins.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-14-bordeaux-251",
+      "date": "2026-06-14",
+      "ville": "Bordeaux",
+      "departement": "Gironde",
+      "codeDept": "33",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Strabologie",
+        "Réfraction",
+        "Champ visuel"
+      ],
+      "resume": "Cabinet d’ophtalmologie proche de Bordeaux (Gironde - 33), recherche un(e) orthoptiste salarié(e) dès septembre pour le retour de congé maternité d’une de nos ophtalmologistes.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-14-caen-253",
+      "date": "2026-06-14",
+      "ville": "Caen",
+      "departement": "Calvados",
+      "codeDept": "14",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction",
+        "Champ visuel"
+      ],
+      "resume": "Pôle ophtalmologique Albert 1er à Caen (Calvados - 14), spécialisé dans la prise en charge des pathologies rétiniennes médicales et chirurgicales, recrute un(e) orthoptiste en CDD (100%) d’u…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-14-caen-254",
+      "date": "2026-06-14",
+      "ville": "Caen",
+      "departement": "Calvados",
+      "codeDept": "14",
+      "type": "Remplacement",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction",
+        "Champ visuel"
+      ],
+      "resume": "Cabinet d'ophtalmologie à Caen (Calvados - 14), spécialisé dans la prise en charge des pathologies rétiniennes médicales et chirurgicales, recrute un(e) orthoptiste en CCD (100%) pour un rem…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-14-gaillac-255",
+      "date": "2026-06-14",
+      "ville": "Gaillac",
+      "departement": "Tarn",
+      "codeDept": "81",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Centre d’ophtalmologie Isatis à Gaillac (Tarn - 81) cherche un(e) orthoptiste en CDI temps plein (poste disponible à partir d’août 2026), afin d’étoffer l’équipe déjà présente 6 orthoptistes…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-14-ornans-256",
+      "date": "2026-06-14",
+      "ville": "Ornans",
+      "departement": "Doubs",
+      "codeDept": "25",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Neurovisuel"
+      ],
+      "resume": "Cabinet d’ophtalmologie dynamique recherche un(e) orthoptiste en CDI à temps plein ou 80%. Situé à Ornans (Doubs - 25), charmante ville au cœur de la vallée de la Loue, il offre un cadre de…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-14-yvelines-257",
+      "date": "2026-06-14",
+      "ville": null,
+      "departement": "Yvelines",
+      "codeDept": "78",
+      "type": "Mission",
+      "structure": "Ophtalmologiste",
+      "specialites": [
+        "Réfraction",
+        "Dépistage rétinopathie"
+      ],
+      "resume": "TOM (Télé Ophtalmologie Mobile) recherche un(e) orthoptiste à temps partiel, pour le département des Yvelines (78).",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-14-indre-et-loire-258",
+      "date": "2026-06-14",
+      "ville": null,
+      "departement": "Indre et Loire",
+      "codeDept": "37",
+      "type": "Mission",
+      "structure": "Ophtalmologiste",
+      "specialites": [
+        "Réfraction",
+        "Dépistage rétinopathie"
+      ],
+      "resume": "TOM (Télé Ophtalmologie Mobile) recherche un(e) orthoptiste à temps partiel, pour le département d'Indre et Loire (37).",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-14-seine-et-marne-259",
+      "date": "2026-06-14",
+      "ville": null,
+      "departement": "Seine et Marne",
+      "codeDept": "77",
+      "type": "Mission",
+      "structure": "Ophtalmologiste",
+      "specialites": [
+        "Réfraction",
+        "Dépistage rétinopathie"
+      ],
+      "resume": "TOM (Télé Ophtalmologie Mobile) recherche un(e) orthoptiste à temps partiel, pour le département de Seine et Marne (77).",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-14-essonne-260",
+      "date": "2026-06-14",
+      "ville": null,
+      "departement": "Essonne",
+      "codeDept": "91",
+      "type": "Mission",
+      "structure": "Ophtalmologiste",
+      "specialites": [
+        "Réfraction",
+        "Dépistage rétinopathie"
+      ],
+      "resume": "TOM (Télé Ophtalmologie Mobile) recherche un(e) orthoptiste à temps partiel, pour le département de l'Essonne (91).",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-14-seine-saint-denis-261",
+      "date": "2026-06-14",
+      "ville": null,
+      "departement": "Seine Saint Denis",
+      "codeDept": "93",
+      "type": "Collaboration",
+      "structure": "Centre / clinique",
+      "specialites": [],
+      "resume": "La Polyclinique d'Aubervilliers (Seine Saint Denis - 93) recherche un(e) orthoptiste dans le cadre d'un CDI à temps partiel 28h par semaine (voire plus si intéressé), lundi de 13h30 à 17h30,…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-14-lavaur-262",
+      "date": "2026-06-14",
+      "ville": "Lavaur",
+      "departement": "Tarn",
+      "codeDept": "81",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Cabinet d'ophtalmologie à Lavaur (Tarn - 81) recherche un(e) orthoptiste en CDI temps complet sur 4 jours avec Carte tickets restaurant et 13eme mois.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-14-salon-de-provence-263",
+      "date": "2026-06-14",
+      "ville": "Salon de Provence",
+      "departement": "Bouches du Rhône",
+      "codeDept": "13",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Cabinet ophtalmologique à Salon de Provence (Bouches du Rhône - 13) recherche un(e) orthoptiste pour un CDI temps plein. Activité secondaire à Miramas.",
+      "contact": "telephone"
+    },
+    {
+      "id": "2026-06-14-pezenas-264",
+      "date": "2026-06-14",
+      "ville": "Pézenas",
+      "departement": "Hérault",
+      "codeDept": "34",
+      "type": "Mission",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Cabinet d’ophtalmologie à Pézenas (Hérault - 34) recherche un(e) orthoptiste pour un temps plein 35h. Vous rejoindrez une équipe de 4 ophtalmologistes et d'orthoptistes dynamiques.",
+      "contact": "telephone"
+    },
+    {
+      "id": "2026-06-14-nord-265",
+      "date": "2026-06-14",
+      "ville": null,
+      "departement": "Nord",
+      "codeDept": "59",
+      "type": "Salariat",
+      "structure": "Centre / clinique",
+      "specialites": [
+        "Strabologie"
+      ],
+      "resume": "Le centre de santé ophtalmologique Klarity Douai(Nord - 59) recherche activement un(e) orthoptiste en CDI temps plein ou temps partiel à partir de septembre afin de compléter une équipe déjà…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-14-maurepas-266",
+      "date": "2026-06-14",
+      "ville": "Maurepas",
+      "departement": "Yvelines",
+      "codeDept": "78",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction",
+        "Champ visuel"
+      ],
+      "resume": "Cabinet d’ophtalmologie à Maurepas (Yvelines - 78), à 15 minutes de Versailles, 5 minutes de Saint-Quentin-en-Yvelines et 30 minutes de l’Ouest parisien, recrute un(e) orthoptiste en CDI à t…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-14-gironde-267",
+      "date": "2026-06-14",
+      "ville": null,
+      "departement": "Gironde",
+      "codeDept": "33",
+      "type": "Association",
+      "structure": null,
+      "specialites": [
+        "Basse vision",
+        "Rééducation"
+      ],
+      "resume": "L’Irsa recherche pour, son CSES A. Peyrelongue d’Ambarès (Gironde - 33), qui accueille des enfants, adolescents et jeunes adultes déficients visuels avec ou sans troubles associés (105 place…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-14-cachan-268",
+      "date": "2026-06-14",
+      "ville": "Cachan",
+      "departement": "Val de Marne",
+      "codeDept": "94",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction",
+        "Champ visuel"
+      ],
+      "resume": "Cabinet d'ophtalmologie à Cachan (Val de Marne - 94), à 15 minutes de Paris en RER B, recrute un(e) orthoptiste salarié(e) expérimenté(e) ou jeune diplômé(e) motivé(é) pour un temps partiel…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-14-montpellier-269",
+      "date": "2026-06-14",
+      "ville": "Montpellier",
+      "departement": "Hérault",
+      "codeDept": "34",
+      "type": "Remplacement",
+      "structure": "Centre / clinique",
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "La clinique Beau Soleil à Montpellier (Hérault - 34) recherche un(e) orthoptiste salarié(e) à temps plein et en CDD pour compléter son équipe dynamique composée de 5 ophtalmologistes spécial…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-14-quimper-270",
+      "date": "2026-06-14",
+      "ville": "Quimper",
+      "departement": "Finistère",
+      "codeDept": "29",
+      "type": "Remplacement",
+      "structure": "Ophtalmologiste",
+      "specialites": [],
+      "resume": "Ophtalmologue à Quimper (Finistère - 29) recherche un(e) orthoptiste pour remplacement pouvant aboutir sur un CDI (35h), dès que possible pour aide à la consultation.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-14-eragny-sur-oise-271",
+      "date": "2026-06-14",
+      "ville": "Eragny sur Oise",
+      "departement": "Val d'Oise",
+      "codeDept": "95",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Rééducation"
+      ],
+      "resume": "Ophtalmed est un centre médical pluridisciplinaire spécialisé en ophtalmologie, orthoptie, ORL, dermatologie et pneumologie.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-14-rouen-272",
+      "date": "2026-06-14",
+      "ville": "Rouen",
+      "departement": "Seine Maritime",
+      "codeDept": "76",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Rééducation"
+      ],
+      "resume": "Ophtalmed est un centre médical pluridisciplinaire spécialisé en ophtalmologie, orthoptie, ORL, dermatologie et pneumologie.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-14-nogent-sur-oise-273",
+      "date": "2026-06-14",
+      "ville": "Nogent sur Oise",
+      "departement": "Oise",
+      "codeDept": "60",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Rééducation"
+      ],
+      "resume": "Ophtalmed est un centre médical pluridisciplinaire spécialisé en ophtalmologie, orthoptie, ORL, dermatologie et pneumologie.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-14-la-garenne-colombes-274",
+      "date": "2026-06-14",
+      "ville": "La Garenne Colombes",
+      "departement": "Hauts de Seine",
+      "codeDept": "92",
+      "type": "Mission",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Cabinet d'ophtalmologie à La Garenne Colombes (Hauts de Seine - 92) cherche un(e) orthoptiste pour travail aidé le lundi, mardi et vendredi.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-14-saint-cloud-275",
+      "date": "2026-06-14",
+      "ville": "Saint Cloud",
+      "departement": "Hauts de Seine",
+      "codeDept": "92",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Cabinet d’ophtalmologie à Saint Cloud (Hauts de Seine - 92) recherche un(e) orthoptiste en CDI pour venir compléter son équipe à partir de septembre 2026 pour le mercredi jeudi et vendredi (…",
+      "contact": "telephone"
+    },
+    {
+      "id": "2026-06-14-meurthe-et-moselle-276",
+      "date": "2026-06-14",
+      "ville": null,
+      "departement": "Meurthe et Moselle",
+      "codeDept": "54",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Rééducation"
+      ],
+      "resume": "Cabinet d'ophtalmologie proche Nancy (Meurthe et Moselle - 54) recherche un(e) orthoptiste en activité salariée ou libérale (ou mixte) pour pré consultation, examens complémentaires (plateau…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-14-caen-277",
+      "date": "2026-06-14",
+      "ville": "Caen",
+      "departement": "Calvados",
+      "codeDept": "14",
+      "type": "Mission",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction",
+        "Champ visuel"
+      ],
+      "resume": "Cabinet ophtalmologique à Caen (Calvados - 14), spécialisé dans la prise en charge des pathologies rétiniennes médicales et chirurgicales, recrute un(e) orthoptiste en CCD à temps plein pour…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-07-herlies-278",
+      "date": "2026-06-07",
+      "ville": "Herlies",
+      "departement": "Nord",
+      "codeDept": "59",
+      "type": "Remplacement",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Neurovisuel",
+        "Bébé vision",
+        "Vertiges / vestibulaire"
+      ],
+      "resume": "Orthoptiste libérale recherche un(e) remplaçant(e) dans le cadre d’un congé maternité pour une durée minimale de 6 mois, avec possibilité de collaboration par la suite, à partir d’août 2026,…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-07-bruges-bordeaux-lac-279",
+      "date": "2026-06-07",
+      "ville": "Bruges Bordeaux-Lac",
+      "departement": "Gironde",
+      "codeDept": "33",
+      "type": "Remplacement",
+      "structure": null,
+      "specialites": [],
+      "resume": "Le Pôle de santé pluridisciplinaire de Bruges Bordeaux-Lac (Gironde – 33) recherche un(e) orthoptiste pour un remplacement de 2 à 3 jours par semaine en juillet et/ou août, avec possibilité…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-07-aveyron-281",
+      "date": "2026-06-07",
+      "ville": null,
+      "departement": "Aveyron",
+      "codeDept": "12",
+      "type": "Remplacement",
+      "structure": null,
+      "specialites": [],
+      "resume": "Orthoptiste en Aveyron (12) recherche un(e) remplaçant(e) au mois d’août (dates à définir ensemble). Activité variée et patientèle agréable.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-07-doubs-282",
+      "date": "2026-06-07",
+      "ville": null,
+      "departement": "Doubs",
+      "codeDept": "25",
+      "type": "Cession",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Basse vision",
+        "Strabologie"
+      ],
+      "resume": "Cabinet d’orthoptie dans le Doubs (25) recherche un(e) orthoptiste pour compléter l’équipe dès maintenant. Temps partiel ou temps plein.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-07-gaillac-283",
+      "date": "2026-06-07",
+      "ville": "Gaillac",
+      "departement": "Tarn",
+      "codeDept": "81",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Neurovisuel",
+        "Strabologie",
+        "Rééducation"
+      ],
+      "resume": "Orthoptiste libérale à Gaillac (Tarn - 81), à 30 minutes de l’Union et 20 minutes d’Albi, proche de la gare de Gaillac, recherche un(e) collaborateur(rice) pour 3 jours suivant la demande en…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-07-charlieu-285",
+      "date": "2026-06-07",
+      "ville": "Charlieu",
+      "departement": "Loire",
+      "codeDept": "42",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Strabologie",
+        "Rééducation"
+      ],
+      "resume": "Cabinet d'orthoptie de Charlieu (Loire - 42) recherche un(e) orthoptiste pour une collaboration les mercredis et 1/2 journée supplémentaire. L'agenda est bien complet.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-07-leguevin-286",
+      "date": "2026-06-07",
+      "ville": "Léguevin",
+      "departement": "Haute Garonne",
+      "codeDept": "31",
+      "type": "Remplacement",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Neurovisuel",
+        "Strabologie"
+      ],
+      "resume": "Orthoptiste à Léguevin (Haute Garonne - 31) recherche un(e) collaborateur(rice) à partir du mois de Septembre pour idéalement 4 jours par semaine mais j'étudie toutes propositions.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-07-lure-287",
+      "date": "2026-06-07",
+      "ville": "Lure",
+      "departement": "Haute Saône",
+      "codeDept": "70",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Dans le cadre du développement de son activité, orthoptiste libérale à Lure (Haute Saône -70) recherche un(e) collaborateur(trice) pour une prise de poste à partir d’octobre.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-07-meslay-du-maine-288",
+      "date": "2026-06-07",
+      "ville": "Meslay-du-Maine",
+      "departement": "Mayenne",
+      "codeDept": "53",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Vous êtes orthoptiste et souhaitez exercer en autonomie complète tout en étant accompagné(e) ? Notre cabinet Téo de Meslay-du-Maine (Mayenne - 53) recrute un(e) orthoptiste en CDI à temps pl…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-07-versailles-289",
+      "date": "2026-06-07",
+      "ville": "Versailles",
+      "departement": "Yvelines",
+      "codeDept": "78",
+      "type": "Collaboration",
+      "structure": "Hôpital",
+      "specialites": [
+        "Rééducation"
+      ],
+      "resume": "Le service d’ophtalmologie du Centre Hospitalier de Versailles (Yvelines - 78) recrute ses futur(e)s collaborateur(rice)s ! Activité complète et stimulante : Pré consultation, imagerie, bila…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-07-rambouillet-290",
+      "date": "2026-06-07",
+      "ville": "Rambouillet",
+      "departement": "Yvelines",
+      "codeDept": "78",
+      "type": "Remplacement",
+      "structure": "Hôpital",
+      "specialites": [
+        "Rééducation"
+      ],
+      "resume": "Le service d’Ophtalmologie du Centre Hospitalier de Rambouillet (Yvelines - 78) recrute son(sa) futur(e) orthoptiste ! Activité complète et stimulante : Pré consultation, examen complémentai…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-07-toulouse-291",
+      "date": "2026-06-07",
+      "ville": "Toulouse",
+      "departement": "Haute Garonne",
+      "codeDept": "31",
+      "type": "Mission",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Cabinet d'ophtalmologie à Cornebarrieu, proche de Toulouse (Haute Garonne - 31), recherche un(e) orthoptiste pour le mois d'Août. Planning à définir ensemble. Rémunération attractive.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-07-grigny-292",
+      "date": "2026-06-07",
+      "ville": "Grigny",
+      "departement": "Essonne",
+      "codeDept": "91",
+      "type": "Collaboration",
+      "structure": "Centre / clinique",
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Le centre ophtalmologique de Grigny (Essonne - 91) recrute un(e) orthoptiste. Au sein de notre centre, vous travaillez en étroite collaboration avec les ophtalmologues dans le respect des pr…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-07-montrouge-293",
+      "date": "2026-06-07",
+      "ville": "Montrouge",
+      "departement": "Hauts de Seine",
+      "codeDept": "92",
+      "type": "Collaboration",
+      "structure": "Centre / clinique",
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Le centre ophtalmologique de Montrouge (Hauts de Seine - 92) recrute un(e) orthoptiste. Au sein de notre centre, vous travaillez en étroite collaboration avec les ophtalmologues dans le resp…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-07-besancon-294",
+      "date": "2026-06-07",
+      "ville": "Besançon",
+      "departement": "Doubs",
+      "codeDept": "25",
+      "type": "Mission",
+      "structure": null,
+      "specialites": [
+        "Rééducation"
+      ],
+      "resume": "Le Centre Ressources pour Déficients visuels des Salins de Bregille, proche de Besançon (Doubs - 25), recherche un(e) orthoptiste à mi-temps qui interviendra auprès d'enfants et adolescents…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-07-rennes-296",
+      "date": "2026-06-07",
+      "ville": "Rennes",
+      "departement": "Ille et Vilaine",
+      "codeDept": "35",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction",
+        "Champ visuel"
+      ],
+      "resume": "Cabinet d'ophtalmologie à l'est de Rennes (Ille et Vilaine - 35) recherche un(e) orthoptiste pour assister le médecin pour les pré consultations.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-07-belley-297",
+      "date": "2026-06-07",
+      "ville": "Belley",
+      "departement": "Ain",
+      "codeDept": "01",
+      "type": "Mission",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Ophtalmologue à Belley (Ain - 01) recherche, pour son nouveau cabinet, deux orthoptistes à plein temps (un temps partiel peut être envisagé). Ouverture en septembre.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-07-ornans-298",
+      "date": "2026-06-07",
+      "ville": "Ornans",
+      "departement": "Doubs",
+      "codeDept": "25",
+      "type": "Remplacement",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction",
+        "Champ visuel"
+      ],
+      "resume": "Cabinet d'ophtalmologie à Ornans (Doubs - 25) recherche un(e) orthoptiste pour assurer un remplacement dans le cadre d'un arrêt maladie.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-07-tours-299",
+      "date": "2026-06-07",
+      "ville": "Tours",
+      "departement": "Indre-et-Loire",
+      "codeDept": "37",
+      "type": "Remplacement",
+      "structure": "Hôpital",
+      "specialites": [],
+      "resume": "Le service d’ophtalmologie du CHRU de Tours (Indre-et-Loire – 37) recherche un(e) orthoptiste à temps plein, dès que possible, dans le cadre d’un remplacement pour congé maternité (temps par…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-07-bernay-300",
+      "date": "2026-06-07",
+      "ville": "Bernay",
+      "departement": "Orne",
+      "codeDept": "61",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Dans le cadre de l’ouverture d'un nouveau cabinet à Bernay (Orne - 61), nous recherchons un(e) orthoptiste pour rejoindre notre équipe à partir de novembre 2026.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-07-strasbourg-301",
+      "date": "2026-06-07",
+      "ville": "Strasbourg",
+      "departement": "Bas Rhin",
+      "codeDept": "67",
+      "type": "Association",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Rééducation"
+      ],
+      "resume": "Nous recrutons dans notre cabinet d’ophtalmologie à Strasbourg (Bas Rhin - 67) un(e) orthoptiste en contrat à durée indéterminée.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-07-rhone-302",
+      "date": "2026-06-07",
+      "ville": null,
+      "departement": "Rhône",
+      "codeDept": "69",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Ovision Lyon (Rhône - 69), cabinet d'ophtalmologie équipé de matériel dernière génération, recherche un(e) orthoptiste pour un poste à pourvoir en CDI dès que possible.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-07-villeurbanne-303",
+      "date": "2026-06-07",
+      "ville": "Villeurbanne",
+      "departement": "Rhône",
+      "codeDept": "69",
+      "type": "Salariat",
+      "structure": null,
+      "specialites": [
+        "Rééducation"
+      ],
+      "resume": "Le centre d’action médico-social précoce pour enfants déficients visuels de 0 à 6 ans de Villeurbanne (Rhône - 69) recherche un(e) orthoptiste en CDI à temps partiel (0,30 ETP.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-07-mulhouse-304",
+      "date": "2026-06-07",
+      "ville": "Mulhouse",
+      "departement": "Haut-Rhin",
+      "codeDept": "68",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Rééducation"
+      ],
+      "resume": "Cabinet d'ophtalmologie à Mulhouse (Haut-Rhin - 68) recherche un(e) orthoptiste salarié(e) à temps partiel ou temps plein en CDI. Poste à pourvoir dès le mois de juin.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-07-saint-cyr-sur-loire-305",
+      "date": "2026-06-07",
+      "ville": "Saint Cyr Sur Loire",
+      "departement": "Indre et Loire",
+      "codeDept": "37",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Cabinet d'ophtalmologie Tours Vision, composé de 3 ophtalmologistes et situé à Saint Cyr Sur Loire (Indre et Loire - 37) recherche un(e) orthoptiste diplômé(e), libéral(e) ou salarié(e), à t…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-07-rhone-306",
+      "date": "2026-06-07",
+      "ville": null,
+      "departement": "Rhône",
+      "codeDept": "69",
+      "type": "Remplacement",
+      "structure": "Centre / clinique",
+      "specialites": [
+        "Basse vision",
+        "Rééducation"
+      ],
+      "resume": "Nous recherchons un(e) orthoptiste remplaçant(e) 2 jours par semaine au sein d'une clinique de l'agglomération lyonnaise (Rhône - 69), avec possibilité d'évolution vers une collaboration de…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-07-gironde-307",
+      "date": "2026-06-07",
+      "ville": null,
+      "departement": "Gironde",
+      "codeDept": "33",
+      "type": "Collaboration",
+      "structure": "Ophtalmologiste",
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Nous recherchons un(e) orthoptiste dynamique et passionné(e) pour rejoindre notre équipe à La Test deBuch, à coté d'Arcachon (Gironde - 33).",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-07-chalon-sur-saone-308",
+      "date": "2026-06-07",
+      "ville": "Chalon sur Saône",
+      "departement": "Saône et Loire",
+      "codeDept": "71",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Cabinet d'ophtalmologie sur Chalon sur Saône (Saône et Loire - 71) recherche un(e) orthoptiste pour compléter son équipe. Temps partiel (25h/semaine).",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-07-lyon-309",
+      "date": "2026-06-07",
+      "ville": "Lyon",
+      "departement": "Rhône",
+      "codeDept": "69",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction",
+        "Champ visuel"
+      ],
+      "resume": "Centre médico-chirurgical composé de 6 ophtalmologistes et 6 orthoptistes recherche un(e) orthoptiste diplômée à temps complet ou partiel afin de compléter l'équipe et de pallier à l'accrois…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-07-rouen-310",
+      "date": "2026-06-07",
+      "ville": "Rouen",
+      "departement": "Seine Maritime",
+      "codeDept": "76",
+      "type": "Collaboration",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction",
+        "Rééducation"
+      ],
+      "resume": "Cabinet d’ophtalmologie à Rouen (Seine Maritime - 76) recherche un(e) orthoptiste pour un temps plein en activité mixte libérale et salariée avec 2 ophtalmologues parmi 6 associés et 2 ortho…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-07-pas-de-calais-311",
+      "date": "2026-06-07",
+      "ville": null,
+      "departement": "Pas de Calais",
+      "codeDept": "62",
+      "type": "Salariat",
+      "structure": "Centre / clinique",
+      "specialites": [
+        "Strabologie"
+      ],
+      "resume": "Le centre de santé ophtalmologique Klarity Bethune (Pas de Calais - 62) recherche activement un(e) orthoptiste en CDI temps partiel pour le lundi, jeudi et vendredi afin de compléter son équ…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-07-frejus-312",
+      "date": "2026-06-07",
+      "ville": "Fréjus",
+      "departement": "Var",
+      "codeDept": "83",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Rééducation"
+      ],
+      "resume": "Ophtavenir recrute, pour un cabinet d'ophtalmologie à Fréjus (Var - 83), un(e) orthoptiste à plein temps.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-07-draguignan-313",
+      "date": "2026-06-07",
+      "ville": "Draguignan",
+      "departement": "Var",
+      "codeDept": "83",
+      "type": "Salariat",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Rééducation"
+      ],
+      "resume": "Ophtavenir recrute, pour un cabinet d'ophtalmologie à Draguignan (Var - 83) un(e) orthoptiste à plein temps.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-07-vienne-314",
+      "date": "2026-06-07",
+      "ville": "Vienne",
+      "departement": "Isère",
+      "codeDept": "38",
+      "type": "Remplacement",
+      "structure": "Hôpital",
+      "specialites": [
+        "Champ visuel"
+      ],
+      "resume": "Le centre hospitalier de Vienne (Isère - 38) recrute ! Nous sommes à la recherche d'un(e) orthoptiste à 100 % (temps partiel accepté), pour un remplacement long, au sein du service consultat…",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-07-chateaulin-315",
+      "date": "2026-06-07",
+      "ville": "Châteaulin",
+      "departement": "Finistère",
+      "codeDept": "29",
+      "type": "Remplacement",
+      "structure": "Cabinet libéral",
+      "specialites": [
+        "Réfraction"
+      ],
+      "resume": "Cabinet d'ophtalmologie à Châteaulin (Finistère - 29) recrute un(e) orthoptiste dans le cadre d'un remplacement de congé maternité.",
+      "contact": "email"
+    },
+    {
+      "id": "2026-06-07-savoie-316",
+      "date": "2026-06-07",
+      "ville": null,
+      "departement": "Savoie",
+      "codeDept": "73",
+      "type": "Mission",
+      "structure": "Cabinet libéral",
+      "specialites": [],
+      "resume": "Les cabinets Alp’Ophta à Aix-les-Bains et Chambéry (Savoie - 73) recherchent un(e) orthoptiste pour aide à la consultation. Cadre de vie exceptionnel entre lac et montagnes.",
+      "contact": "email"
+    }
+  ]
+}
