@@ -11,12 +11,12 @@ import { REFERENCE, type ZoneDepartement, type ZoneType, type ZoneVille } from "
  * chiffres différents produisent deux textes différents.
  */
 
-function pluriel(n: number, singulier: string, plurielMot = `${singulier}s`): string {
+export function pluriel(n: number, singulier: string, plurielMot = `${singulier}s`): string {
   return n > 1 ? plurielMot : singulier;
 }
 
 /** « réfraction, rééducation et basse vision » */
-function enumerer(elements: string[]): string {
+export function enumerer(elements: string[]): string {
   if (elements.length <= 1) return elements[0] ?? "";
   return `${elements.slice(0, -1).join(", ")} et ${elements[elements.length - 1]}`;
 }
@@ -26,7 +26,7 @@ function fraicheur(derniere: string): string {
 }
 
 /** Phrase de fraîcheur, omise si la donnée n'apporte rien. */
-function phraseFraicheur(stats: { recentes30j: number; derniere: string; total: number }): string {
+export function phraseFraicheur(stats: { recentes30j: number; derniere: string; total: number }): string {
   const quand = fraicheur(stats.derniere);
   if (stats.recentes30j === stats.total && stats.total > 1) {
     return `Toutes ont été publiées au cours des trente derniers jours, la plus récente ${quand}.`;
@@ -65,7 +65,7 @@ function phraseStructures(structures: { nom: string; count: number }[], total: n
 }
 
 /** « de remplacement » / « d'association » — élision devant voyelle ou h muet. */
-function deElide(mot: string): string {
+export function deElide(mot: string): string {
   return /^[aeiouyâêîôûéèh]/i.test(mot.normalize("NFD").replace(/[̀-ͯ]/g, "")) ? `d'${mot}` : `de ${mot}`;
 }
 
