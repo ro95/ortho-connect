@@ -511,3 +511,27 @@ describe("agrégation régionale", () => {
     ]);
   });
 });
+
+describe("index des villes — redistribution du maillage", () => {
+  it("chaque ville publiée appartient à exactement un groupe régional", () => {
+    const groupes = geoReel.getVillesParRegion();
+    const slugs = groupes.flatMap((g) => g.villes.map((v) => v.slug));
+
+    expect(new Set(slugs).size, "une ville apparaît dans deux groupes").toBe(slugs.length);
+    // L'union doit être exactement geoReel.getVilles() : une ville absente de l'index ne
+    // recevrait aucun lien depuis cette page, qui raterait alors son unique rôle.
+    expect([...slugs].sort()).toEqual(geoReel.getVilles().map((v) => v.slug).sort());
+  });
+
+  it("chaque ville est rangée dans la région de son département", () => {
+    for (const groupe of geoReel.getVillesParRegion()) {
+      for (const v of groupe.villes) {
+        expect(v.departement.region, `${v.slug} mal rangée`).toBe(groupe.region.nom);
+      }
+    }
+  });
+
+  it("aucun groupe vide", () => {
+    for (const g of geoReel.getVillesParRegion()) expect(g.villes.length).toBeGreaterThan(0);
+  });
+});

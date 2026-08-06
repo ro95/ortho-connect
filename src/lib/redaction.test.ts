@@ -10,6 +10,7 @@ import {
   texteRegion,
   texteType,
   texteVille,
+  texteIndexVilles,
 } from "./redaction";
 import {
   REFERENCE,
@@ -359,7 +360,9 @@ describe("qualité typographique des textes réellement publiés", () => {
   }
 
   for (const v of getVilles()) {
-    const total = v.departement ? (getDepartements().find((d) => d.departement.code === v.departement.code)?.stats.total ?? v.stats.total) : v.stats.total;
+    // `departement` est non optionnel sur ZoneVille : pas de branche de repli à tester ici.
+    const total =
+      getDepartements().find((d) => d.departement.code === v.departement.code)?.stats.total ?? v.stats.total;
     const { chapeau, paragraphes } = texteVille(v, total, communesDe(v.departement.code));
     textes.push({ zone: `ville ${v.slug}`, texte: chapeau });
     paragraphes.forEach((p, i) => textes.push({ zone: `ville ${v.slug} §${i + 1}`, texte: p }));
@@ -373,6 +376,20 @@ describe("qualité typographique des textes réellement publiés", () => {
     const { chapeau, paragraphes } = texteType(t, top);
     textes.push({ zone: `type ${t.slug}`, texte: chapeau });
     paragraphes.forEach((p, i) => textes.push({ zone: `type ${t.slug} §${i + 1}`, texte: p }));
+  }
+
+  {
+    // L'index des villes est une page publiée comme les autres : son texte doit
+    // passer les mêmes contrôles typographiques.
+    const villes = getVilles();
+    const communes = [...new Set(villes.map((v) => v.departement.code))].flatMap(communesDe);
+    const { chapeau, paragraphes } = texteIndexVilles({
+      villes,
+      nbRegions: new Set(villes.map((v) => v.departement.region)).size,
+      communesSansPage: communes,
+    });
+    textes.push({ zone: "index villes", texte: chapeau });
+    paragraphes.forEach((p, i) => textes.push({ zone: `index villes §${i + 1}`, texte: p }));
   }
 
   it("génère au moins un texte par zone", () => {
