@@ -1,32 +1,10 @@
-import { SITE_NAME } from "@/lib/constants";
-import { EyeIcon, SearchIcon, CalendarIcon, ShieldIcon } from "@/components/icons";
+import { SearchIcon, CalendarIcon, ShieldIcon } from "@/components/icons";
 import SubscribeForm from "@/components/subscribe-form";
 import BentoCard from "@/components/bento-card";
 import HeroIllustration from "@/components/hero-illustration";
 import MissionsSection from "@/components/missions-section";
+import { Footer, Navbar } from "@/components/site-chrome";
 import { getMissionsStats } from "@/lib/missions";
-
-/* ───────────────────────── Navbar ───────────────────────── */
-function Navbar() {
-  return (
-    <nav className="fixed top-0 inset-x-0 z-50 backdrop-blur-lg bg-white/70 border-b border-gray-100">
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-        <a href="#" className="flex items-center gap-2 text-primary-700 font-bold text-lg tracking-tight">
-          <EyeIcon className="w-7 h-7" />
-          {SITE_NAME}
-        </a>
-        <div className="flex items-center gap-4">
-          <a href="#missions" className="hidden text-sm font-medium text-gray-500 transition-colors hover:text-primary-700 sm:block">
-            Les missions
-          </a>
-          <span className="rounded-full bg-primary-50 px-3 py-1 text-xs font-medium text-primary-600 ring-1 ring-primary-200">
-            Bientôt disponible
-          </span>
-        </div>
-      </div>
-    </nav>
-  );
-}
 
 /* ───────────────────── Hero Bento ────────────────────────── */
 function HeroBento({ total, departements }: { total: number; departements: number }) {
@@ -192,30 +170,13 @@ function BottomCTA() {
   );
 }
 
-/* ───────────────────────── Footer ───────────────────────── */
-function Footer() {
-  return (
-    <footer className="border-t border-gray-100 py-10">
-      <div className="mx-auto flex max-w-5xl flex-col items-center gap-4 px-6 sm:flex-row sm:justify-between">
-        <a href="#" className="flex items-center gap-2 text-primary-700 font-semibold text-sm">
-          <EyeIcon className="w-5 h-5" />
-          {SITE_NAME}
-        </a>
-        <p className="text-xs text-gray-400">
-          &copy; {new Date().getFullYear()} {SITE_NAME}. Tous droits réservés.
-        </p>
-      </div>
-    </footer>
-  );
-}
-
 /* ───────────────────────── Page ─────────────────────────── */
 export default function Home() {
   const stats = getMissionsStats();
 
   return (
     <>
-      <Navbar />
+      <Navbar accueil />
       <main>
         <HeroBento total={stats.total} departements={stats.departements} />
         <MissionsSection />
