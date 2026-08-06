@@ -25,6 +25,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: `${SITE_URL}/`, lastModified: plusRecente, changeFrequency: "weekly", priority: 1 },
     { url: `${SITE_URL}${urls.hub()}`, lastModified: plusRecente, changeFrequency: "daily", priority: 0.9 },
+    // Même priorité que les régions : c'est un palier de navigation, pas une
+    // feuille de l'arbre — il distribue vers les 33 pages de ville.
+    {
+      url: `${SITE_URL}${urls.villes()}`,
+      lastModified: villes.reduce((max, v) => (v.stats.derniere > max ? v.stats.derniere : max), ""),
+      changeFrequency: "weekly" as const,
+      priority: 0.85,
+    },
     ...regions.map((r) => ({
       url: `${SITE_URL}${urls.region(r.slug)}`,
       lastModified: r.stats.derniere,

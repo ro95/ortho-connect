@@ -413,6 +413,29 @@ export function getRegionByNom(nom: string): ZoneRegion | null {
   return regionsParNom.get(nom) ?? null;
 }
 
+/** Villes publiées d'une même région, telles que l'index des villes les affiche. */
+export interface GroupeVilles {
+  region: Region;
+  /** Slug de la page régionale — n'a de sens que si `publiee` est vrai. */
+  slug: string;
+  /** Faux pour une région sans page : le titre du groupe reste alors non lié. */
+  publiee: boolean;
+  villes: ZoneVille[];
+}
+
+/**
+ * Regroupement des villes publiées par région, pour l'index `/missions/ville`.
+ *
+ * Le parcours part de TOUTES les régions, pas seulement des publiées : une ville
+ * dont la région n'a pas de page doit rester affichée, sinon l'index cesse de
+ * redistribuer vers l'intégralité des pages de ville.
+ */
+export function getVillesParRegion(): GroupeVilles[] {
+  return regions
+    .filter((r) => r.villes.length > 0)
+    .map(({ region, slug, publiee, villes }) => ({ region, slug, publiee, villes }));
+}
+
 /**
  * Communes d'un département présentes dans les données mais sans page dédiée.
  * Elles sont citées en texte sur la page du département : un lien vers une page
@@ -424,10 +447,15 @@ export function getCommunesSousLeSeuil(codeDept: string): ZoneVille[] {
 
 /* ── URLs ── */
 
+// Le segment est déclaré une fois : l'index et les pages de ville partagent la
+// même racine, et un changement de segment ne peut plus les désynchroniser.
+const SEGMENT_VILLE = "/missions/ville";
+
 export const urls = {
   hub: () => "/missions",
   region: (slug: string) => `/missions/region/${slug}`,
   departement: (slug: string) => `/missions/departement/${slug}`,
-  ville: (slug: string) => `/missions/ville/${slug}`,
+  villes: () => SEGMENT_VILLE,
+  ville: (slug: string) => `${SEGMENT_VILLE}/${slug}`,
   type: (slug: string) => `/missions/type/${slug}`,
 };

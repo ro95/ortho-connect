@@ -84,6 +84,13 @@ export default async function Page({ params }: Props) {
     blocs.push({
       titre: "Élargir la recherche",
       liens: [
+        // Le fil d'Ariane suit la hiérarchie géographique (région, département) ;
+        // l'index des villes est un axe transverse, sa place est donc ici.
+        {
+          href: urls.villes(),
+          label: "Toutes les villes couvertes",
+          count: getVilles().length,
+        },
         {
           href: urls.departement(departement.slug),
           label: `Tout le département — ${departement.nom}`,

@@ -19,6 +19,12 @@ export const metadata: Metadata = buildMetadata({
   chemin: urls.hub(),
 });
 
+/**
+ * Le hub ne montre que les villes de tête : lister les 33 ici et sur l'index des
+ * villes ferait deux pages au contenu identique, qui se cannibaliseraient.
+ */
+const MAX_VILLES_TEASER = 8;
+
 const SEUIL_RECENT = (() => {
   const d = new Date(REFERENCE);
   d.setDate(d.getDate() - 7);
@@ -124,16 +130,17 @@ export default function Page() {
             </ul>
           </section>
 
-          {/* ── Par ville ── */}
+          {/* ── Par ville : teaser seulement, l'annuaire complet vit sur son index ── */}
           {villes.length > 0 && (
             <section className="mt-12">
               <h2 className="text-xl font-bold tracking-tight text-gray-900">Par ville</h2>
               <p className="mt-2 text-sm text-gray-500">
-                Les villes comptant au moins deux annonces. Les communes plus isolées sont
-                regroupées sur la page de leur département.
+                Les villes les mieux fournies. Les {villes.length} villes couvertes sont réunies sur
+                l&apos;index des villes ; les communes plus isolées restent sur la page de leur
+                département.
               </p>
               <ul className="mt-4 flex flex-wrap gap-2">
-                {villes.map((v) => (
+                {villes.slice(0, MAX_VILLES_TEASER).map((v) => (
                   <li key={v.slug}>
                     <Link
                       href={urls.ville(v.slug)}
@@ -144,6 +151,15 @@ export default function Page() {
                     </Link>
                   </li>
                 ))}
+                <li>
+                  <Link
+                    href={urls.villes()}
+                    className="inline-flex items-center gap-2 rounded-xl border border-primary-200 bg-primary-50 px-4 py-2.5 text-sm font-medium text-primary-700 transition-colors hover:bg-primary-100"
+                  >
+                    Toutes les villes
+                    <span className="text-xs text-primary-600">{villes.length}</span>
+                  </Link>
+                </li>
               </ul>
             </section>
           )}

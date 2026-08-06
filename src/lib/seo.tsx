@@ -90,6 +90,40 @@ export function collectionJsonLd(opts: {
   };
 }
 
+/**
+ * Liste de PAGES et non d'annonces : chaque élément porte son URL, ce qui décrit
+ * un index de navigation. `collectionJsonLd` ne convient pas ici, ses éléments
+ * sont des résumés d'offres sans URL propre.
+ */
+export function pagesJsonLd(opts: {
+  titre: string;
+  description: string;
+  chemin: string;
+  pages: { nom: string; chemin: string }[];
+}) {
+  const { titre, description, chemin, pages } = opts;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: titre,
+    description,
+    url: `${SITE_URL}${chemin}`,
+    inLanguage: "fr-FR",
+    isPartOf: { "@type": "WebSite", name: SITE_NAME, url: SITE_URL },
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: pages.length,
+      itemListElement: pages.map((page, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: page.nom,
+        url: `${SITE_URL}${page.chemin}`,
+      })),
+    },
+  };
+}
+
 /** `<script type="application/ld+json">` — à rendre dans le corps de la page. */
 export function JsonLd({ data }: { data: object }) {
   return (

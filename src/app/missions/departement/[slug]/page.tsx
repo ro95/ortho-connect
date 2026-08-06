@@ -8,6 +8,7 @@ import {
   getDepartementsVoisins,
   getRegionByNom,
   getTypes,
+  getVilles,
   urls,
 } from "@/lib/geo";
 import { citerCommunes, texteDepartement } from "@/lib/redaction";
@@ -54,13 +55,23 @@ export default async function Page({ params }: Props) {
   const blocs: BlocLiens[] = [];
 
   if (zone.villes.length > 0) {
+    const toutesLesVilles = getVilles();
     blocs.push({
       titre: `Missions par ville ${departement.loc}`,
-      liens: zone.villes.map((v) => ({
-        href: urls.ville(v.slug),
-        label: v.nom,
-        count: v.missions.length,
-      })),
+      liens: [
+        ...zone.villes.map((v) => ({
+          href: urls.ville(v.slug),
+          label: v.nom,
+          count: v.missions.length,
+        })),
+        // L'index des villes est l'étage au-dessus de ce bloc : il permet de sortir
+        // du département sans repasser par le hub national.
+        {
+          href: urls.villes(),
+          label: "Toutes les villes couvertes",
+          count: toutesLesVilles.length,
+        },
+      ],
     });
   }
 

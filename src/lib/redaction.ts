@@ -262,6 +262,82 @@ export function texteVille(
   return { chapeau, paragraphes };
 }
 
+/* ────────────────────────── Index des villes ─────────────────────────── */
+
+/** Fusionne les décomptes de plusieurs zones, les plus fréquents d'abord. */
+function agreger(listes: { nom: string; count: number }[][]): { nom: string; count: number }[] {
+  const totaux = new Map<string, number>();
+  for (const liste of listes) {
+    for (const { nom, count } of liste) totaux.set(nom, (totaux.get(nom) ?? 0) + count);
+  }
+  return [...totaux.entries()]
+    .map(([nom, count]) => ({ nom, count }))
+    // Départage alphabétique : le texte doit être identique d'un build à l'autre.
+    .sort((a, b) => b.count - a.count || a.nom.localeCompare(b.nom, "fr"));
+}
+
+/** Au-delà, l'énumération des villes de tête cesse d'être une phrase. */
+const MAX_VILLES_CITEES = 4;
+
+/**
+ * Chapeau et analyse de l'index des villes. Cette page ne décrit pas un lieu mais
+ * une couverture : ce qu'elle a à dire, c'est combien de villes sont pourvues, où
+ * elles se trouvent et ce qu'on y cherche — pas la liste des annonces, qui vit
+ * sur les pages de ville.
+ */
+export function texteIndexVilles({
+  villes,
+  nbRegions,
+  communesSansPage = [],
+}: {
+  villes: ZoneVille[];
+  nbRegions: number;
+  communesSansPage?: CommuneCitee[];
+}): { chapeau: string; paragraphes: string[] } {
+  const nbVilles = villes.length;
+  const total = villes.reduce((n, v) => n + v.stats.total, 0);
+  const stats = {
+    total,
+    recentes30j: villes.reduce((n, v) => n + v.stats.recentes30j, 0),
+    derniere: villes.reduce((max, v) => (v.stats.derniere > max ? v.stats.derniere : max), ""),
+  };
+
+  // Une seule région couverte rendrait « réparties sur 1 région » ridicule, et
+  // l'information intéressante devient alors l'inverse : la concentration.
+  const dispersion =
+    nbRegions > 1
+      ? `${pluriel(total, "répartie", "réparties")} sur ${nbRegions} régions`
+      : "toutes situées dans une même région";
+
+  const chapeau =
+    `${nbVilles} ${pluriel(nbVilles, "ville")} ${pluriel(nbVilles, "a sa propre page", "ont leur propre page")} ` +
+    `de missions d'orthoptie, soit ${total} ${pluriel(total, "annonce")} ${dispersion}. ` +
+    phraseFraicheur(stats);
+
+  const paragraphes: string[] = [];
+
+  const parVolume = [...villes].sort(
+    (a, b) => b.stats.total - a.stats.total || a.nom.localeCompare(b.nom, "fr"),
+  );
+  const cites = parVolume.slice(0, MAX_VILLES_CITEES).map((v) => `${v.nom} (${v.stats.total})`);
+  if (cites.length > 0) {
+    paragraphes.push(
+      `${enumerer(cites)} ${pluriel(cites.length, "concentre", "concentrent")} le plus d'annonces.`,
+    );
+  }
+
+  const specialites = phraseSpecialites(agreger(villes.map((v) => v.stats.specialites)), "dans ces villes");
+  if (specialites) paragraphes.push(specialites);
+
+  const structures = phraseStructures(agreger(villes.map((v) => v.stats.structures)), total);
+  if (structures) paragraphes.push(structures);
+
+  const communes = phraseAutresCommunes(communesSansPage, "sur la page de leur département");
+  if (communes) paragraphes.push(communes);
+
+  return { chapeau, paragraphes };
+}
+
 /* ─────────────────────────────── Type ────────────────────────────────── */
 
 export function texteType(
