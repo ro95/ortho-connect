@@ -1,5 +1,12 @@
 import { formatAnciennete } from "./missions";
-import { REFERENCE, type ZoneDepartement, type ZoneRegion, type ZoneType, type ZoneVille } from "./geo";
+import {
+  REFERENCE,
+  type ZoneDepartement,
+  type ZoneRegion,
+  type ZoneStats,
+  type ZoneType,
+  type ZoneVille,
+} from "./geo";
 
 /**
  * Rédaction des textes d'introduction des pages de zone.
@@ -262,7 +269,7 @@ export function texteVille(
   return { chapeau, paragraphes };
 }
 
-/* ────────────────────────── Index des villes ─────────────────────────── */
+/* ──────────────────────────── Pages d'index ──────────────────────────── */
 
 /** Fusionne les décomptes de plusieurs zones, les plus fréquents d'abord. */
 function agreger(listes: { nom: string; count: number }[][]): { nom: string; count: number }[] {
@@ -276,8 +283,8 @@ function agreger(listes: { nom: string; count: number }[][]): { nom: string; cou
     .sort((a, b) => b.count - a.count || a.nom.localeCompare(b.nom, "fr"));
 }
 
-/** Au-delà, l'énumération des villes de tête cesse d'être une phrase. */
-const MAX_VILLES_CITEES = 4;
+/** Au-delà, l'énumération des zones de tête cesse d'être une phrase. */
+const MAX_ZONES_CITEES = 4;
 
 /**
  * Chapeau et analyse de l'index des villes. Cette page ne décrit pas un lieu mais
@@ -319,7 +326,7 @@ export function texteIndexVilles({
   const parVolume = [...villes].sort(
     (a, b) => b.stats.total - a.stats.total || a.nom.localeCompare(b.nom, "fr"),
   );
-  const cites = parVolume.slice(0, MAX_VILLES_CITEES).map((v) => `${v.nom} (${v.stats.total})`);
+  const cites = parVolume.slice(0, MAX_ZONES_CITEES).map((v) => `${v.nom} (${v.stats.total})`);
   if (cites.length > 0) {
     paragraphes.push(
       `${enumerer(cites)} ${pluriel(cites.length, "concentre", "concentrent")} le plus d'annonces.`,
@@ -334,6 +341,205 @@ export function texteIndexVilles({
 
   const communes = phraseAutresCommunes(communesSansPage, "sur la page de leur département");
   if (communes) paragraphes.push(communes);
+
+  return { chapeau, paragraphes };
+}
+
+/* ───────────────── Index des départements, régions, types ───────────────── */
+
+/**
+ * Statistiques cumulées d'un ensemble de zones, dans la forme minimale
+ * qu'attend `phraseFraicheur`. Les quatre index en ont besoin à l'identique.
+ */
+function cumuler(zones: { stats: ZoneStats }[]): { total: number; recentes30j: number; derniere: string } {
+  return {
+    total: zones.reduce((n, z) => n + z.stats.total, 0),
+    recentes30j: zones.reduce((n, z) => n + z.stats.recentes30j, 0),
+    derniere: zones.reduce((max, z) => (z.stats.derniere > max ? z.stats.derniere : max), ""),
+  };
+}
+
+/**
+ * Chapeau et analyse de l'index des départements. Comme l'index des villes, cette
+ * page décrit une couverture et non un lieu : ce qu'elle apporte, c'est l'étendue
+ * du maillage et la concentration réelle de l'activité, pas la liste des annonces.
+ */
+export function texteIndexDepartements({
+  departements,
+  nbRegions,
+}: {
+  departements: ZoneDepartement[];
+  nbRegions: number;
+}): { chapeau: string; paragraphes: string[] } {
+  const nbDepts = departements.length;
+  const stats = cumuler(departements);
+  const total = stats.total;
+
+  const dispersion =
+    nbRegions > 1
+      ? `${pluriel(total, "répartie", "réparties")} sur ${nbRegions} régions`
+      : "toutes situées dans une même région";
+
+  const chapeau =
+    `${nbDepts} ${pluriel(nbDepts, "département")} ${pluriel(nbDepts, "a sa propre page", "ont leur propre page")} ` +
+    `de missions d'orthoptie, soit ${total} ${pluriel(total, "annonce")} ${dispersion}. ` +
+    phraseFraicheur(stats);
+
+  const paragraphes: string[] = [];
+
+  const parVolume = [...departements].sort(
+    (a, b) => b.stats.total - a.stats.total || a.nom.localeCompare(b.nom, "fr"),
+  );
+  const cites = parVolume
+    .slice(0, MAX_ZONES_CITEES)
+    .map((d) => `${d.nom} (${d.stats.total})`);
+  if (cites.length > 0) {
+    paragraphes.push(
+      `${enumerer(cites)} ${pluriel(cites.length, "concentre", "concentrent")} le plus d'annonces.`,
+    );
+  }
+
+  // Le nombre de communes distinctes dit ce que le seul décompte des pages de ville
+  // masque : la couverture réelle est plus large que le nombre de pages publiées.
+  const nbCommunes = departements.reduce((n, d) => n + d.nbVilles, 0);
+  const nbAvecPage = departements.reduce((n, d) => n + d.villes.length, 0);
+  if (nbCommunes > 0) {
+    paragraphes.push(
+      `${nbCommunes} ${pluriel(nbCommunes, "commune")} ${pluriel(nbCommunes, "est concernée", "sont concernées")}, ` +
+        `dont ${nbAvecPage} ${pluriel(nbAvecPage, "a sa propre page", "ont leur propre page")}. ` +
+        `Les autres sont couvertes par la page de leur département.`,
+    );
+  }
+
+  const specialites = phraseSpecialites(
+    agreger(departements.map((d) => d.stats.specialites)),
+    "dans ces départements",
+  );
+  if (specialites) paragraphes.push(specialites);
+
+  const structures = phraseStructures(agreger(departements.map((d) => d.stats.structures)), total);
+  if (structures) paragraphes.push(structures);
+
+  return { chapeau, paragraphes };
+}
+
+/**
+ * Chapeau et analyse de l'index des régions.
+ *
+ * `regionsSansPage` n'est pas décoratif : sans cette mention, un lecteur qui ne
+ * trouve pas sa région conclurait qu'elle n'est pas couverte, alors que ses
+ * annonces vivent sur la page de son unique département pourvu.
+ */
+export function texteIndexRegions({
+  regions,
+  regionsSansPage = [],
+}: {
+  regions: ZoneRegion[];
+  regionsSansPage?: { nom: string; count: number }[];
+}): { chapeau: string; paragraphes: string[] } {
+  const nbRegions = regions.length;
+  const stats = cumuler(regions);
+  const total = stats.total;
+  const nbDepts = regions.reduce((n, r) => n + r.departements.length, 0);
+
+  const chapeau =
+    `${nbRegions} ${pluriel(nbRegions, "région")} ${pluriel(nbRegions, "a sa propre page", "ont leur propre page")} ` +
+    `de missions d'orthoptie, soit ${total} ${pluriel(total, "annonce")} ` +
+    `${pluriel(total, "répartie", "réparties")} sur ${nbDepts} ${pluriel(nbDepts, "département")}. ` +
+    phraseFraicheur(stats);
+
+  const paragraphes: string[] = [];
+
+  const parVolume = [...regions].sort(
+    (a, b) => b.stats.total - a.stats.total || a.nom.localeCompare(b.nom, "fr"),
+  );
+  const [tete, ...reste] = parVolume;
+  if (tete) {
+    // La locution vient de la table (`en Occitanie`, `dans les Hauts-de-France`) :
+    // aucune préposition n'est fabriquée à partir du nom.
+    const debut = `C'est ${tete.region.loc} que les offres sont les plus nombreuses (${tete.stats.total} sur ${total}).`;
+    const suite =
+      reste.length > 0
+        ? ` Suivent ${enumerer(reste.slice(0, MAX_ZONES_CITEES - 1).map((r) => `${r.nom} (${r.stats.total})`))}.`
+        : "";
+    paragraphes.push(`${debut}${suite}`);
+  }
+
+  if (regionsSansPage.length > 0) {
+    const nb = regionsSansPage.length;
+    const liste = enumerer(regionsSansPage.map(({ nom, count }) => `${nom} (${count})`));
+    paragraphes.push(
+      `${nb} ${pluriel(nb, "autre région", "autres régions")} ${pluriel(nb, "ne compte", "ne comptent")} qu'un seul département pourvu : ${liste}. ` +
+        `${pluriel(nb, "Sa page régionale", "Leurs pages régionales")} ${pluriel(nb, "ferait", "feraient")} double emploi avec celle de ce département, qui recense déjà ces annonces.`,
+    );
+  }
+
+  const specialites = phraseSpecialites(agreger(regions.map((r) => r.stats.specialites)), "dans ces régions");
+  if (specialites) paragraphes.push(specialites);
+
+  const structures = phraseStructures(agreger(regions.map((r) => r.stats.structures)), total);
+  if (structures) paragraphes.push(structures);
+
+  return { chapeau, paragraphes };
+}
+
+/**
+ * Chapeau et analyse de l'index des types de mission.
+ *
+ * Les libellés de type sont de genres différents (un remplacement, une
+ * collaboration) : on les introduit systématiquement par « les offres … », dont
+ * l'accord est stable, et `deElide` prend en charge l'élision.
+ */
+export function texteIndexTypes({
+  types,
+  nbDepartements,
+  nbCommunes,
+}: {
+  types: ZoneType[];
+  nbDepartements: number;
+  nbCommunes: number;
+}): { chapeau: string; paragraphes: string[] } {
+  const nbTypes = types.length;
+  const stats = cumuler(types);
+  const total = stats.total;
+
+  const repartition =
+    nbTypes > 1
+      ? `${pluriel(total, "répartie", "réparties")} en ${nbTypes} types de mission`
+      : "toutes du même type de mission";
+
+  const chapeau =
+    `${total} ${pluriel(total, "offre")} d'orthoptiste ${pluriel(total, "est recensée", "sont recensées")} ` +
+    `en France, ${repartition}. ` +
+    phraseFraicheur(stats);
+
+  const paragraphes: string[] = [];
+
+  const parVolume = [...types].sort(
+    (a, b) => b.stats.total - a.stats.total || a.nom.localeCompare(b.nom, "fr"),
+  );
+  const [tete, ...reste] = parVolume;
+  if (tete) {
+    const debut = `Les offres ${deElide(tete.nom.toLowerCase())} sont les plus nombreuses : ${tete.stats.total} sur ${total}.`;
+    const suite =
+      reste.length > 0
+        ? ` Viennent ensuite ${enumerer(reste.slice(0, MAX_ZONES_CITEES - 1).map((t) => `${t.nom.toLowerCase()} (${t.stats.total})`))}.`
+        : "";
+    paragraphes.push(`${debut}${suite}`);
+  }
+
+  if (nbDepartements > 0) {
+    paragraphes.push(
+      `Tous types confondus, ces offres proviennent de ${nbDepartements} ${pluriel(nbDepartements, "département")} ` +
+        `et de ${nbCommunes} ${pluriel(nbCommunes, "commune")}.`,
+    );
+  }
+
+  const specialites = phraseSpecialites(agreger(types.map((t) => t.stats.specialites)), "tous types confondus");
+  if (specialites) paragraphes.push(specialites);
+
+  const structures = phraseStructures(agreger(types.map((t) => t.stats.structures)), total);
+  if (structures) paragraphes.push(structures);
 
   return { chapeau, paragraphes };
 }

@@ -448,6 +448,41 @@ export function getVillesParRegion(): GroupeVilles[] {
     .map(({ region, slug, publiee, villes }) => ({ region, slug, publiee, villes }));
 }
 
+/** Départements d'une même région, tels que l'index des départements les affiche. */
+export interface GroupeDepartements {
+  region: Region;
+  /** Slug de la page régionale — n'a de sens que si `publiee` est vrai. */
+  slug: string;
+  /** Faux pour une région sans page : le titre du groupe reste alors non lié. */
+  publiee: boolean;
+  departements: ZoneDepartement[];
+}
+
+/**
+ * Regroupement des départements par région, pour l'index `/missions/departement`.
+ *
+ * Comme pour les villes, le parcours part de TOUTES les régions : un département
+ * dont la région n'a pas de page doit rester affiché, faute de quoi l'index
+ * cesserait de redistribuer vers l'intégralité des pages de département.
+ */
+export function getDepartementsParRegion(): GroupeDepartements[] {
+  return regions.map(({ region, slug, publiee, departements }) => ({
+    region,
+    slug,
+    publiee,
+    departements,
+  }));
+}
+
+/**
+ * Régions ayant des annonces mais pas de page dédiée (un seul département pourvu).
+ * L'index des régions les cite en clair : les taire laisserait croire que leurs
+ * annonces ne sont couvertes nulle part.
+ */
+export function getRegionsSansPage(): ZoneRegion[] {
+  return regions.filter((r) => !r.publiee);
+}
+
 /**
  * Communes d'un département présentes dans les données mais sans page dédiée.
  * Elles sont citées en texte sur la page du département : un lien vers une page
@@ -459,15 +494,22 @@ export function getCommunesSousLeSeuil(codeDept: string): ZoneVille[] {
 
 /* ── URLs ── */
 
-// Le segment est déclaré une fois : l'index et les pages de ville partagent la
-// même racine, et un changement de segment ne peut plus les désynchroniser.
+// Chaque segment est déclaré une fois : l'index d'un palier et les pages qu'il
+// distribue partagent la même racine, et un renommage ne peut plus les
+// désynchroniser au point de laisser l'index sur une URL morte.
+const SEGMENT_REGION = "/missions/region";
+const SEGMENT_DEPARTEMENT = "/missions/departement";
 const SEGMENT_VILLE = "/missions/ville";
+const SEGMENT_TYPE = "/missions/type";
 
 export const urls = {
   hub: () => "/missions",
-  region: (slug: string) => `/missions/region/${slug}`,
-  departement: (slug: string) => `/missions/departement/${slug}`,
+  regions: () => SEGMENT_REGION,
+  region: (slug: string) => `${SEGMENT_REGION}/${slug}`,
+  departements: () => SEGMENT_DEPARTEMENT,
+  departement: (slug: string) => `${SEGMENT_DEPARTEMENT}/${slug}`,
   villes: () => SEGMENT_VILLE,
   ville: (slug: string) => `${SEGMENT_VILLE}/${slug}`,
-  type: (slug: string) => `/missions/type/${slug}`,
+  types: () => SEGMENT_TYPE,
+  type: (slug: string) => `${SEGMENT_TYPE}/${slug}`,
 };

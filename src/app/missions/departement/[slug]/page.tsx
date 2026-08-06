@@ -77,24 +77,35 @@ export default async function Page({ params }: Props) {
 
   // Lien remontant vers la région, en tête du bloc régional : c'est le palier
   // au-dessus, et la page qui recense l'ensemble des voisins non cités ici.
+  // Le bloc est rendu même sans page régionale, sinon les départements des régions
+  // à département unique seraient les seuls à ne pas atteindre l'index départemental.
   const voisins = getDepartementsVoisins(zone);
-  if (region) {
-    blocs.push({
-      titre: `Ailleurs ${region.region.loc}`,
-      liens: [
-        {
-          href: urls.region(region.slug),
-          label: `Toute la région — ${region.nom}`,
-          count: region.missions.length,
-        },
-        ...voisins.map((d) => ({
-          href: urls.departement(d.slug),
-          label: `${d.nom} (${d.departement.code})`,
-          count: d.missions.length,
-        })),
-      ],
-    });
-  }
+  blocs.push({
+    titre: region ? `Ailleurs ${region.region.loc}` : "Ailleurs en France",
+    liens: [
+      ...(region
+        ? [
+            {
+              href: urls.region(region.slug),
+              label: `Toute la région — ${region.nom}`,
+              count: region.missions.length,
+            },
+          ]
+        : []),
+      ...voisins.map((d) => ({
+        href: urls.departement(d.slug),
+        label: `${d.nom} (${d.departement.code})`,
+        count: d.missions.length,
+      })),
+      // Sortie de la région sans repasser par le hub : l'index départemental est
+      // l'étage transverse de ce palier, comme l'index des villes plus haut.
+      {
+        href: urls.departements(),
+        label: "Tous les départements couverts",
+        count: getDepartements().length,
+      },
+    ],
+  });
 
   // On ne propose que les types réellement présents dans le département : un lien
   // vers une combinaison vide serait une impasse pour l'utilisateur comme pour le crawl.

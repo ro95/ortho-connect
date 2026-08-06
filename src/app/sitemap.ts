@@ -25,14 +25,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: `${SITE_URL}/`, lastModified: plusRecente, changeFrequency: "weekly", priority: 1 },
     { url: `${SITE_URL}${urls.hub()}`, lastModified: plusRecente, changeFrequency: "daily", priority: 0.9 },
-    // Même priorité que les régions : c'est un palier de navigation, pas une
-    // feuille de l'arbre — il distribue vers les 33 pages de ville.
-    {
-      url: `${SITE_URL}${urls.villes()}`,
-      lastModified: villes.reduce((max, v) => (v.stats.derniere > max ? v.stats.derniere : max), ""),
+    // Les quatre index partagent la priorité des régions : ce sont des paliers de
+    // navigation, pas des feuilles de l'arbre — ils distribuent vers les pages du
+    // palier qu'ils recensent.
+    ...[
+      { chemin: urls.regions(), zones: regions },
+      { chemin: urls.departements(), zones: departements },
+      { chemin: urls.villes(), zones: villes },
+      { chemin: urls.types(), zones: types },
+    ].map(({ chemin, zones }) => ({
+      url: `${SITE_URL}${chemin}`,
+      lastModified: zones.reduce((max, z) => (z.stats.derniere > max ? z.stats.derniere : max), ""),
       changeFrequency: "weekly" as const,
       priority: 0.85,
-    },
+    })),
     ...regions.map((r) => ({
       url: `${SITE_URL}${urls.region(r.slug)}`,
       lastModified: r.stats.derniere,

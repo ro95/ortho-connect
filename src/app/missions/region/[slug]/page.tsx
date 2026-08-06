@@ -79,6 +79,19 @@ export default async function Page({ params }: Props) {
     });
   }
 
+  // L'index des régions ferme la page : c'est le palier transverse qui permet de
+  // changer de région sans repasser par le hub national.
+  blocs.push({
+    titre: "Chercher autrement",
+    liens: [
+      {
+        href: urls.regions(),
+        label: "Toutes les régions couvertes",
+        count: getRegionsPubliees().length,
+      },
+    ],
+  });
+
   return (
     <ZonePage
       zone={zone}

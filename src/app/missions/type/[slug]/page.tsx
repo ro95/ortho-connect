@@ -72,9 +72,18 @@ export default async function Page({ params }: Props) {
     },
     {
       titre: "Autres types de mission",
-      liens: getTypes()
-        .filter((t) => t.slug !== slug)
-        .map((t) => ({ href: urls.type(t.slug), label: t.nom, count: t.missions.length })),
+      liens: [
+        ...getTypes()
+          .filter((t) => t.slug !== slug)
+          .map((t) => ({ href: urls.type(t.slug), label: t.nom, count: t.missions.length })),
+        // L'index des types porte la comparaison entre formats — volumes,
+        // ancrage géographique — que cette page ne donne que pour le sien.
+        {
+          href: urls.types(),
+          label: "Comparer tous les types de mission",
+          count: getTypes().length,
+        },
+      ],
     },
   ];
 
