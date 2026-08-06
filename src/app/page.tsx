@@ -22,7 +22,7 @@ function HeroBento({ total, departements }: { total: number; departements: numbe
           <div className="lg:col-span-3 lg:row-span-2 flex flex-col justify-center py-4">
             <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-5xl animate-fade-in-up">
               La plateforme qui connecte les{" "}
-              <span className="bg-gradient-to-r from-primary-600 to-accent-500 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-primary-600 to-accent-500 bg-clip-text text-transparent">
                 orthoptistes
               </span>{" "}
               à leurs missions
@@ -47,7 +47,7 @@ function HeroBento({ total, departements }: { total: number; departements: numbe
           </div>
 
           {/* ── Illustration cell (2 cols, top right) ── */}
-          <BentoCard className="lg:col-span-2 lg:row-span-2 flex items-center justify-center bg-gradient-to-br from-primary-50/80 to-white p-4 animate-fade-in-up animation-delay-200">
+          <BentoCard className="lg:col-span-2 lg:row-span-2 flex items-center justify-center bg-linear-to-br from-primary-50/80 to-white p-4 animate-fade-in-up animation-delay-200">
             <HeroIllustration className="w-full max-w-[280px] h-auto" />
           </BentoCard>
 
@@ -136,7 +136,7 @@ function BentoFeatures() {
           </BentoCard>
 
           {/* Card 4 — highlight */}
-          <BentoCard className="flex flex-col items-center justify-center text-center bg-gradient-to-br from-primary-600 to-primary-800 border-primary-700">
+          <BentoCard className="flex flex-col items-center justify-center text-center bg-linear-to-br from-primary-600 to-primary-800 border-primary-700">
             <p className="stat-value text-5xl font-extrabold text-white">0</p>
             <p className="mt-2 text-sm font-medium text-primary-200">
               Plateforme dédiée aux orthoptistes… jusqu&apos;ici.
@@ -153,7 +153,7 @@ function BentoFeatures() {
 function BottomCTA() {
   return (
     <section id="inscription" className="relative scroll-mt-24 overflow-hidden py-24 md:py-32 reveal">
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-primary-50/80 to-white" />
+      <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-primary-50/80 to-white" />
       <div className="relative mx-auto max-w-2xl px-6 text-center">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Prêt à ne plus chercher vos missions à l&apos;aveugle ?

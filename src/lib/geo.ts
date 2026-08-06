@@ -108,11 +108,23 @@ const missions = getMissions();
 /** Référence de fraîcheur : l'annonce la plus récente du jeu de données. */
 export const REFERENCE = missions.reduce((max, m) => (m.date > max ? m.date : max), missions[0]?.date ?? "");
 
-const SEUIL_30J = (() => {
+/** Date ISO située `jours` avant la référence de fraîcheur. */
+function avantReference(jours: number): string {
   const d = new Date(REFERENCE);
-  d.setDate(d.getDate() - 30);
+  d.setDate(d.getDate() - jours);
   return d.toISOString().slice(0, 10);
-})();
+}
+
+const SEUIL_30J = avantReference(30);
+
+/**
+ * En deçà, une annonce porte le badge « récente ».
+ *
+ * Calculé ici et non dans les composants : deux pages qui dateraient la même
+ * annonce différemment se contrediraient, et le seuil se lit depuis la même
+ * référence que le reste des statistiques.
+ */
+export const SEUIL_RECENT = avantReference(7);
 
 function compter<T>(valeurs: T[]): { valeur: T; count: number }[] {
   const compteurs = new Map<T, number>();

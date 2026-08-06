@@ -4,7 +4,7 @@ import SubscribeForm from "./subscribe-form";
 import { Footer, Navbar } from "./site-chrome";
 import { MapPinIcon } from "./icons";
 import { formatAnciennete, formatLieu } from "@/lib/missions";
-import { REFERENCE, type Zone } from "@/lib/geo";
+import { REFERENCE, SEUIL_RECENT, type Zone } from "@/lib/geo";
 import { breadcrumbJsonLd, collectionJsonLd, JsonLd } from "@/lib/seo";
 
 export interface LienZone {
@@ -50,12 +50,6 @@ interface Props {
   /** Zone pré-remplie envoyée avec l'inscription, pour savoir d'où viennent les leads. */
   zoneLead: string;
 }
-
-const SEUIL_RECENT = (() => {
-  const d = new Date(REFERENCE);
-  d.setDate(d.getDate() - 7);
-  return d.toISOString().slice(0, 10);
-})();
 
 export default function ZonePage({
   zone,
@@ -197,7 +191,7 @@ export default function ZonePage({
 
         {/* ── Inscription ── */}
         <section id="inscription" className="relative mt-16 scroll-mt-24 overflow-hidden py-24">
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-primary-50/80 to-white" />
+          <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-primary-50/80 to-white" />
           <div className="relative mx-auto max-w-2xl px-6 text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900">
               Soyez alerté des prochaines missions

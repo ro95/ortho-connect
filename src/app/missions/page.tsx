@@ -4,7 +4,7 @@ import MissionsBoard, { type MissionCard } from "@/components/missions-board";
 import SubscribeForm from "@/components/subscribe-form";
 import { Footer, Navbar } from "@/components/site-chrome";
 import { formatAnciennete, formatLieu, getMissions, getMissionsStats } from "@/lib/missions";
-import { REFERENCE, getRegionsZones, getTypes, getVilles, urls } from "@/lib/geo";
+import { REFERENCE, SEUIL_RECENT, getRegionsZones, getTypes, getVilles, urls } from "@/lib/geo";
 import { breadcrumbJsonLd, buildMetadata, collectionJsonLd, JsonLd } from "@/lib/seo";
 
 const stats = getMissionsStats();
@@ -24,12 +24,6 @@ export const metadata: Metadata = buildMetadata({
  * villes ferait deux pages au contenu identique, qui se cannibaliseraient.
  */
 const MAX_VILLES_TEASER = 8;
-
-const SEUIL_RECENT = (() => {
-  const d = new Date(REFERENCE);
-  d.setDate(d.getDate() - 7);
-  return d.toISOString().slice(0, 10);
-})();
 
 export default function Page() {
   const missions = getMissions();
@@ -217,7 +211,7 @@ export default function Page() {
         </div>
 
         <section id="inscription" className="relative mt-16 scroll-mt-24 overflow-hidden py-24">
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-primary-50/80 to-white" />
+          <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-primary-50/80 to-white" />
           <div className="relative mx-auto max-w-2xl px-6 text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900">
               Recevez les missions de votre secteur
