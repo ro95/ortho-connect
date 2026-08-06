@@ -1,14 +1,36 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useRef, useState, type FormEvent } from "react";
 import { ArrowRightIcon, CheckCircleIcon } from "./icons";
 
 type Status = "idle" | "loading" | "success" | "error";
 
-export default function SubscribeForm() {
+interface Props {
+  /**
+   * Secteur d'où provient l'inscription (« Toulouse (31) », « Remplacement »…).
+   * Transmis avec l'email pour savoir quelles zones convertissent — c'est le seul
+   * moyen de mesurer le rendement réel des pages géographiques.
+   */
+  zone?: string;
+}
+
+export default function SubscribeForm({ zone }: Props = {}) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
+
+  /**
+   * Piège à robots : champ caché que personne ne voit et que seul un script
+   * remplit. Sa valeur part avec la requête, le serveur y répond par un faux
+   * succès.
+   */
+  const [honeypot, setHoneypot] = useState("");
+
+  /**
+   * Instant du premier rendu. L'écart avec l'envoi permet au serveur d'écarter
+   * les soumissions instantanées, hors de portée d'une saisie humaine.
+   */
+  const monteA = useRef(Date.now());
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
@@ -20,7 +42,12 @@ export default function SubscribeForm() {
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: email.trim() }),
+        body: JSON.stringify({
+          email: email.trim(),
+          zone,
+          website: honeypot,
+          delaiMs: Date.now() - monteA.current,
+        }),
       });
 
       const data = await res.json();
@@ -50,6 +77,23 @@ export default function SubscribeForm() {
 
   return (
     <form onSubmit={handleSubmit} className="w-full max-w-md">
+      {/*
+        Honeypot. `sr-only` le sort du flux visuel par découpe, sans recourir à
+        `display: none` que certains robots savent détecter. aria-hidden et
+        tabIndex -1 le rendent inatteignable au clavier comme au lecteur
+        d'écran, malgré ce que le nom de la classe suggère.
+      */}
+      <input
+        type="text"
+        name="website"
+        value={honeypot}
+        onChange={(e) => setHoneypot(e.target.value)}
+        className="sr-only"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+      />
+
       <div className="flex rounded-2xl border border-gray-200 bg-white shadow-lg shadow-primary-900/5 transition-shadow focus-within:shadow-xl focus-within:border-primary-300">
         <input
           type="email"
