@@ -3,22 +3,27 @@ import { describe, expect, it } from "vitest";
 import {
   deElide,
   enumerer,
+  phraseAutresCommunes,
   phraseFraicheur,
   pluriel,
   texteDepartement,
+  texteRegion,
   texteType,
   texteVille,
 } from "./redaction";
 import {
   REFERENCE,
+  getCommunesSousLeSeuil,
   getDepartements,
+  getRegionsPubliees,
   getTypes,
   getVilles,
   type ZoneDepartement,
+  type ZoneRegion,
   type ZoneStats,
   type ZoneVille,
 } from "./geo";
-import { getDepartement } from "./departements";
+import { getDepartement, getRegion } from "./departements";
 import type { Mission } from "./missions";
 
 /**
@@ -145,6 +150,68 @@ describe("phraseFraicheur", () => {
   });
 });
 
+describe("phraseAutresCommunes", () => {
+  it("ne dit rien quand aucune commune n'est concernée", () => {
+    expect(phraseAutresCommunes([], "sur cette page")).toBeNull();
+  });
+
+  it("accorde tout au singulier pour une commune à annonce unique", () => {
+    expect(phraseAutresCommunes([{ nom: "Pessac", count: 1 }], "sur cette page")).toBe(
+      "Une commune n'atteint pas le volume qui justifierait sa propre page : Pessac. " +
+        "Son annonce est regroupée sur cette page.",
+    );
+  });
+
+  it("accorde le possessif sur les communes et le verbe sur les annonces", () => {
+    expect(phraseAutresCommunes([{ nom: "Pessac", count: 3 }], "sur cette page")).toContain(
+      "Ses 3 annonces sont regroupées",
+    );
+    expect(
+      phraseAutresCommunes(
+        [
+          { nom: "Pessac", count: 1 },
+          { nom: "Talence", count: 1 },
+        ],
+        "sur cette page",
+      ),
+    ).toContain("Leurs 2 annonces sont regroupées");
+  });
+
+  it("énumère les communes et n'affiche le compte que s'il dépasse une annonce", () => {
+    const phrase = phraseAutresCommunes(
+      [
+        { nom: "Pessac", count: 2 },
+        { nom: "Talence", count: 1 },
+        { nom: "Mérignac", count: 1 },
+      ],
+      "sur cette page",
+    );
+    expect(phrase).toContain("Pessac (2), Talence et Mérignac.");
+  });
+
+  it("tronque la liste et compte le reste plutôt que d'aligner les mots-clés", () => {
+    const communes = Array.from({ length: 12 }, (_, i) => ({ nom: `Commune${i}`, count: 1 }));
+    const phrase = phraseAutresCommunes(communes, "sur cette page", 3)!;
+    expect(phrase).toContain("12 communes n'atteignent pas");
+    expect(phrase).toContain("Commune0, Commune1, Commune2 et 9 autres.");
+    expect(phrase).not.toContain("Commune3");
+    expect(phrase).toContain("Leurs 12 annonces sont regroupées sur cette page.");
+  });
+
+  it("écrit « 1 autre » au singulier", () => {
+    const communes = Array.from({ length: 3 }, (_, i) => ({ nom: `Commune${i}`, count: 1 }));
+    expect(phraseAutresCommunes(communes, "sur cette page", 2)).toContain(
+      "Commune0, Commune1 et 1 autre.",
+    );
+  });
+
+  it("adapte la destination du regroupement", () => {
+    expect(phraseAutresCommunes([{ nom: "Pessac", count: 1 }], "sur la page du département")).toContain(
+      "regroupée sur la page du département.",
+    );
+  });
+});
+
 /* ───────────────── Accords des textes générés (données forgées) ───────────────── */
 
 describe("accords singulier / pluriel des textes de zone", () => {
@@ -211,20 +278,89 @@ describe("accords singulier / pluriel des textes de zone", () => {
   });
 });
 
+/* ────────────────────────────── texteRegion ────────────────────────────── */
+
+describe("texteRegion", () => {
+  it("emploie la locution de la région, jamais un « en » plaqué", () => {
+    // C'est exactement le cas que la table de locutions existe pour couvrir :
+    // « en Occitanie » mais « dans les Hauts-de-France ».
+    expect(texteRegion(regionFictive({ codesDept: ["31", "34"] })).chapeau).toContain(
+      "sont ouvertes en Occitanie :",
+    );
+    expect(texteRegion(regionFictive({ codesDept: ["59", "62"] })).chapeau).toContain(
+      "sont ouvertes dans les Hauts-de-France :",
+    );
+    expect(texteRegion(regionFictive({ codesDept: ["75", "92"] })).chapeau).toContain(
+      "sont ouvertes en Île-de-France :",
+    );
+    expect(texteRegion(regionFictive({ codesDept: ["67", "57"] })).chapeau).toContain(
+      "sont ouvertes dans le Grand Est :",
+    );
+    expect(texteRegion(regionFictive({ codesDept: ["974"] })).chapeau).toContain(
+      "est ouverte à La Réunion :",
+    );
+  });
+
+  it("accorde le chapeau sur une seule mission", () => {
+    const { chapeau } = texteRegion(regionFictive({ codesDept: ["974"] }));
+    expect(chapeau).toContain("1 mission d'orthoptie est ouverte");
+    expect(chapeau).not.toContain("sont ouvertes");
+  });
+
+  it("dit explicitement qu'un seul département est pourvu plutôt que d'énumérer une liste d'un", () => {
+    const { paragraphes } = texteRegion(regionFictive({ codesDept: ["974"] }));
+    expect(paragraphes.join(" ")).toContain(
+      "Un seul département de la région recense actuellement des annonces : La Réunion (974).",
+    );
+    expect(paragraphes.join(" ")).not.toContain("se répartissent sur");
+  });
+
+  it("classe les départements par volume et tronque au-delà de quatre", () => {
+    const zone = regionFictive({ codesDept: ["31", "34", "30", "81", "46"], parDept: [1, 5, 2, 1, 1] });
+    const paragraphe = texteRegion(zone).paragraphes[0];
+    expect(paragraphe).toContain("Ces offres se répartissent sur 5 départements :");
+    expect(paragraphe).toContain("Hérault (5), Gard (2), Haute-Garonne (1), Lot (1) et 1 autre.");
+  });
+
+  it("distingue les communes concernées de celles ayant leur propre page", () => {
+    const zone = regionFictive({ codesDept: ["31", "34"], parDept: [3, 1] });
+    const textes = texteRegion(zone).paragraphes.join(" ");
+    expect(textes).toContain("communes sont concernées, dont");
+    expect(textes).toContain("en concentre le plus");
+  });
+
+  it("produit un texte différent pour deux régions aux chiffres différents", () => {
+    // La garantie anti-gabarit : ce ne sont pas les mêmes phrases avec un nom changé.
+    const [a, b] = getRegionsPubliees();
+    expect(texteRegion(a).chapeau).not.toBe(texteRegion(b).chapeau);
+    expect(texteRegion(a).paragraphes).not.toEqual(texteRegion(b).paragraphes);
+  });
+});
+
 /* ─────────── Qualité typographique sur toutes les zones réelles ─────────── */
 
 describe("qualité typographique des textes réellement publiés", () => {
   const textes: { zone: string; texte: string }[] = [];
 
+  /** Communes sous le seuil du département, telles que les pages les passent. */
+  const communesDe = (codeDept: string) =>
+    getCommunesSousLeSeuil(codeDept).map((c) => ({ nom: c.nom, count: c.missions.length }));
+
+  for (const r of getRegionsPubliees()) {
+    const { chapeau, paragraphes } = texteRegion(r);
+    textes.push({ zone: `région ${r.slug}`, texte: chapeau });
+    paragraphes.forEach((p, i) => textes.push({ zone: `région ${r.slug} §${i + 1}`, texte: p }));
+  }
+
   for (const d of getDepartements()) {
-    const { chapeau, paragraphes } = texteDepartement(d);
+    const { chapeau, paragraphes } = texteDepartement(d, communesDe(d.departement.code));
     textes.push({ zone: `département ${d.slug}`, texte: chapeau });
     paragraphes.forEach((p, i) => textes.push({ zone: `département ${d.slug} §${i + 1}`, texte: p }));
   }
 
   for (const v of getVilles()) {
     const total = v.departement ? (getDepartements().find((d) => d.departement.code === v.departement.code)?.stats.total ?? v.stats.total) : v.stats.total;
-    const { chapeau, paragraphes } = texteVille(v, total);
+    const { chapeau, paragraphes } = texteVille(v, total, communesDe(v.departement.code));
     textes.push({ zone: `ville ${v.slug}`, texte: chapeau });
     paragraphes.forEach((p, i) => textes.push({ zone: `ville ${v.slug} §${i + 1}`, texte: p }));
   }
@@ -382,6 +518,40 @@ function deptFictif({
     stats: statsDe(missions),
     villes,
     nbVilles: new Set(missions.map((m) => m.ville).filter(Boolean)).size,
+  };
+}
+
+/**
+ * Région forgée à partir de vrais codes de département : le premier code donne la
+ * région, et `parDept` le nombre d'annonces de chacun. Permet de tester les
+ * locutions irrégulières et les accords sans dépendre du contenu du jeu de données.
+ */
+function regionFictive({
+  codesDept,
+  parDept,
+}: {
+  codesDept: string[];
+  parDept?: number[];
+}): ZoneRegion {
+  const departements = codesDept.map((code, i) =>
+    deptFictif({ nbMissions: parDept?.[i] ?? 1, codeDept: code }),
+  );
+  const missions = departements.flatMap((d) => d.missions);
+  const region = getRegion(getDepartement(codesDept[0])!.region)!;
+
+  return {
+    kind: "region",
+    slug: region.nom.toLowerCase(),
+    nom: region.nom,
+    region,
+    departements: [...departements].sort((a, b) => a.nom.localeCompare(b.nom, "fr")),
+    villes: departements
+      .flatMap((d) => d.villes)
+      .sort((a, b) => b.missions.length - a.missions.length || a.nom.localeCompare(b.nom, "fr")),
+    missions,
+    stats: statsDe(missions),
+    nbVilles: new Set(missions.map((m) => `${m.ville}|${m.codeDept}`)).size,
+    publiee: departements.length >= 2,
   };
 }
 
