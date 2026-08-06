@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2563eb" />
+      <stop offset="1" stop-color="#1d4ed8" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#bg)" />
+  <!--
+    Même œil que `EyeIcon` (nav et footer) : la marque reste la même du favicon
+    à l'en-tête. Tracé en coordonnées 24×24, recentré et agrandi ici ; le trait
+    est épaissi (1.5 → 2) pour rester lisible à 16 px.
+  -->
+  <g transform="translate(32 32) scale(2.4) translate(-12 -12)" fill="none" stroke="#ffffff"
+     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+    <circle cx="12" cy="12" r="3" fill="#34d399" stroke="none" />
+  </g>
+</svg>
